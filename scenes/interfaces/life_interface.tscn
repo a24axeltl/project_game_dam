@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bjhwife5qt4v8"]
+
+[ext_resource type="Script" uid="uid://bbowlopcda3hy" path="res://life_interface.gd" id="1_24qka"]
+
+[node name="LifeInterface" type="Control" unique_id=1294108106 node_paths=PackedStringArray("label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_24qka")
+label = NodePath("Label")
+
+[node name="Label" type="Label" parent="." unique_id=2028704715]
+layout_mode = 0
+offset_right = 652.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 25

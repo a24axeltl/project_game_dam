@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cdx1jwcuht2f6"]
+
+[ext_resource type="Script" uid="uid://ck41eqyt38wau" path="res://scenes/levels/controller_levels/controller_levels.gd" id="1_iyxch"]
+[ext_resource type="PackedScene" uid="uid://ctd040saoa64l" path="res://scenes/levels/test_levels/test_level1.tscn" id="2_mur4o"]
+[ext_resource type="PackedScene" uid="uid://d00vll0sj2a7c" path="res://scenes/levels/test_levels/test_level2.tscn" id="3_qfcr8"]
+[ext_resource type="PackedScene" uid="uid://cjdtdk3bgbteu" path="res://scenes/levels/test_levels/test_level_3.tscn" id="4_qfcr8"]
+[ext_resource type="PackedScene" uid="uid://c83l63vw008if" path="res://scenes/levels/test_levels/test_boss.tscn" id="5_65p5o"]
+[ext_resource type="PackedScene" uid="uid://d2de13gr6gf74" path="res://scenes/finish/finish.tscn" id="6_8lwq0"]
+
+[node name="ControllerLevels" type="Node2D" unique_id=2080523597]
+script = ExtResource("1_iyxch")
+levels = Array[PackedScene]([ExtResource("3_qfcr8"), ExtResource("2_mur4o"), ExtResource("4_qfcr8"), ExtResource("5_65p5o"), ExtResource("6_8lwq0")])

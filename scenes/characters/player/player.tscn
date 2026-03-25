@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://5f4xvt46vnjl"]
+
+[ext_resource type="Script" uid="uid://t8dmkn6mjm5u" path="res://scenes/characters/player/player.gd" id="1_oya4h"]
+[ext_resource type="SpriteFrames" uid="uid://b2ecee3gecwiw" path="res://scenes/characters/player/player.tres" id="1_tg20s"]
+[ext_resource type="Material" uid="uid://bc5sxomibst57" path="res://shaders/player/blue_player.tres" id="2_686vu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tg20s"]
+size = Vector2(60.5, 122.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oya4h"]
+size = Vector2(61, 122.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwk1h"]
+size = Vector2(71, 87)
+
+[node name="Player" type="CharacterBody2D" unique_id=1543182604 node_paths=PackedStringArray("animacion", "hurtboxPivot", "hitbox", "hurtbox") groups=["player"]]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_oya4h")
+blue_shader = ExtResource("2_686vu")
+animacion = NodePath("AnimatedSprite2D")
+hurtboxPivot = NodePath("HurtboxPivot")
+hitbox = NodePath("Hitbox")
+hurtbox = NodePath("HurtboxPivot/Hurtbox")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1156699237]
+position = Vector2(3.8146973e-06, 0.97656095)
+scale = Vector2(0.9350649, 0.9842491)
+sprite_frames = ExtResource("1_tg20s")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1989449960]
+visible = false
+shape = SubResource("RectangleShape2D_tg20s")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=2073882041]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=838686882]
+shape = SubResource("RectangleShape2D_oya4h")
+
+[node name="HurtboxPivot" type="Node2D" parent="." unique_id=200822512]
+position = Vector2(38, 0)
+
+[node name="Hurtbox" type="Area2D" parent="HurtboxPivot" unique_id=616019100]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxPivot/Hurtbox" unique_id=1595303690]
+shape = SubResource("RectangleShape2D_fwk1h")

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bpd826kl5bqq0"]
+
+[ext_resource type="Script" uid="uid://ceimp6gy1hmcc" path="res://scenes/characters/enemies/test_boss/test_boss_enemy.gd" id="1_7mfsb"]
+[ext_resource type="Texture2D" uid="uid://dfyttk85mfjgq" path="res://assets/characters/enemie_test.png" id="1_ttd8i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mfsb"]
+size = Vector2(184, 314)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttd8i"]
+size = Vector2(184, 314)
+
+[node name="TestBossEnemy" type="CharacterBody2D" unique_id=264527191 node_paths=PackedStringArray("hitbox", "rayCastDown", "rayCastRight", "rayCastUp", "rayCastLeft") groups=["enemy"]]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_7mfsb")
+hitbox = NodePath("Hitbox")
+rayCastDown = NodePath("RayCastDown")
+rayCastRight = NodePath("RayCastRight")
+rayCastUp = NodePath("RayCastUp")
+rayCastLeft = NodePath("RayCastLeft")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1926456816]
+scale = Vector2(2.9126985, 2.8761468)
+texture = ExtResource("1_ttd8i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=444683996]
+shape = SubResource("RectangleShape2D_7mfsb")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=36906367]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1102833623]
+shape = SubResource("RectangleShape2D_ttd8i")
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=1830254625]
+target_position = Vector2(99, 0)
+
+[node name="RayCastDown" type="RayCast2D" parent="." unique_id=1254220486]
+target_position = Vector2(0, 163)
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1205266160]
+target_position = Vector2(-99, 0)
+
+[node name="RayCastUp" type="RayCast2D" parent="." unique_id=2093657575]
+target_position = Vector2(0, -163)
