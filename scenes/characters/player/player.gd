@@ -10,7 +10,7 @@ const walk_velocity: float = 300.0
 const jump_velocity: float = -500.0
 const knockback_force_X := 400.0
 const knockback_force_Y := -400.0
-const hitbox_offset = Vector2(38, 38)
+const hurtbox_offset = Vector2(38, 38)
 
 var _hit: bool = false
 var _atacking: bool = false
@@ -21,9 +21,11 @@ var _knockback := Vector2.ZERO
 var _hurtbox_pos = Vector2.ZERO
 
 func _ready() -> void:
-	hurtbox.body_entered.connect(_on_body_hurtbox_entered)
+	hurtbox.area_entered.connect(_on_hurtbox_hitbox_entered)
+	hitbox.area_entered.connect(_on_hitbox_hurtbox_entered)
 
 func _physics_process(delta: float) -> void:
+	#Handle inmunity
 	if PlayerController.get_inmunity_time() < PlayerController.get_inmunity_time_max() and _inmunity:
 		PlayerController.add_inmunity_time(delta)
 	else:
@@ -31,12 +33,10 @@ func _physics_process(delta: float) -> void:
 		PlayerController.reset_inmunity_timer()
 	
 	if PlayerController.is_muerto():
-		await animacion.animation_finished
 		get_tree().quit(0)
 
 	if !is_on_floor():
 		velocity += get_gravity() * delta
-
 	else:
 		PlayerController.reset_jump_count()
 		PlayerController.reset_dash_count()
@@ -67,16 +67,16 @@ func _physics_process(delta: float) -> void:
 
 	# Handle hurtbox.
 	if Input.is_action_pressed("der"):
-		_hurtbox_pos.x = hitbox_offset.x
+		_hurtbox_pos.x = hurtbox_offset.x
 	elif Input.is_action_pressed("izq"):
-		_hurtbox_pos.x = -hitbox_offset.x
+		_hurtbox_pos.x = -hurtbox_offset.x
 
 	if Input.is_action_pressed("up"):
 		_hurtbox_pos.x = 0
-		_hurtbox_pos.y = -hitbox_offset.y * 2
+		_hurtbox_pos.y = -hurtbox_offset.y * 2
 	elif Input.is_action_pressed("down"):
 		_hurtbox_pos.x = 0
-		_hurtbox_pos.y = hitbox_offset.y * 2
+		_hurtbox_pos.y = hurtbox_offset.y * 2
 	else:
 		_set_last_position()
 	hurtboxPivot.position = _hurtbox_pos
@@ -113,16 +113,21 @@ func _physics_process(delta: float) -> void:
 		hurtbox.monitorable = true
 		_atacking = true
 	
-	# DEBUG, restore life
+	# DEBUG: Restore life
 	if Input.is_action_just_pressed("health"):
 		_health()
 
 	move_and_slide()
 	_control_animation()
 
-func _on_body_hurtbox_entered(body: Node2D) -> void:
+func _on_hurtbox_hitbox_entered(area: Area2D) -> void:
 	if Input.is_action_pressed("down"):
-		_control_knockback_atack(body)
+		_control_knockback_atack(area)
+
+func _on_hitbox_hurtbox_entered(area: Area2D) -> void:
+	if area.get_parent().get_parent().is_in_group("enemy"):
+		if area.name == "Hurtbox":
+			_control_damage(area)
 
 func _control_damage(body: Node2D):
 	if !_defending and !_inmunity:
@@ -130,7 +135,6 @@ func _control_damage(body: Node2D):
 		RunScript.add_hit()
 		_hit = true
 		_inmunity = true
-
 	_control_knockback_damage(body)
 	
 	print("El personaje jugable recibio daño, VIDA: ",PlayerController.get_life_count())
@@ -145,9 +149,9 @@ func _control_knockback_damage(body: Node2D):
 	_knockback.y = knockback_force_Y
 	velocity = _knockback
 
-func _control_knockback_atack(body: Node2D):
+func _control_knockback_atack(area: Area2D):
 	# Dirección del golpe
-	var direction = sign(global_position.x - body.global_position.x)
+	var direction = sign(global_position.x - area.global_position.x)
 	
 	# Aplicar knockback
 	_knockback.x = direction * (knockback_force_X * 1.5)
@@ -194,10 +198,10 @@ func _defense_animation():
 
 func _set_last_position():
 	if !animacion.flip_h:
-		_hurtbox_pos.x = hitbox_offset.x
+		_hurtbox_pos.x = hurtbox_offset.x
 		_hurtbox_pos.y = 0
 	else:
-		_hurtbox_pos.x = -hitbox_offset.x
+		_hurtbox_pos.x = -hurtbox_offset.x
 		_hurtbox_pos.y = 0
 
 func _health():

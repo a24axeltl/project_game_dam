@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="TestRoom"
+config/name="ProyectoDAM"
 run/main_scene="uid://cdx1jwcuht2f6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 PlayerController="*uid://buqdglywdhnlr"
 RunScript="*uid://bg1rq0oac5tco"
+
+[global_group]
+
+enemy=""
 
 [input]
 
@@ -112,3 +116,4 @@ debug_next={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.66656864, 0.6665687, 0.6665685, 1)

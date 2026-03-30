@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://hpats7kjkppj"]
+
+[ext_resource type="SpriteFrames" uid="uid://bgy6uhgm771k0" path="res://scenes/characters/enemies/attack_enemy/attack_enemy.tres" id="1_i25l1"]
+[ext_resource type="Script" uid="uid://nr4n3iw6d6rf" path="res://scenes/characters/enemies/attack_enemy/attack_enemy.gd" id="1_ti5qr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ti5qr"]
+size = Vector2(58.46875, 124.63281)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i25l1"]
+size = Vector2(60.5, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nswak"]
+size = Vector2(71, 87)
+
+[node name="AttackEnemy" type="CharacterBody2D" unique_id=786959747 node_paths=PackedStringArray("animacion", "hitbox", "rayCastFloor", "rayCastWall", "hurtboxPivot", "hurtbox") groups=["enemy"]]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_ti5qr")
+animacion = NodePath("AnimatedSprite2D")
+hitbox = NodePath("Hitbox")
+rayCastFloor = NodePath("RayCastFloor")
+rayCastWall = NodePath("RayCastWall")
+hurtboxPivot = NodePath("HurtboxPivot")
+hurtbox = NodePath("HurtboxPivot/Hurtbox")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1466066703]
+sprite_frames = ExtResource("1_i25l1")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=805364112]
+shape = SubResource("RectangleShape2D_ti5qr")
+
+[node name="RayCastFloor" type="RayCast2D" parent="." unique_id=2012054326]
+target_position = Vector2(40, 66)
+
+[node name="RayCastWall" type="RayCast2D" parent="." unique_id=824620438]
+target_position = Vector2(41, 0)
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=890870866]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1029439214]
+position = Vector2(1.25, 0)
+shape = SubResource("RectangleShape2D_i25l1")
+
+[node name="HurtboxPivot" type="Node2D" parent="." unique_id=167842300]
+position = Vector2(38, 0)
+
+[node name="Hurtbox" type="Area2D" parent="HurtboxPivot" unique_id=461687773]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxPivot/Hurtbox" unique_id=364971061]
+shape = SubResource("RectangleShape2D_nswak")

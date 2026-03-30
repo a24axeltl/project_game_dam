@@ -6,6 +6,8 @@ enum State {PATROL, CHASE}
 @export var hitbox: Area2D
 @export var rayCastFloor: RayCast2D
 @export var rayCastWall: RayCast2D
+@export var hurtboxPivot: Node2D
+@export var hurtbox: Area2D
 
 const damage: int = 1
 const knockback_force_X := 400.0
@@ -13,11 +15,14 @@ const knockback_force_Y := -400.0
 const detection_distance_x: float = 450.0
 const detection_distance_y: float = 250.0
 const walk_velocity: float = 100.0
+const hurtbox_offset = Vector2(38, 38)
 
 var _hit: bool = false
+var _atacking: bool = false
 var _muerto: bool = false
 var _life_count: int = 2
 var _direction: int = 1
+var _hurtbox_pos = Vector2.ZERO
 var _knockback := Vector2.ZERO
 var _state: State = State.PATROL
 var _player: Node2D
@@ -32,6 +37,13 @@ func _physics_process(delta: float) -> void:
 	# Handle gravity.
 	if !is_on_floor():
 		velocity += get_gravity() * delta
+
+	# Handle hurtbox.
+	if !animacion.flip_h:
+		_hurtbox_pos.x = hurtbox_offset.x
+	else:
+		_hurtbox_pos.x = -hurtbox_offset.x
+	hurtboxPivot.position = _hurtbox_pos
 
 	# Handle RayCast.
 	if !rayCastFloor.is_colliding() or rayCastWall.is_colliding():
@@ -57,7 +69,7 @@ func _physics_process(delta: float) -> void:
 	if _player:
 		var distance = _player.global_position - global_position
 		if abs(distance.x) < detection_distance_x and abs(distance.y) < detection_distance_y:
-			_state = State.CHASE
+			_state =  State.CHASE
 		else:
 			_state = State.PATROL
 	
@@ -74,6 +86,8 @@ func _physics_process(delta: float) -> void:
 	# Handle life.
 	if _life_count == 0:
 		_muerto = true
+	
+	_control_animation()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.get_parent().get_parent().is_in_group("player"):
@@ -100,3 +114,23 @@ func _chase():
 	var player_direction = sign(_player.global_position.x - global_position.x)
 	velocity.x = player_direction * (walk_velocity*2)
 	animacion.flip_h = player_direction < 0
+	var distance = _player.global_position - global_position
+	if abs(distance.x) < 130 and abs(distance.y) < 50:
+			_attack()
+
+func _attack():
+	_atacking = true 
+	hurtbox.monitoring  = true
+	hurtbox.monitorable = true
+
+func _control_animation():
+	if _atacking:
+		_atack_animation()
+	else:
+		animacion.play("idle")
+
+func _atack_animation():
+	animacion.play("attack")
+	_atacking = false
+	hurtbox.monitoring  = false
+	hurtbox.monitorable = false
