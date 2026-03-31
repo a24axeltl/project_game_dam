@@ -22,6 +22,7 @@ var _hurtbox_pos = Vector2.ZERO
 
 func _ready() -> void:
 	hurtbox.area_entered.connect(_on_hurtbox_hitbox_entered)
+	hitbox.area_entered.connect(_on_hitbox_hurtbox_entered)
 
 func _physics_process(delta: float) -> void:
 	#Handle inmunity
@@ -30,9 +31,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		_inmunity = false
 		PlayerController.reset_inmunity_timer()
-	
-	# Handle damage with a hitbox.
-	_handle_damage_hitbox()
 	
 	if PlayerController.is_muerto():
 		get_tree().quit(0)
@@ -46,6 +44,11 @@ func _physics_process(delta: float) -> void:
 	if !_atacking:
 		hurtbox.monitoring  = false
 		hurtbox.monitorable = false
+	
+	# Handle damage hitbox.
+	for body in hitbox.get_overlapping_bodies():
+		if body.is_in_group("enemy"):
+			_control_damage(body)
 
 	# Handle jump.
 	if Input.is_action_just_pressed("salto") and PlayerController.get_jump_count() <= 1:
@@ -121,9 +124,9 @@ func _on_hurtbox_hitbox_entered(area: Area2D) -> void:
 	if Input.is_action_pressed("down"):
 		_control_knockback_atack(area)
 
-func _handle_damage_hitbox():
-	for area in hitbox.get_overlapping_areas():
-		if area.get_owner().is_in_group("enemy"):
+func _on_hitbox_hurtbox_entered(area: Area2D) -> void:
+	if area.get_parent().get_parent().is_in_group("enemy"):
+		if area.name == "Hurtbox":
 			_control_damage(area)
 
 func _control_damage(body: Node2D):
