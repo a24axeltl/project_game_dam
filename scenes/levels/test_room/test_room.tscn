@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d3prqsg8bpdtf" path="res://scenes/characters/enemies/basic_enemy/basic_enemy.tscn" id="3_af4j7"]
 [ext_resource type="PackedScene" uid="uid://hpats7kjkppj" path="res://scenes/characters/enemies/attack_enemy/attack_enemy.tscn" id="4_riu6q"]
 [ext_resource type="TileSet" uid="uid://dxdjsbax8tlda" path="res://tilesets/test_assets.tres" id="4_watgw"]
+[ext_resource type="PackedScene" uid="uid://cbw1vab8rgi5l" path="res://scenes/characters/enemies/shooter_enemy/shooter_enemy.tscn" id="6_af4j7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_olv5d"]
 size = Vector2(4845, 20)
@@ -22,6 +23,9 @@ position = Vector2(-916, 95)
 
 [node name="AttackEnemy" parent="." unique_id=786959747 instance=ExtResource("4_riu6q")]
 position = Vector2(-228, 103)
+
+[node name="ShooterEnemy" parent="." unique_id=1355098275 instance=ExtResource("6_af4j7")]
+position = Vector2(439, -63)
 
 [node name="Floor" type="RigidBody2D" parent="." unique_id=828943443]
 position = Vector2(-8, 709)

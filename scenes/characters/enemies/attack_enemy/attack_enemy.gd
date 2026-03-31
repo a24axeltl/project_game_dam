@@ -90,7 +90,7 @@ func _physics_process(delta: float) -> void:
 	_control_animation()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.get_parent().get_parent().is_in_group("player"):
+	if area.get_owner().is_in_group("player"):
 		if area.name == "Hurtbox":
 			_damage_control(area)
 
