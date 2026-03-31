@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://chxyg2o8r0i7s"]
+
+[ext_resource type="Shader" uid="uid://cj5575c7v2vrl" path="res://shaders/enemy/black_shader.tres" id="1_838e8"]
+[ext_resource type="Script" uid="uid://c2i2uit55j3rk" path="res://scenes/objects/bullet/bullet.gd" id="1_hwavt"]
+[ext_resource type="Texture2D" uid="uid://dtv5ecswqcw8v" path="res://icon.svg" id="2_hwavt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rj4lm"]
+shader = ExtResource("1_838e8")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wj3vo"]
+size = Vector2(52, 15)
+
+[node name="Bullet" type="CharacterBody2D" unique_id=1199941265 node_paths=PackedStringArray("hitbox") groups=["enemy"]]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_hwavt")
+hitbox = NodePath("Hitbox")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=49150331]
+material = SubResource("ShaderMaterial_rj4lm")
+position = Vector2(-8, 2.5000002)
+scale = Vector2(0.40624997, 0.1171875)
+texture = ExtResource("2_hwavt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=163270491]
+position = Vector2(-8, 2.5)
+shape = SubResource("RectangleShape2D_wj3vo")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1242465586]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1348217751]
+position = Vector2(-8, 2.5)
+shape = SubResource("RectangleShape2D_wj3vo")

@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://w5788deww5vm"]
+
+[ext_resource type="Texture2D" uid="uid://o1dsj5ye5jm8" path="res://assets/characters/enemy_test/idle_spritesheet.png" id="1_bgtlr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_weed7"]
+atlas = ExtResource("1_bgtlr")
+region = Rect2(0, 0, 64, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jum0u"]
+atlas = ExtResource("1_bgtlr")
+region = Rect2(64, 0, 64, 124)
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"atack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_weed7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jum0u")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]

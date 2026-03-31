@@ -1,0 +1,16 @@
+class_name KeyContainer
+extends Node
+
+var _total_keys: int
+var _collected_keys: int
+
+func _ready() -> void:
+	var keys := get_children()
+	_total_keys = keys.size()
+	for key in keys:
+		key.key_container = self
+
+func collecte_key():
+	_collected_keys += 1
+	if _collected_keys == _total_keys:
+		get_parent().get_parent().next_level()

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cbw1vab8rgi5l"]
+
+[ext_resource type="Script" uid="uid://cq7xfvmcee6bp" path="res://scenes/characters/enemies/shooter_enemy/shooter_enemy.gd" id="1_mpxuq"]
+[ext_resource type="Texture2D" uid="uid://qrg6pa3uhna7" path="res://assets/characters/enemy_test/idle_shooter.png" id="1_qpsir"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpxuq"]
+atlas = ExtResource("1_qpsir")
+region = Rect2(0, 0, 64, 65)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujfer"]
+atlas = ExtResource("1_qpsir")
+region = Rect2(64, 0, 64, 65)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k11xq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpxuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujfer")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qpsir"]
+radius = 35.0
+
+[node name="ShooterEnemy" type="Node2D" unique_id=1355098275 node_paths=PackedStringArray("spawnPoint", "timer") groups=["enemy"]]
+script = ExtResource("1_mpxuq")
+spawnPoint = NodePath("SpawnPoint")
+timer = NodePath("Timer")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=387483722]
+sprite_frames = SubResource("SpriteFrames_k11xq")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.82638425
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=694722219]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=701932056]
+shape = SubResource("CircleShape2D_qpsir")
+
+[node name="Timer" type="Timer" parent="." unique_id=1904002427]
+autostart = true
+
+[node name="SpawnPoint" type="Node2D" parent="." unique_id=1910062126]
+position = Vector2(0, 67)
