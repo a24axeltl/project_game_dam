@@ -9,7 +9,7 @@ func _ready() -> void:
 	RunScript.start_timer()
 	create_level(_actual_level)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("debug_next") and _actual_level != levels.size():
 		next_level()
 

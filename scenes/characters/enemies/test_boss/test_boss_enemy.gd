@@ -24,7 +24,7 @@ var enemy_container: EnemyContainer
 func _ready() -> void:
 	hitbox.area_entered.connect(_on_area_2d_area_entered)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	# Handle RayCast.
 	if rayCastDown.is_colliding() or rayCastRight.is_colliding() or rayCastUp.is_colliding() or rayCastLeft.is_colliding():
 		_direction *= -1
