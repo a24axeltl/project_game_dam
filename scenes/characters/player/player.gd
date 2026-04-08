@@ -127,8 +127,9 @@ func _handle_damage_hitbox():
 			_control_damage(area)
 
 func _control_damage(body: Node2D):
+	var enemy_damage = body.owner.get("damage")
 	if !_defending and !_inmunity:
-		PlayerController.subtract_life(1)
+		PlayerController.subtract_life(enemy_damage)
 		RunScript.add_hit()
 		_hit = true
 		_inmunity = true

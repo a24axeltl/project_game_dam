@@ -3,6 +3,8 @@ extends Node2D
 @export var spawnPoint: Node2D
 @export var timer: Timer
 
+const damage: int = 1
+
 var bullet = preload("res://scenes/objects/bullet/bullet.tscn")
 
 func _ready() -> void:
