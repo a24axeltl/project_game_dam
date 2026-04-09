@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b6q6p3u67ia4q"]
+
+[ext_resource type="Script" uid="uid://di513upgb0ojk" path="res://scenes/objects/healing_objects/healing_object.gd" id="1_pps8u"]
+[ext_resource type="Texture2D" uid="uid://c6f5fwu2u35d5" path="res://assets/objects/healing_object/HealingTreeNoFruit_WIP.png" id="1_pve6o"]
+[ext_resource type="Texture2D" uid="uid://c4rplw62o5pme" path="res://assets/objects/healing_object/HealingTreeFruit_WIP.png" id="2_pps8u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_luxx1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pve6o")
+}],
+"loop": true,
+"name": &"no_fruit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pps8u")
+}],
+"loop": true,
+"name": &"with_fruit",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dexks"]
+size = Vector2(105.75, 131)
+
+[node name="HealingObject" type="Node2D" unique_id=124032395 node_paths=PackedStringArray("hitbox", "sprite")]
+script = ExtResource("1_pps8u")
+hitbox = NodePath("Hitbox")
+sprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1748392901]
+scale = Vector2(0.21103895, 0.22103658)
+sprite_frames = SubResource("SpriteFrames_luxx1")
+animation = &"with_fruit"
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=927324045]
+collision_layer = 8
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=727113070]
+position = Vector2(-3.875, -3.5)
+shape = SubResource("RectangleShape2D_dexks")

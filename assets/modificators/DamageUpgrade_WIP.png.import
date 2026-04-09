@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b40xa5fh8oh1q"
-path="res://.godot/imported/test_exit.png-cacb53b4319b6c7548b27536fac84b58.ctex"
+uid="uid://q1j1iiln0i2k"
+path="res://.godot/imported/DamageUpgrade_WIP.png-883b8c63b0899426e49d3e209689d96f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/exit_level/test_exit.png"
-dest_files=["res://.godot/imported/test_exit.png-cacb53b4319b6c7548b27536fac84b58.ctex"]
+source_file="res://assets/modificators/DamageUpgrade_WIP.png"
+dest_files=["res://.godot/imported/DamageUpgrade_WIP.png-883b8c63b0899426e49d3e209689d96f.ctex"]
 
 [params]
 
