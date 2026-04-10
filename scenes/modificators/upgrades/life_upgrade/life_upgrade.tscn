@@ -10,4 +10,5 @@ offset_bottom = 358.0
 theme = ExtResource("1_1iguu")
 text = "Life Upgrade"
 icon = ExtResource("1_og8fw")
+expand_icon = true
 script = ExtResource("2_6sok0")

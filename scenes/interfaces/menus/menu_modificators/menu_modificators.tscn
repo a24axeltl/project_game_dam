@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://wunkf12l6vwg"]
 
 [ext_resource type="PackedScene" uid="uid://b3nyxfdwae3n8" path="res://scenes/modificators/upgrades/life_upgrade/life_upgrade.tscn" id="1_y5lxe"]
+[ext_resource type="PackedScene" uid="uid://bxuohcyda7qc2" path="res://scenes/modificators/upgrades/damage_upgrade/damage_upgrade.tscn" id="2_6hg4b"]
+[ext_resource type="PackedScene" uid="uid://bher4n6poiiyo" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_dash_reduction/time_dash_reduction.tscn" id="3_qq44r"]
 
 [node name="MenuModificators" type="Control" unique_id=164326612]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,5 +28,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="LifeUpgrade" parent="VBoxContainer" unique_id=1194657547 instance=ExtResource("1_y5lxe")]
+process_mode = 3
+layout_mode = 2
+
+[node name="DamageUpgrade" parent="VBoxContainer" unique_id=977702863 instance=ExtResource("2_6hg4b")]
+process_mode = 3
+layout_mode = 2
+
+[node name="TimeReduction" parent="VBoxContainer" unique_id=509241284 instance=ExtResource("3_qq44r")]
 process_mode = 3
 layout_mode = 2

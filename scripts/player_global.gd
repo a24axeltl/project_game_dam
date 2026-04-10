@@ -54,8 +54,8 @@ func get_inmunity_time():
 func reset_inmunity_timer():
 	_inmunity_timer = 0.0
 
-func set_dash_time_max(dash_max: float):
-	_dash_time_max = dash_max
+func reduce_dash_time_max(dash_reduce: float):
+	_dash_time_max -= dash_reduce
 
 func get_dash_time_max():
 	return _dash_time_max
@@ -98,8 +98,8 @@ func get_jump_count():
 func get_damage_player():
 	return _damage
 
-func set_damage_player(damage: int):
-	_damage = damage
+func add_damage_player(new_damage: int):
+	_damage += new_damage
 
 func add_jump_count(jump: int):
 	_jump_count_current += jump

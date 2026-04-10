@@ -12,5 +12,7 @@ func _ready() -> void:
 
 func defeated_enemy():
 	_defeated_enemys += 1
-	if _defeated_enemys == _total_enemys:
+	if _defeated_enemys == _total_enemys and !get_child(0).is_in_group("boss"):
 		owner.get_parent().init_menu_modificators()
+	elif get_child(0).is_in_group("boss"):
+		owner.get_parent().next_level()

@@ -23,6 +23,7 @@ RunScript="*uid://bg1rq0oac5tco"
 [global_group]
 
 enemy=""
+boss=""
 
 [input]
 

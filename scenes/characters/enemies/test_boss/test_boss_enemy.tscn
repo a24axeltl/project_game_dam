@@ -9,7 +9,7 @@ size = Vector2(184, 314)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ttd8i"]
 size = Vector2(184, 314)
 
-[node name="TestBossEnemy" type="CharacterBody2D" unique_id=264527191 node_paths=PackedStringArray("hitbox", "rayCastDown", "rayCastRight", "rayCastUp", "rayCastLeft") groups=["enemy"]]
+[node name="TestBossEnemy" type="CharacterBody2D" unique_id=264527191 node_paths=PackedStringArray("hitbox", "rayCastDown", "rayCastRight", "rayCastUp", "rayCastLeft") groups=["boss", "enemy"]]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_7mfsb")
