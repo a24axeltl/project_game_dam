@@ -13,6 +13,9 @@ size = Vector2(4845, 20)
 
 [node name="Test_Room" type="Node2D" unique_id=1196158189]
 
+[node name="HealingObject" parent="." unique_id=124032395 instance=ExtResource("6_perqg")]
+position = Vector2(-463, 131)
+
 [node name="Player" parent="." unique_id=1543182604 instance=ExtResource("1_watgw")]
 position = Vector2(446, -268)
 
@@ -27,9 +30,6 @@ position = Vector2(-228, 103)
 
 [node name="ShooterEnemy" parent="." unique_id=1355098275 instance=ExtResource("6_af4j7")]
 position = Vector2(439, -63)
-
-[node name="HealingObject" parent="." unique_id=124032395 instance=ExtResource("6_perqg")]
-position = Vector2(-463, 131)
 
 [node name="Floor" type="RigidBody2D" parent="." unique_id=828943443]
 position = Vector2(-8, 709)

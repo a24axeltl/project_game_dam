@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr8k1cwl1ptrm"
-path="res://.godot/imported/LifeUpgrade_WIP.png-95a6a16e6060160efcc5f0f4e5cb5ec1.ctex"
+uid="uid://d7esuyvckjsq"
+path="res://.godot/imported/ExplosionHability_WIP.png-4d86be118a4496fbf6d639794575d675.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/modificators/LifeUpgrade_WIP.png"
-dest_files=["res://.godot/imported/LifeUpgrade_WIP.png-95a6a16e6060160efcc5f0f4e5cb5ec1.ctex"]
+source_file="res://assets/modificators/habilitys/ExplosionHability_WIP.png"
+dest_files=["res://.godot/imported/ExplosionHability_WIP.png-4d86be118a4496fbf6d639794575d675.ctex"]
 
 [params]
 

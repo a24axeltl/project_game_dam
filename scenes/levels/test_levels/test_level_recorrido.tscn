@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://5f4xvt46vnjl" path="res://scenes/characters/player/player.tscn" id="2_11lub"]
 [ext_resource type="TileSet" uid="uid://dxdjsbax8tlda" path="res://tilesets/test_assets.tres" id="3_11lub"]
 [ext_resource type="PackedScene" uid="uid://d3prqsg8bpdtf" path="res://scenes/characters/enemies/basic_enemy/basic_enemy.tscn" id="4_85v8c"]
-[ext_resource type="PackedScene" uid="uid://bas6p1esj2ubb" path="res://scenes/exit_door/exit_door.tscn" id="5_sr1yv"]
+[ext_resource type="PackedScene" uid="uid://bas6p1esj2ubb" path="res://scenes/objects/exit_door/exit_door.tscn" id="5_sr1yv"]
 
 [node name="TestLevel2" type="Node2D" unique_id=517779826]
 

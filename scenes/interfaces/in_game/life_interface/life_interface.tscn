@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjhwife5qt4v8"]
 
-[ext_resource type="Script" uid="uid://bbowlopcda3hy" path="res://life_interface.gd" id="1_24qka"]
+[ext_resource type="Script" uid="uid://bbowlopcda3hy" path="res://scenes/interfaces/in_game/life_interface/life_interface.gd" id="1_24qka"]
 
 [node name="LifeInterface" type="Control" unique_id=1294108106 node_paths=PackedStringArray("label")]
 layout_mode = 3

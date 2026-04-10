@@ -13,4 +13,4 @@ func _ready() -> void:
 func defeated_enemy():
 	_defeated_enemys += 1
 	if _defeated_enemys == _total_enemys:
-		get_parent().get_parent().next_level()
+		owner.get_parent().init_menu_modificators()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu5xy54253a10"
-path="res://.godot/imported/ShieldHability_WIP.png-153b78466dd72e65e7e33049015730d9.ctex"
+uid="uid://q1j1iiln0i2k"
+path="res://.godot/imported/DamageUpgrade_WIP.png-c9453ffe78a7c91ef5282f67419650c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/modificators/ShieldHability_WIP.png"
-dest_files=["res://.godot/imported/ShieldHability_WIP.png-153b78466dd72e65e7e33049015730d9.ctex"]
+source_file="res://assets/modificators/upgrades/DamageUpgrade_WIP.png"
+dest_files=["res://.godot/imported/DamageUpgrade_WIP.png-c9453ffe78a7c91ef5282f67419650c5.ctex"]
 
 [params]
 

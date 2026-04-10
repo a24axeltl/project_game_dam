@@ -13,4 +13,4 @@ func _ready() -> void:
 func collecte_key():
 	_collected_keys += 1
 	if _collected_keys == _total_keys:
-		get_parent().get_parent().next_level()
+		owner.get_parent().init_menu_modificators()

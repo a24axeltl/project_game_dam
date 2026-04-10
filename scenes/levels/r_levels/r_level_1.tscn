@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://d1txednftnfjd" path="res://tilesets/tile_floor.tres" id="1_dytoe"]
 [ext_resource type="PackedScene" uid="uid://5f4xvt46vnjl" path="res://scenes/characters/player/player.tscn" id="2_7v02r"]
-[ext_resource type="PackedScene" uid="uid://bas6p1esj2ubb" path="res://scenes/exit_door/exit_door.tscn" id="2_csqs4"]
+[ext_resource type="PackedScene" uid="uid://bas6p1esj2ubb" path="res://scenes/objects/exit_door/exit_door.tscn" id="2_csqs4"]
 [ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/camera/camera.tscn" id="3_csqs4"]
 [ext_resource type="PackedScene" uid="uid://d3prqsg8bpdtf" path="res://scenes/characters/enemies/basic_enemy/basic_enemy.tscn" id="5_csqs4"]
 [ext_resource type="PackedScene" uid="uid://cbw1vab8rgi5l" path="res://scenes/characters/enemies/shooter_enemy/shooter_enemy.tscn" id="6_7ktmd"]

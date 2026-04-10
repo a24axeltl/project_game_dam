@@ -87,8 +87,10 @@ func add_life(life: int):
 func get_life_max():
 	return _life_max_count
 
-func set_life_max(life: int):
-	_life_max_count = life
+func add_life_max(life: int):
+	_life_max_count += life
+	_life_current_count = _life_max_count
+	current_life.emit()
 
 func get_jump_count():
 	return _jump_count_current

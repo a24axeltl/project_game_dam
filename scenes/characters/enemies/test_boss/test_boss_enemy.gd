@@ -12,6 +12,7 @@ const knockback_force_X := 400.0
 const knockback_force_Y := -400.0
 const detection_distance: float = 250.0
 const walk_velocity: float = 100.0
+const damage: int = 1
 
 var _hit: bool = false
 var _muerto: bool = false

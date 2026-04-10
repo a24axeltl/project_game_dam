@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d2de13gr6gf74"]
 
-[ext_resource type="Script" uid="uid://p0ukummlawyp" path="res://scenes/finish/finish.gd" id="1_w5ssc"]
+[ext_resource type="Script" uid="uid://p0ukummlawyp" path="res://scenes/results/results.gd" id="1_w5ssc"]
 [ext_resource type="Texture2D" uid="uid://drduut3661fkj" path="res://assets/joke/luigi-spin.png" id="2_vwv2c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g6loe"]
@@ -102,7 +102,7 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="Finish" type="Node2D" unique_id=1736534899 node_paths=PackedStringArray("label_time", "label_hit", "animation1", "animation2")]
+[node name="Results" type="Node2D" unique_id=1736534899 node_paths=PackedStringArray("label_time", "label_hit", "animation1", "animation2")]
 script = ExtResource("1_w5ssc")
 label_time = NodePath("Tiempo")
 label_hit = NodePath("Hits")

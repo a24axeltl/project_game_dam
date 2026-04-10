@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvnkalbdfrl2v"
-path="res://.godot/imported/TimeUpgrade_WIP.png-d58f73ada98ac7a287dc5b8a427e7efe.ctex"
+uid="uid://cu5xy54253a10"
+path="res://.godot/imported/ShieldHability_WIP.png-2ab040972b2d97f93c7d1c4395d2040f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/modificators/TimeUpgrade_WIP.png"
-dest_files=["res://.godot/imported/TimeUpgrade_WIP.png-d58f73ada98ac7a287dc5b8a427e7efe.ctex"]
+source_file="res://assets/modificators/habilitys/ShieldHability_WIP.png"
+dest_files=["res://.godot/imported/ShieldHability_WIP.png-2ab040972b2d97f93c7d1c4395d2040f.ctex"]
 
 [params]
 
