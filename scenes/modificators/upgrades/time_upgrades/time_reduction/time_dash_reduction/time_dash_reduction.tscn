@@ -1,14 +1,12 @@
-[gd_scene format=3 uid="uid://bher4n6poiiyo"]
+[gd_scene format=3 uid="uid://bhbx3o2obqpib"]
 
 [ext_resource type="Texture2D" uid="uid://cvnkalbdfrl2v" path="res://assets/modificators/upgrades/TimeUpgrade_WIP.png" id="1_iy0rr"]
 [ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="1_t35oq"]
 [ext_resource type="Script" uid="uid://b4ekvcjkqiu3b" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_dash_reduction/time_dash_reduction.gd" id="3_jlxij"]
 
-[node name="TimeDashReduction" type="Button" unique_id=509241284]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="TimeDashReduction" type="Button" unique_id=1242088891]
 theme = ExtResource("1_t35oq")
-text = "Time Dash Reduction"
+text = "Dash Reduction"
 icon = ExtResource("1_iy0rr")
 expand_icon = true
 script = ExtResource("3_jlxij")

@@ -1,3 +1,12 @@
 [gd_scene format=3 uid="uid://dmkbpx3xchnue"]
 
-[node name="FullShieldHability" type="Node2D" unique_id=2099730376]
+[ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="1_sweyc"]
+[ext_resource type="Texture2D" uid="uid://cu5xy54253a10" path="res://assets/modificators/habilitys/ShieldHability_WIP.png" id="2_wmak4"]
+[ext_resource type="Script" uid="uid://eih7ibsuwux0" path="res://scenes/modificators/habilitys/full_shield_hability/full_shield_hability.gd" id="3_53anh"]
+
+[node name="FullShieldHability" type="Button" unique_id=1681241325]
+theme = ExtResource("1_sweyc")
+text = "Shield Hability"
+icon = ExtResource("2_wmak4")
+expand_icon = true
+script = ExtResource("3_53anh")

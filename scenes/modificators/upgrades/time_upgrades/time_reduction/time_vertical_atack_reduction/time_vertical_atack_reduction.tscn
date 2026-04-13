@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bkbn0ay1b3sip"]
+
+[ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="1_5crkq"]
+[ext_resource type="Texture2D" uid="uid://cvnkalbdfrl2v" path="res://assets/modificators/upgrades/TimeUpgrade_WIP.png" id="2_ffqid"]
+[ext_resource type="Script" uid="uid://cnnqyt8uewrad" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_vertical_atack_reduction/time_vertical_atack_reduction.gd" id="3_ffqid"]
+
+[node name="TimeVerticalAtackReduction" type="Button" unique_id=842341272]
+theme = ExtResource("1_5crkq")
+text = "Vertical Reduction"
+icon = ExtResource("2_ffqid")
+expand_icon = true
+script = ExtResource("3_ffqid")

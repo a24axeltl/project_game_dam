@@ -84,7 +84,7 @@ func _physics_process(delta: float) -> void:
 	animacion.play("idle")
 	
 	# Handle life.
-	if _life_count == 0:
+	if _life_count <= 0:
 		_muerto = true
 	
 	_control_animation()

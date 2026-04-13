@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://wunkf12l6vwg"]
 
-[ext_resource type="PackedScene" uid="uid://b3nyxfdwae3n8" path="res://scenes/modificators/upgrades/life_upgrade/life_upgrade.tscn" id="1_y5lxe"]
-[ext_resource type="PackedScene" uid="uid://bxuohcyda7qc2" path="res://scenes/modificators/upgrades/damage_upgrade/damage_upgrade.tscn" id="2_6hg4b"]
-[ext_resource type="PackedScene" uid="uid://bher4n6poiiyo" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_dash_reduction/time_dash_reduction.tscn" id="3_qq44r"]
+[ext_resource type="PackedScene" uid="uid://dmkbpx3xchnue" path="res://scenes/modificators/habilitys/full_shield_hability/full_shield_hability.tscn" id="4_aqxoi"]
+[ext_resource type="PackedScene" uid="uid://dmlhoamwyfyd1" path="res://scenes/modificators/habilitys/explosion_atack_hability/explosion_atack_hability.tscn" id="5_d26cb"]
+[ext_resource type="PackedScene" uid="uid://gmw5uvwnf8dv" path="res://scenes/modificators/habilitys/vertical_atack_hability/vertical_atack_hability.tscn" id="5_jgdg1"]
+[ext_resource type="PackedScene" uid="uid://c72bj6hlah0u6" path="res://scenes/modificators/upgrades/time_upgrades/time_amplification/time_shield_amplification/time_shield_amplification.tscn" id="6_dsik6"]
+[ext_resource type="PackedScene" uid="uid://crcv03xh042i8" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_explosion_reduction/time_explosion_reduction.tscn" id="6_jgdg1"]
+[ext_resource type="PackedScene" uid="uid://bkbn0ay1b3sip" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_vertical_atack_reduction/time_vertical_atack_reduction.tscn" id="7_dsik6"]
 
 [node name="MenuModificators" type="Control" unique_id=164326612]
 process_mode = 3
@@ -27,14 +30,21 @@ offset_bottom = 179.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LifeUpgrade" parent="VBoxContainer" unique_id=1194657547 instance=ExtResource("1_y5lxe")]
-process_mode = 3
+[node name="FullShieldHability" parent="VBoxContainer" unique_id=1681241325 instance=ExtResource("4_aqxoi")]
 layout_mode = 2
 
-[node name="DamageUpgrade" parent="VBoxContainer" unique_id=977702863 instance=ExtResource("2_6hg4b")]
-process_mode = 3
+[node name="TimeShieldAmplification" parent="VBoxContainer" unique_id=192243634 instance=ExtResource("6_dsik6")]
+layout_mode = 2
+text = "Shield Ampli"
+
+[node name="ExplosionAtackHability" parent="VBoxContainer" unique_id=1201823494 instance=ExtResource("5_d26cb")]
 layout_mode = 2
 
-[node name="TimeReduction" parent="VBoxContainer" unique_id=509241284 instance=ExtResource("3_qq44r")]
-process_mode = 3
+[node name="TimeExplosionReduction" parent="VBoxContainer" unique_id=1750254924 instance=ExtResource("6_jgdg1")]
+layout_mode = 2
+
+[node name="VerticalAtackHability" parent="VBoxContainer" unique_id=101550759 instance=ExtResource("5_jgdg1")]
+layout_mode = 2
+
+[node name="TimeVerticalAtackReduction" parent="VBoxContainer" unique_id=842341272 instance=ExtResource("7_dsik6")]
 layout_mode = 2
