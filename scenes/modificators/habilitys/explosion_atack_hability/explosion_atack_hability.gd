@@ -4,6 +4,6 @@ func _ready() -> void:
 	pressed.connect(_button_pressed)
 
 func _button_pressed():
-	PlayerController.set_explosion_atack(true)
+	HabilitysController.set_explosion_atack(true)
 	owner.get_parent().next_level()
 	owner.queue_free()

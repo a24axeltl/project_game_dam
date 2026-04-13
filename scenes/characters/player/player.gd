@@ -104,18 +104,18 @@ func _physics_process(delta: float) -> void:
 		_control_atack()
 	
 	# Handle hability def.
-	if Input.is_action_pressed("def") and is_on_floor() and PlayerController.have_shield():
-		if PlayerController.get_defense_time() < PlayerController.get_defense_time_max():
+	if Input.is_action_pressed("def") and is_on_floor() and HabilitysController.have_shield():
+		if HabilitysController.get_defense_time() < HabilitysController.get_defense_time_max():
 			_defending = true
-			PlayerController.add_defense_time(delta)
+			HabilitysController.add_defense_time(delta)
 		else:
 			_defending = false
 	else:
 		_defending = false
-		PlayerController.reset_defense_timer()
+		HabilitysController.reset_defense_timer()
 	
 	# Handle hability vertical atack.
-	if Input.is_action_just_pressed("vertical_atq") and !_vertical_atacking and PlayerController.get_vertical_atack_time() < PlayerController.get_vertical_atack_time_max() and PlayerController.have_vertical_atack():
+	if Input.is_action_just_pressed("vertical_atq") and !_vertical_atacking and HabilitysController.get_vertical_atack_time() < HabilitysController.get_vertical_atack_time_max() and HabilitysController.have_vertical_atack():
 		_vertical_atacking = true
 		_control_atack()
 		_resize_hurtbox(hurtbox_vertical_size)
@@ -123,28 +123,28 @@ func _physics_process(delta: float) -> void:
 		
 		await get_tree().create_timer(0.2).timeout
 		_resize_hurtbox(hurtbox_size)
-		PlayerController.reset_vertical_atack_timer()
-	if PlayerController.get_vertical_atack_time() < PlayerController.get_vertical_atack_time_max() and _vertical_atacking:
-		PlayerController.add_vertical_atack_time(delta)
+		HabilitysController.reset_vertical_atack_timer()
+	if HabilitysController.get_vertical_atack_time() < HabilitysController.get_vertical_atack_time_max() and _vertical_atacking:
+		HabilitysController.add_vertical_atack_time(delta)
 	else:
 		_vertical_atacking = false
-		PlayerController.reset_vertical_atack_timer()
+		HabilitysController.reset_vertical_atack_timer()
 	
 	# Handle hability explosion.
-	if Input.is_action_just_pressed("explosion_atq") and !_explosion_atacking and PlayerController.have_explosion_atack():
+	if Input.is_action_just_pressed("explosion_atq") and !_explosion_atacking and HabilitysController.have_explosion_atack():
 		_explosion_atacking = true
-		PlayerController.set_damage_player_with_explosion()
+		HabilitysController.set_damage_player_with_explosion()
 		_control_atack()
 		_resize_hurtbox(hurtbox_explosion_size)
 		
 		await get_tree().create_timer(0.3).timeout
-		PlayerController.set_damage_player_without_explosion()
+		HabilitysController.set_damage_player_without_explosion()
 		_resize_hurtbox(hurtbox_size)
-	if PlayerController.get_explosion_atack_time() < PlayerController.get_explosion_atack_time_max() and _explosion_atacking:
-		PlayerController.add_explosion_atack_time(delta)
+	if HabilitysController.get_explosion_atack_time() < HabilitysController.get_explosion_atack_time_max() and _explosion_atacking:
+		HabilitysController.add_explosion_atack_time(delta)
 	else:
 		_explosion_atacking = false
-		PlayerController.reset_explosion_atack_timer()
+		HabilitysController.reset_explosion_atack_timer()
 	
 	# DEBUG: Restore life
 	if Input.is_action_just_pressed("health"):
