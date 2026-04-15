@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b5qw22e2rnud" path="res://assets/joke/death_pose.png" id="1_dp3h3"]
 [ext_resource type="Script" uid="uid://cpg5rnxswo58t" path="res://scenes/interfaces/menus/menu_death/retry_button.gd" id="2_fn2ve"]
-[ext_resource type="Script" uid="uid://ihhudwvey5iv" path="res://scenes/interfaces/menus/menu_death/exit_button.gd" id="2_xqsv0"]
+[ext_resource type="Script" uid="uid://ihhudwvey5iv" path="res://scenes/interfaces/menus/exit_button.gd" id="2_xqsv0"]
 [ext_resource type="PackedScene" uid="uid://cdx1jwcuht2f6" path="res://scenes/controller_levels/controller_levels.tscn" id="3_ct0de"]
 
 [node name="MenuDeath" type="Control" unique_id=1115627666]

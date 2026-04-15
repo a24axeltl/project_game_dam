@@ -16,4 +16,4 @@ label = NodePath("Label")
 layout_mode = 0
 offset_right = 652.0
 offset_bottom = 640.0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 60

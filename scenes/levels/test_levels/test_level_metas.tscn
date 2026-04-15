@@ -18,7 +18,8 @@ rotation = 3.126505
 position = Vector2(769, 1124.0001)
 rotation = 3.126505
 
-[node name="KeyContainer" parent="." unique_id=485478545 instance=ExtResource("1_rc3kj")]
+[node name="KeyContainer" parent="." unique_id=485478545 node_paths=PackedStringArray("remainKeysLabel") instance=ExtResource("1_rc3kj")]
+remainKeysLabel = NodePath("../Player/Camera2D/Label")
 
 [node name="Key" parent="KeyContainer" unique_id=1709542588 instance=ExtResource("2_awn3m")]
 position = Vector2(-517, -121)
@@ -53,3 +54,11 @@ anchor_bottom = 0.0
 offset_top = -267.0
 offset_bottom = -267.0
 grow_vertical = 1
+
+[node name="Label" type="Label" parent="Player/Camera2D" unique_id=2063044652]
+offset_left = 473.0
+offset_top = -275.0
+offset_right = 513.0
+offset_bottom = -206.0
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1

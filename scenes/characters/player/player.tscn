@@ -13,7 +13,7 @@ size = Vector2(61, 122.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwk1h"]
 size = Vector2(71, 87)
 
-[node name="Player" type="CharacterBody2D" unique_id=1543182604 node_paths=PackedStringArray("animacion", "hurtboxPivot", "hitbox", "hurtbox", "hurtboxCollision") groups=["player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1543182604 node_paths=PackedStringArray("animacion", "hurtboxPivot", "hitbox", "hurtbox", "hurtboxCollision", "colorDebug") groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_oya4h")
 blue_shader = ExtResource("2_686vu")
@@ -22,6 +22,7 @@ hurtboxPivot = NodePath("HurtboxPivot")
 hitbox = NodePath("Hitbox")
 hurtbox = NodePath("HurtboxPivot/Hurtbox")
 hurtboxCollision = NodePath("HurtboxPivot/Hurtbox/CollisionShape2D")
+colorDebug = NodePath("HurtboxPivot/Hurtbox/CollisionShape2D/ColorDebug")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1156699237]
 position = Vector2(3.8146973e-06, 0.97656095)

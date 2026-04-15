@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var hitbox: Area2D
 @export var hurtbox: Area2D
 @export var hurtboxCollision: CollisionShape2D
+@export var colorDebug: ColorRect
 
 const walk_velocity: float = 300.0
 const jump_velocity: float = -500.0
@@ -147,9 +148,13 @@ func _physics_process(delta: float) -> void:
 		_explosion_atacking = false
 		HabilitysController.reset_explosion_atack_timer()
 	
-	# DEBUG: Restore life
+	# DEBUG: 
+	# Restore life
 	if Input.is_action_just_pressed("health"):
 		_health()
+	# Damage Field
+	var collision_actual_shape = hurtboxCollision.shape.get_rect().size
+	colorDebug.size = collision_actual_shape
 
 	move_and_slide()
 	_control_animation()

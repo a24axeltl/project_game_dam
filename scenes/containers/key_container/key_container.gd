@@ -1,6 +1,8 @@
 class_name KeyContainer
 extends Node
 
+@export var remainKeysLabel: Label
+
 var _total_keys: int
 var _collected_keys: int
 
@@ -14,3 +16,4 @@ func collecte_key():
 	_collected_keys += 1
 	if _collected_keys == _total_keys:
 		owner.get_parent().init_menu_modificators()
+	remainKeysLabel.text = str(_collected_keys,"/",_total_keys)

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://duhq0gxf7veoe"]
+
+[ext_resource type="Script" uid="uid://cqxlr0f05b4id" path="res://scenes/interfaces/menus/menu_main/star_button.gd" id="1_xijqv"]
+[ext_resource type="Script" uid="uid://ihhudwvey5iv" path="res://scenes/interfaces/menus/exit_button.gd" id="2_xijqv"]
+
+[node name="MainMenu" type="Control" unique_id=366997339]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=1573540113]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 650.0
+color = Color(0.9779369, 0.97793704, 0.9779369, 1)
+
+[node name="ContainerLabel" type="VBoxContainer" parent="." unique_id=1586684675]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.0
+offset_top = 148.0
+offset_right = 232.0
+offset_bottom = 244.0
+grow_horizontal = 2
+
+[node name="TitleLabel" type="Label" parent="ContainerLabel" unique_id=662388600]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "Cracked Mind"
+
+[node name="Label" type="Label" parent="ContainerLabel" unique_id=2055090998]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "(Prototype)"
+horizontal_alignment = 1
+
+[node name="ContainerButton" type="VBoxContainer" parent="." unique_id=1629617544]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -86.5
+offset_top = -286.0
+offset_right = 86.5
+offset_bottom = -114.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StarButton" type="Button" parent="ContainerButton" unique_id=1977199958]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+text = "Iniciar"
+script = ExtResource("1_xijqv")
+
+[node name="ExitButton" type="Button" parent="ContainerButton" unique_id=1735855371]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+text = "Salir"
+script = ExtResource("2_xijqv")

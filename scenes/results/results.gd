@@ -18,8 +18,8 @@ func play_animations():
 
 func set_text_labels():
 	label_time.text = str("Duración: ",RunScript.get_time())
-	label_hit.text = str("Numero de Golpes: ",RunScript.get_hits())
+	label_hit.text = str("Golpes Recibidos: ",RunScript.get_hits())
 
 func close_program():
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(4.0).timeout
 	get_tree().quit(0)
