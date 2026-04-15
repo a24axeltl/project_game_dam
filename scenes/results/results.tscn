@@ -58,6 +58,13 @@ label_time = NodePath("Camera2D/VBoxContainer/Tiempo")
 label_hit = NodePath("Camera2D/VBoxContainer/Hits")
 animation = NodePath("CelebrateSprite")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=916238315]
+offset_left = -384.0
+offset_top = -276.0
+offset_right = 384.0
+offset_bottom = 156.0
+color = Color(0.9882353, 0.81960785, 0.40784314, 1)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1850918490]
 offset = Vector2(0, -60)
 zoom = Vector2(1.5, 1.5)

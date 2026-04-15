@@ -44,7 +44,7 @@ horizontal_alignment = 1
 [node name="LabelInfo" type="Label" parent="ContainerLabel" unique_id=1351866446]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "¿Intentarlo otra vez?"
+text = "¿Reintentar?"
 horizontal_alignment = 1
 
 [node name="ContainerButtons" type="VBoxContainer" parent="." unique_id=1382924132]
@@ -64,7 +64,7 @@ grow_vertical = 0
 [node name="RetryButton" type="Button" parent="ContainerButtons" unique_id=525947211]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Intentar"
+text = "Reintentar"
 script = ExtResource("2_fn2ve")
 controller_levels = ExtResource("3_ct0de")
 
