@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://mcdlxgtojbnn"]
+
+[ext_resource type="Texture2D" uid="uid://b5qw22e2rnud" path="res://assets/joke/death_pose.png" id="1_dp3h3"]
+[ext_resource type="Script" uid="uid://cpg5rnxswo58t" path="res://scenes/interfaces/menus/menu_death/retry_button.gd" id="2_fn2ve"]
+[ext_resource type="Script" uid="uid://ihhudwvey5iv" path="res://scenes/interfaces/menus/menu_death/exit_button.gd" id="2_xqsv0"]
+[ext_resource type="PackedScene" uid="uid://cdx1jwcuht2f6" path="res://scenes/controller_levels/controller_levels.tscn" id="3_ct0de"]
+
+[node name="MenuDeath" type="Control" unique_id=1115627666]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=1031743625]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 651.0
+color = Color(2.9329676e-08, 0, 0.058501996, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=762443808]
+position = Vector2(576.00006, 318.99997)
+scale = Vector2(0.381735, 0.3091588)
+texture = ExtResource("1_dp3h3")
+
+[node name="ContainerLabel" type="VBoxContainer" parent="." unique_id=1009156984]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -281.0
+offset_top = 47.0
+offset_right = 281.0
+offset_bottom = 216.0
+grow_horizontal = 2
+
+[node name="LabelTitle" type="Label" parent="ContainerLabel" unique_id=175647715]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "H a s   m u e r t o"
+horizontal_alignment = 1
+
+[node name="LabelInfo" type="Label" parent="ContainerLabel" unique_id=1351866446]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "¿Intentarlo otra vez?"
+horizontal_alignment = 1
+
+[node name="ContainerButtons" type="VBoxContainer" parent="." unique_id=1382924132]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -103.0
+offset_top = -213.0
+offset_right = 103.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="RetryButton" type="Button" parent="ContainerButtons" unique_id=525947211]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Intentar"
+script = ExtResource("2_fn2ve")
+controller_levels = ExtResource("3_ct0de")
+
+[node name="ExitButton" type="Button" parent="ContainerButtons" unique_id=919669411]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Salir"
+script = ExtResource("2_xqsv0")

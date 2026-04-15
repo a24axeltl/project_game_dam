@@ -30,6 +30,10 @@ func _ready() -> void:
 	hurtbox.area_entered.connect(_on_hurtbox_hitbox_entered)
 
 func _physics_process(delta: float) -> void:
+	# Handle if is "death".
+	if PlayerController.is_muerto():
+		get_tree().change_scene_to_file("res://scenes/interfaces/menus/menu_death/menu_death.tscn")
+		return
 	#Handle inmunity
 	if PlayerController.get_inmunity_time() < PlayerController.get_inmunity_time_max() and _inmunity:
 		PlayerController.add_inmunity_time(delta)
@@ -39,9 +43,6 @@ func _physics_process(delta: float) -> void:
 	
 	# Handle damage with a hitbox.
 	_handle_damage_hitbox()
-	
-	if PlayerController.is_muerto():
-		get_tree().quit(0)
 
 	if !is_on_floor():
 		velocity += get_gravity() * delta

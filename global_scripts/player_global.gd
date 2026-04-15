@@ -25,6 +25,9 @@ var _damage_max_value: int = 4
 
 var _muerto: bool = false
 
+func reload_player():
+	print("Pendiente")
+
 func set_inmunity_time_max(inmunity_max: float):
 	_inmunity_time_max = inmunity_max
 

@@ -25,6 +25,9 @@ RunScript="*uid://bg1rq0oac5tco"
 
 enemy=""
 boss=""
+meta=""
+recorrido=""
+combate=""
 
 [input]
 

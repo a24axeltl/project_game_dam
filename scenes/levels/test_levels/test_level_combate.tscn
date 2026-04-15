@@ -2,15 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/camera/camera.tscn" id="1_k6scc"]
 [ext_resource type="TileSet" uid="uid://dxdjsbax8tlda" path="res://tilesets/test_assets.tres" id="2_05dpx"]
+[ext_resource type="PackedScene" uid="uid://rb2xnbv14vlt" path="res://scenes/interfaces/in_game/message_level/message_level.tscn" id="2_kanpj"]
 [ext_resource type="TileSet" uid="uid://d1txednftnfjd" path="res://tilesets/tile_floor.tres" id="2_wmjgt"]
 [ext_resource type="PackedScene" uid="uid://dkwvchqp6yarr" path="res://scenes/containers/enemy_container/enemy_container.tscn" id="3_wmjgt"]
 [ext_resource type="PackedScene" uid="uid://d3prqsg8bpdtf" path="res://scenes/characters/enemies/basic_enemy/basic_enemy.tscn" id="4_kanpj"]
 [ext_resource type="PackedScene" uid="uid://5f4xvt46vnjl" path="res://scenes/characters/player/player.tscn" id="5_l2cms"]
 
-[node name="TestLevel1" type="Node2D" unique_id=1277095687]
-
-[node name="Camera2D" parent="." unique_id=443728676 instance=ExtResource("1_k6scc")]
-zoom = Vector2(0.8, 0.8)
+[node name="TestLevel1" type="Node2D" unique_id=1277095687 groups=["combate"]]
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=1005435967]
 visible = false
@@ -34,3 +32,10 @@ position = Vector2(-191, 143)
 
 [node name="Player" parent="." unique_id=1543182604 instance=ExtResource("5_l2cms")]
 position = Vector2(-557, -339)
+
+[node name="Camera2D" parent="." unique_id=443728676 instance=ExtResource("1_k6scc")]
+zoom = Vector2(0.8, 0.8)
+
+[node name="MessageLevel" parent="Camera2D" unique_id=1186170099 instance=ExtResource("2_kanpj")]
+offset_top = -267.0
+offset_bottom = -267.0

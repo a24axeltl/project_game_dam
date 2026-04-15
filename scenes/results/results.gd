@@ -2,8 +2,7 @@ extends Node2D
 
 @export var label_time: Label
 @export var label_hit: Label
-@export var animation1: AnimatedSprite2D
-@export var animation2: AnimatedSprite2D
+@export var animation: AnimatedSprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,12 +14,11 @@ func _ready() -> void:
 	close_program()
 
 func play_animations():
-	animation1.play("default")
-	animation2.play("default")
+	animation.play("default")
 
 func set_text_labels():
-	label_time.text = RunScript.get_time()
-	label_hit.text = str(RunScript.get_hits())
+	label_time.text = str("Duración: ",RunScript.get_time())
+	label_hit.text = str("Numero de Golpes: ",RunScript.get_hits())
 
 func close_program():
 	await get_tree().create_timer(3.0).timeout

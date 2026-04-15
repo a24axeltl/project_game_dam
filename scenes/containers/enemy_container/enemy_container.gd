@@ -1,6 +1,8 @@
 class_name EnemyContainer
 extends Node
 
+@export var results: PackedScene
+
 var _total_enemys: int
 var _defeated_enemys: int
 
@@ -15,4 +17,4 @@ func defeated_enemy():
 	if _defeated_enemys == _total_enemys and !get_child(0).is_in_group("boss"):
 		owner.get_parent().init_menu_modificators()
 	elif get_child(0).is_in_group("boss"):
-		owner.get_parent().next_level()
+		get_tree().change_scene_to_packed(results)

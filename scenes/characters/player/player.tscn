@@ -48,3 +48,10 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxPivot/Hurtbox" unique_id=1595303690]
 shape = SubResource("RectangleShape2D_fwk1h")
+
+[node name="ColorDebug" type="ColorRect" parent="HurtboxPivot/Hurtbox/CollisionShape2D" unique_id=664729203]
+offset_left = -36.0
+offset_top = -43.0
+offset_right = 35.0
+offset_bottom = 44.0
+color = Color(0, 0.6548173, 1.6197081, 0.5411765)

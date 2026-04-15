@@ -16,7 +16,7 @@ const damage: int = 1
 
 var _hit: bool = false
 var _muerto: bool = false
-var _life_count: int = 5
+var _life_count: int = 8
 var _direction: int = 1
 var _knockback := Vector2.ZERO
 var _state: State = State.PATROL
@@ -26,20 +26,22 @@ func _ready() -> void:
 	hitbox.area_entered.connect(_on_area_2d_area_entered)
 
 func _physics_process(_delta: float) -> void:
-	# Handle RayCast.
-	if rayCastDown.is_colliding() or rayCastRight.is_colliding() or rayCastUp.is_colliding() or rayCastLeft.is_colliding():
-		_direction *= -1
-
 	# Handle "death".
 	if _muerto:
 		queue_free()
 		if enemy_container != null:
 			enemy_container.defeated_enemy()
+			return
+	
+	# Handle RayCast.
+	if rayCastDown.is_colliding() or rayCastRight.is_colliding() or rayCastUp.is_colliding() or rayCastLeft.is_colliding():
+		_direction *= -1
 	
 	# Handle hit.
 	if _hit:
 		velocity = _knockback
 		_hit = false
+		move_and_slide()
 		await get_tree().create_timer(0.5).timeout
 		velocity = Vector2.ZERO
 		return
