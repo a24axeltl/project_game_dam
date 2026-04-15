@@ -7,8 +7,9 @@
 [node name="ExplosionAtackHability" type="Button" unique_id=1201823494]
 offset_right = 8.0
 offset_bottom = 8.0
+tooltip_text = "El daño se amplifica y aumenta durante unos breves instantes. Se activa presionando \"F\"."
 theme = ExtResource("1_iftw2")
-text = "Explosion Hability"
+text = "Hab. Explosion"
 icon = ExtResource("2_7s6ye")
 expand_icon = true
 script = ExtResource("3_xhf4x")

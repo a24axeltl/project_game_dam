@@ -11,6 +11,10 @@ var _vertical_atack_timer: float = 0.0
 var _explosion_atack_time_max: float = 10.0
 var _explosion_atack_timer: float = 0.0
 
+var _defense_max_value: float = 2.5
+var _vertical_atack_max_value: float = 3.0
+var _explosion_atack_max_value: float = 4.0
+
 var _shield: bool = false
 var _vertical_atack = false
 var _explosion_atack = false
@@ -89,3 +93,21 @@ func have_explosion_atack():
 
 func set_explosion_atack(state: bool):
 	_explosion_atack = state
+
+func have_defense_reach_max():
+	if _defense_time_max >= _defense_max_value:
+		return true
+	else:
+		return false
+
+func have_vertical_atack_reach_max():
+	if _vertical_atack_time_max >= _vertical_atack_max_value:
+		return true
+	else:
+		return false
+
+func have_explosion_reach_max():
+	if _explosion_atack_time_max >= _explosion_atack_max_value:
+		return true
+	else:
+		return false

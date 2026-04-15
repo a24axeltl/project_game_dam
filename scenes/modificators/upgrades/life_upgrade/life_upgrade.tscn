@@ -7,8 +7,9 @@
 [node name="LifeUpgrade" type="Button" unique_id=1194657547]
 offset_right = 864.0
 offset_bottom = 358.0
+tooltip_text = "La vida máxima aumenta un valor. Si se selecciona, la vida se restaura en la siguiente pantalla."
 theme = ExtResource("1_1iguu")
-text = "Life Upgrade"
+text = "Mejora Vida"
 icon = ExtResource("1_og8fw")
 expand_icon = true
 script = ExtResource("2_6sok0")

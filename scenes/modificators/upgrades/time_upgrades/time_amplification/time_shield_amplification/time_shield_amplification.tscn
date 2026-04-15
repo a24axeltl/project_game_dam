@@ -5,8 +5,9 @@
 [ext_resource type="Script" uid="uid://cfhbapa6qn11p" path="res://scenes/modificators/upgrades/time_upgrades/time_amplification/time_shield_amplification/time_shield_amplification.gd" id="3_s2hm5"]
 
 [node name="TimeShieldAmplification" type="Button" unique_id=192243634]
+tooltip_text = "La duración del escudo aumenta un poco."
 theme = ExtResource("1_knmxi")
-text = "Shield Amplification"
+text = "Amplificación Escudo"
 icon = ExtResource("2_s2hm5")
 expand_icon = true
 script = ExtResource("3_s2hm5")

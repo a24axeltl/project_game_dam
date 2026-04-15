@@ -5,8 +5,9 @@
 [ext_resource type="Script" uid="uid://bc3nnjuty7s8n" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_explosion_reduction/time_explosion_reduction.gd" id="3_wh2bt"]
 
 [node name="TimeExplosionReduction" type="Button" unique_id=1750254924]
+tooltip_text = "El tiempo de espera de la explosion se reduce."
 theme = ExtResource("1_hmgtk")
-text = "Expl Reduction"
+text = "Reduccion Explosion"
 icon = ExtResource("2_wh2bt")
 expand_icon = true
 script = ExtResource("3_wh2bt")

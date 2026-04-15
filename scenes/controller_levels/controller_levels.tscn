@@ -10,7 +10,7 @@
 
 [node name="ControllerLevels" type="Node2D" unique_id=2080523597 node_paths=PackedStringArray("menu_modificators")]
 script = ExtResource("1_iyxch")
-levels = Array[PackedScene]([ExtResource("2_4wyme"), ExtResource("3_ppdki"), ExtResource("4_lhwf4"), ExtResource("5_ix8gd"), ExtResource("6_hbuuc")])
+levels = Array[PackedScene]([ExtResource("2_4wyme"), ExtResource("3_ppdki"), ExtResource("4_lhwf4"), ExtResource("4_lhwf4"), ExtResource("5_ix8gd"), ExtResource("6_hbuuc")])
 menu_modificators = NodePath("CanvasLayer/MenuModificators")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1616295871]

@@ -13,11 +13,15 @@ var _jump_count_current: int = 0
 var _dash_count_max: int = 1
 var _dash_count_current: int = 0
 
-var _dash_time_max: float = 1.5
+var _dash_time_max: float = 2.5
 var _dash_timer: float = 0.0
 
 var _inmunity_time_max: float = 0.5
 var _inmunity_timer: float = 0.0
+
+var _dash_max_value: float = 0.5
+var _life_max_value: int = 8
+var _damage_max_value: int = 4
 
 var _muerto: bool = false
 
@@ -118,3 +122,21 @@ func is_muerto():
 
 func set_muerto(state: bool):
 	_muerto = state
+
+func have_dash_reach_max():
+	if _dash_time_max >= _dash_max_value:
+		return true
+	else:
+		return false
+
+func have_life_reach_max():
+	if _life_max_count >= _life_max_value:
+		return true
+	else:
+		return false
+
+func have_damage_reach_max():
+	if _damage >= _damage_max_value:
+		return true
+	else:
+		return false

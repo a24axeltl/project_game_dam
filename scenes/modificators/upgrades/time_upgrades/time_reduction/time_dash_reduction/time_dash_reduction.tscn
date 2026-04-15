@@ -5,8 +5,9 @@
 [ext_resource type="Script" uid="uid://b4ekvcjkqiu3b" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_dash_reduction/time_dash_reduction.gd" id="3_jlxij"]
 
 [node name="TimeDashReduction" type="Button" unique_id=1242088891]
+tooltip_text = "El tiempo de espera del dash se reduce."
 theme = ExtResource("1_t35oq")
-text = "Dash Reduction"
+text = "Reducción Dash"
 icon = ExtResource("1_iy0rr")
 expand_icon = true
 script = ExtResource("3_jlxij")

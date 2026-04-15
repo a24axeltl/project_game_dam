@@ -3,7 +3,13 @@
 [ext_resource type="Script" uid="uid://csml81xrveeuo" path="res://scenes/interfaces/menus/menu_modificators/menu_modificators.gd" id="1_y5lxe"]
 [ext_resource type="PackedScene" uid="uid://dmkbpx3xchnue" path="res://scenes/modificators/habilitys/full_shield_hability/full_shield_hability.tscn" id="4_aqxoi"]
 [ext_resource type="PackedScene" uid="uid://dmlhoamwyfyd1" path="res://scenes/modificators/habilitys/explosion_atack_hability/explosion_atack_hability.tscn" id="5_d26cb"]
+[ext_resource type="PackedScene" uid="uid://bxuohcyda7qc2" path="res://scenes/modificators/upgrades/damage_upgrade/damage_upgrade.tscn" id="5_dsik6"]
 [ext_resource type="PackedScene" uid="uid://gmw5uvwnf8dv" path="res://scenes/modificators/habilitys/vertical_atack_hability/vertical_atack_hability.tscn" id="5_jgdg1"]
+[ext_resource type="PackedScene" uid="uid://b3nyxfdwae3n8" path="res://scenes/modificators/upgrades/life_upgrade/life_upgrade.tscn" id="6_e78ir"]
+[ext_resource type="PackedScene" uid="uid://c72bj6hlah0u6" path="res://scenes/modificators/upgrades/time_upgrades/time_amplification/time_shield_amplification/time_shield_amplification.tscn" id="7_xmm1v"]
+[ext_resource type="PackedScene" uid="uid://bhbx3o2obqpib" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_dash_reduction/time_dash_reduction.tscn" id="8_w7jd6"]
+[ext_resource type="PackedScene" uid="uid://crcv03xh042i8" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_explosion_reduction/time_explosion_reduction.tscn" id="9_uorl4"]
+[ext_resource type="PackedScene" uid="uid://bkbn0ay1b3sip" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_vertical_atack_reduction/time_vertical_atack_reduction.tscn" id="10_cggec"]
 
 [node name="MenuModificators" type="Control" unique_id=164326612 node_paths=PackedStringArray("vbox_container")]
 process_mode = 3
@@ -15,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y5lxe")
 vbox_container = NodePath("VBoxContainer")
-array_modificators = Array[PackedScene]([ExtResource("4_aqxoi"), ExtResource("5_jgdg1"), ExtResource("5_d26cb")])
+array_modificators = Array[PackedScene]([ExtResource("4_aqxoi"), ExtResource("5_jgdg1"), ExtResource("5_d26cb"), ExtResource("5_dsik6"), ExtResource("6_e78ir"), ExtResource("7_xmm1v"), ExtResource("8_w7jd6"), ExtResource("9_uorl4"), ExtResource("10_cggec")])
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=968497925]
 layout_mode = 1

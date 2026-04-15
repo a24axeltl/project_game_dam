@@ -7,8 +7,9 @@
 [node name="DamageUpgrade" type="Button" unique_id=977702863]
 offset_right = 8.0
 offset_bottom = 8.0
+tooltip_text = "El daño base sube a un valor."
 theme = ExtResource("1_agqsf")
-text = "Damage Upgrade"
+text = "Mejora Daño"
 icon = ExtResource("2_0iy82")
 expand_icon = true
 script = ExtResource("3_0iy82")

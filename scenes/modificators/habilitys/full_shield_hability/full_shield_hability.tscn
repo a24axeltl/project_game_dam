@@ -5,8 +5,9 @@
 [ext_resource type="Script" uid="uid://eih7ibsuwux0" path="res://scenes/modificators/habilitys/full_shield_hability/full_shield_hability.gd" id="3_53anh"]
 
 [node name="FullShieldHability" type="Button" unique_id=1681241325]
+tooltip_text = "Permite una vulnerabilidad breve de los ataques. Se activa presionando \"R\""
 theme = ExtResource("1_sweyc")
-text = "Shield Hability"
+text = "Hab. Escudo"
 icon = ExtResource("2_wmak4")
 expand_icon = true
 script = ExtResource("3_53anh")

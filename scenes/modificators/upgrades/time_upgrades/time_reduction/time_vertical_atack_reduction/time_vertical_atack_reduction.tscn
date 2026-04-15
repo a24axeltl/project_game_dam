@@ -5,8 +5,9 @@
 [ext_resource type="Script" uid="uid://cnnqyt8uewrad" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_vertical_atack_reduction/time_vertical_atack_reduction.gd" id="3_ffqid"]
 
 [node name="TimeVerticalAtackReduction" type="Button" unique_id=842341272]
+tooltip_text = "El tiempo de espera del ataque vertical se reduce."
 theme = ExtResource("1_5crkq")
-text = "Vertical Reduction"
+text = "Reducion Atq. Vertical"
 icon = ExtResource("2_ffqid")
 expand_icon = true
 script = ExtResource("3_ffqid")
