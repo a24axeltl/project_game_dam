@@ -1,14 +1,23 @@
 [gd_scene format=3 uid="uid://cdx1jwcuht2f6"]
 
 [ext_resource type="Script" uid="uid://ck41eqyt38wau" path="res://scenes/controller_levels/controller_levels.gd" id="1_iyxch"]
-[ext_resource type="PackedScene" uid="uid://ctd040saoa64l" path="res://scenes/levels/test_levels/test_level_combate.tscn" id="2_mur4o"]
-[ext_resource type="PackedScene" uid="uid://d00vll0sj2a7c" path="res://scenes/levels/test_levels/test_level_recorrido.tscn" id="3_qfcr8"]
-[ext_resource type="PackedScene" uid="uid://cjdtdk3bgbteu" path="res://scenes/levels/test_levels/test_level_metas.tscn" id="4_qfcr8"]
-[ext_resource type="PackedScene" uid="uid://c83l63vw008if" path="res://scenes/levels/test_levels/test_level_jefe.tscn" id="5_65p5o"]
-[ext_resource type="PackedScene" uid="uid://d2de13gr6gf74" path="res://scenes/results/results.tscn" id="6_8lwq0"]
+[ext_resource type="PackedScene" uid="uid://d00vll0sj2a7c" path="res://scenes/levels/test_levels/test_level_recorrido.tscn" id="2_4wyme"]
+[ext_resource type="PackedScene" uid="uid://ctd040saoa64l" path="res://scenes/levels/test_levels/test_level_combate.tscn" id="3_ppdki"]
+[ext_resource type="PackedScene" uid="uid://cjdtdk3bgbteu" path="res://scenes/levels/test_levels/test_level_metas.tscn" id="4_lhwf4"]
+[ext_resource type="PackedScene" uid="uid://c83l63vw008if" path="res://scenes/levels/test_levels/test_level_jefe.tscn" id="5_ix8gd"]
+[ext_resource type="PackedScene" uid="uid://d2de13gr6gf74" path="res://scenes/results/results.tscn" id="6_hbuuc"]
 [ext_resource type="PackedScene" uid="uid://wunkf12l6vwg" path="res://scenes/interfaces/menus/menu_modificators/menu_modificators.tscn" id="7_4wyme"]
 
-[node name="ControllerLevels" type="Node2D" unique_id=2080523597]
+[node name="ControllerLevels" type="Node2D" unique_id=2080523597 node_paths=PackedStringArray("menu_modificators")]
 script = ExtResource("1_iyxch")
-levels = Array[PackedScene]([ExtResource("3_qfcr8"), ExtResource("2_mur4o"), ExtResource("4_qfcr8"), ExtResource("5_65p5o"), ExtResource("6_8lwq0")])
-menu_modificators = ExtResource("7_4wyme")
+levels = Array[PackedScene]([ExtResource("2_4wyme"), ExtResource("3_ppdki"), ExtResource("4_lhwf4"), ExtResource("5_ix8gd"), ExtResource("6_hbuuc")])
+menu_modificators = NodePath("CanvasLayer/MenuModificators")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1616295871]
+
+[node name="MenuModificators" parent="CanvasLayer" unique_id=164326612 instance=ExtResource("7_4wyme")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5

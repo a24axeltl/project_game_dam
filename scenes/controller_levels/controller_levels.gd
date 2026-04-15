@@ -1,12 +1,13 @@
 extends Node2D
 
 @export var levels: Array[PackedScene]
-@export var menu_modificators: PackedScene
+@export var menu_modificators: Control
 
 var _instance_level: Node
 var _actual_level: int = 1
 
 func _ready() -> void:
+	hide_menu_modificators()
 	RunScript.start_timer()
 	create_level(_actual_level)
 
@@ -34,9 +35,8 @@ func next_level():
 	create_level.call_deferred(_actual_level)
 
 func init_menu_modificators():
+	menu_modificators.show()
 	pause()
-	var menu: Control = menu_modificators.instantiate()
-	add_child(menu)
-	
-	var viewport_center = get_viewport().get_camera_2d().get_screen_center_position()
-	menu.global_position = viewport_center
+
+func hide_menu_modificators():
+	menu_modificators.hide()
