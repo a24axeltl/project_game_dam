@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://duhq0gxf7veoe"]
 
 [ext_resource type="Script" uid="uid://cqxlr0f05b4id" path="res://scenes/interfaces/menus/menu_main/star_button.gd" id="1_xijqv"]
-[ext_resource type="PackedScene" uid="uid://cdx1jwcuht2f6" path="res://scenes/controller_levels/controller_levels.tscn" id="2_f87hv"]
+[ext_resource type="PackedScene" uid="uid://dh075d6am36vf" path="res://scenes/load_scene/load_scene.tscn" id="2_f87hv"]
 [ext_resource type="Script" uid="uid://ihhudwvey5iv" path="res://scenes/interfaces/menus/exit_button.gd" id="2_xijqv"]
 
 [node name="MainMenu" type="Control" unique_id=366997339]
@@ -61,7 +61,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 55
 text = "Iniciar"
 script = ExtResource("1_xijqv")
-controllerLevels = ExtResource("2_f87hv")
+loadScene = ExtResource("2_f87hv")
 
 [node name="ExitButton" type="Button" parent="ContainerButton" unique_id=1735855371]
 layout_mode = 2

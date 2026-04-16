@@ -8,5 +8,5 @@ func _press_button():
 	HabilitysController.load_script()
 	RunScript.load_script()
 	
-	var controllerLevels = load("res://scenes/controller_levels/controller_levels.tscn")
-	get_tree().change_scene_to_packed(controllerLevels)
+	var loadScene = load("res://scenes/load_scene/load_scene.tscn")
+	get_tree().change_scene_to_packed(loadScene)
