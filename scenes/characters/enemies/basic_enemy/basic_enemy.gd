@@ -89,6 +89,7 @@ func _damage_control(area: Area2D):
 	_knockback.x = strike_direction * knockback_force_X
 	_knockback.y = knockback_force_Y
 	
+	SoundController.play_sound_atack()
 	print("El enemigo recibio daño:")
 	print(_life_count)
 

@@ -119,6 +119,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Handle hability vertical atack.
 	if Input.is_action_just_pressed("vertical_atq") and !_vertical_atacking and HabilitysController.get_vertical_atack_time() < HabilitysController.get_vertical_atack_time_max() and HabilitysController.have_vertical_atack():
+		SoundController.play_sound_vertical_slice()
 		_vertical_atacking = true
 		_control_atack()
 		_resize_hurtbox(hurtbox_vertical_size)
@@ -135,6 +136,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Handle hability explosion.
 	if Input.is_action_just_pressed("explosion_atq") and !_explosion_atacking and HabilitysController.have_explosion_atack():
+		SoundController.play_sound_explosion()
 		_explosion_atacking = true
 		HabilitysController.set_damage_player_with_explosion()
 		_control_atack()
@@ -185,6 +187,8 @@ func _control_damage(body: Node2D):
 		_hit = true
 		_inmunity = true
 	_control_knockback_damage(body)
+	
+	SoundController.play_sound_damage()
 	
 	print("El personaje jugable recibio daño, VIDA: ",PlayerController.get_life_count())
 	print("Muerto: ",PlayerController.is_muerto())

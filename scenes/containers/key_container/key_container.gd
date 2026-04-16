@@ -13,6 +13,7 @@ func _ready() -> void:
 		key.key_container = self
 
 func collecte_key():
+	SoundController.play_sound_key_pick()
 	_collected_keys += 1
 	if _collected_keys == _total_keys:
 		owner.get_parent().init_menu_modificators()

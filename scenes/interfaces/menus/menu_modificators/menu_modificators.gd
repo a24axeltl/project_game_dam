@@ -16,6 +16,10 @@ func reload():
 		remove_modificators()
 		add_modificators()
 		set_block_signals(false)
+		
+		for button: Button in vbox_container.get_children():
+			if !button.pressed:
+				button.pressed.connect(SoundController.play_sound_button)
 
 func remove_modificators():
 	for modificator in vbox_container.get_children():
