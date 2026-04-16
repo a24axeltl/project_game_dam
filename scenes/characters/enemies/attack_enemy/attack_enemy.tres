@@ -1,7 +1,7 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://bgy6uhgm771k0"]
 
-[ext_resource type="Texture2D" uid="uid://bv2bdclyi42i7" path="res://assets/characters/enemy_test/attack-sword_spritesheet.png" id="1_42q4c"]
-[ext_resource type="Texture2D" uid="uid://o1dsj5ye5jm8" path="res://assets/characters/enemy_test/idle_spritesheet.png" id="2_xqcgj"]
+[ext_resource type="Texture2D" uid="uid://bv2bdclyi42i7" path="res://assets/images/characters/enemy_test/attack-sword_spritesheet.png" id="1_42q4c"]
+[ext_resource type="Texture2D" uid="uid://o1dsj5ye5jm8" path="res://assets/images/characters/enemy_test/idle_spritesheet.png" id="2_xqcgj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gwpu4"]
 atlas = ExtResource("1_42q4c")

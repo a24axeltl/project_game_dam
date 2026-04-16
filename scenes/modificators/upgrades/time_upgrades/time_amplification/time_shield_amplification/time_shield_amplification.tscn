@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c72bj6hlah0u6"]
 
 [ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="1_knmxi"]
-[ext_resource type="Texture2D" uid="uid://cvnkalbdfrl2v" path="res://assets/modificators/upgrades/TimeUpgrade_WIP.png" id="2_s2hm5"]
+[ext_resource type="Texture2D" uid="uid://cvnkalbdfrl2v" path="res://assets/images/modificators/upgrades/TimeUpgrade_WIP.png" id="2_s2hm5"]
 [ext_resource type="Script" uid="uid://cfhbapa6qn11p" path="res://scenes/modificators/upgrades/time_upgrades/time_amplification/time_shield_amplification/time_shield_amplification.gd" id="3_s2hm5"]
 
 [node name="TimeShieldAmplification" type="Button" unique_id=192243634]

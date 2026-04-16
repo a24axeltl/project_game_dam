@@ -1,12 +1,12 @@
 [gd_resource type="TileSet" format=3 uid="uid://d1txednftnfjd"]
 
-[ext_resource type="Texture2D" uid="uid://dj7wumvaiieg2" path="res://assets/scenario/floor/floor.png" id="1_rkihf"]
-[ext_resource type="Texture2D" uid="uid://sf75ho6vh16f" path="res://assets/scenario/floor/floor_degrate.png" id="2_6jas8"]
-[ext_resource type="Texture2D" uid="uid://bor8r4b5xk2qu" path="res://assets/scenario/floor/floor_2.png" id="3_01vu8"]
-[ext_resource type="Texture2D" uid="uid://btvpflwvwxfik" path="res://assets/scenario/floor/floor_degrate_2.png" id="4_nvid6"]
+[ext_resource type="Texture2D" uid="uid://dj7wumvaiieg2" path="res://assets/images/scenario/floor/floor.png" id="1_01vu8"]
+[ext_resource type="Texture2D" uid="uid://sf75ho6vh16f" path="res://assets/images/scenario/floor/floor_degrate.png" id="2_nvid6"]
+[ext_resource type="Texture2D" uid="uid://bor8r4b5xk2qu" path="res://assets/images/scenario/floor/floor_2.png" id="3_m2nq5"]
+[ext_resource type="Texture2D" uid="uid://btvpflwvwxfik" path="res://assets/images/scenario/floor/floor_degrate_2.png" id="4_u75px"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6jas8"]
-texture = ExtResource("1_rkihf")
+texture = ExtResource("1_01vu8")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -137,7 +137,7 @@ texture = ExtResource("1_rkihf")
 7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75o1w"]
-texture = ExtResource("2_6jas8")
+texture = ExtResource("2_nvid6")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -268,7 +268,7 @@ texture = ExtResource("2_6jas8")
 7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2nq5"]
-texture = ExtResource("3_01vu8")
+texture = ExtResource("3_m2nq5")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -399,7 +399,7 @@ texture = ExtResource("3_01vu8")
 7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u75px"]
-texture = ExtResource("4_nvid6")
+texture = ExtResource("4_u75px")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0

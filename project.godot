@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 PlayerController="*uid://buqdglywdhnlr"
 HabilitysController="*uid://blcn7oygexw1a"
 RunScript="*uid://bg1rq0oac5tco"
+SoundController="*uid://uagme33f7w8o"
 
 [global_group]
 

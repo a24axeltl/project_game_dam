@@ -1,16 +1,19 @@
 [gd_scene format=3 uid="uid://mcdlxgtojbnn"]
 
-[ext_resource type="Texture2D" uid="uid://b5qw22e2rnud" path="res://assets/joke/death_pose.png" id="1_dp3h3"]
+[ext_resource type="Script" uid="uid://cduk6onpa0e74" path="res://scenes/interfaces/menus/menu_death/menu_death.gd" id="1_ct0de"]
+[ext_resource type="Texture2D" uid="uid://b5qw22e2rnud" path="res://assets/images/joke/death_pose.png" id="1_dp3h3"]
 [ext_resource type="Script" uid="uid://cpg5rnxswo58t" path="res://scenes/interfaces/menus/menu_death/retry_button.gd" id="2_fn2ve"]
 [ext_resource type="Script" uid="uid://ihhudwvey5iv" path="res://scenes/interfaces/menus/exit_button.gd" id="2_xqsv0"]
 
-[node name="MenuDeath" type="Control" unique_id=1115627666]
+[node name="MenuDeath" type="Control" unique_id=1115627666 node_paths=PackedStringArray("containerButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ct0de")
+containerButton = NodePath("ContainerButtons")
 
 [node name="BackgroundColor" type="ColorRect" parent="." unique_id=1031743625]
 layout_mode = 0

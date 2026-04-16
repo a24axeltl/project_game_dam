@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dmlhoamwyfyd1"]
 
 [ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="1_iftw2"]
-[ext_resource type="Texture2D" uid="uid://d7esuyvckjsq" path="res://assets/modificators/habilitys/ExplosionHability_WIP.png" id="2_7s6ye"]
+[ext_resource type="Texture2D" uid="uid://d7esuyvckjsq" path="res://assets/images/modificators/habilitys/ExplosionHability_WIP.png" id="2_7s6ye"]
 [ext_resource type="Script" uid="uid://dovd8d75kmymc" path="res://scenes/modificators/habilitys/explosion_atack_hability/explosion_atack_hability.gd" id="3_xhf4x"]
 
 [node name="ExplosionAtackHability" type="Button" unique_id=1201823494]

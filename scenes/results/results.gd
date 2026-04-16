@@ -7,6 +7,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	play_animations()
+	SoundController.play_victory_melody()
 	
 	RunScript.stop_timer()
 	
@@ -21,5 +22,5 @@ func set_text_labels():
 	label_hit.text = str("Golpes Recibidos: ",RunScript.get_hits())
 
 func close_program():
-	await get_tree().create_timer(4.0).timeout
+	await get_tree().create_timer(10.5).timeout
 	get_tree().quit(0)

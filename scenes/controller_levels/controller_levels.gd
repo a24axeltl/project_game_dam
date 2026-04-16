@@ -18,6 +18,7 @@ func _process(_delta: float) -> void:
 
 func prepare_run():
 	levels.shuffle()
+	levels = levels.slice(0,3)
 	_end_level = levels.size()
 	hide_menu_modificators()
 

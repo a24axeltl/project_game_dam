@@ -1,16 +1,19 @@
 [gd_scene format=3 uid="uid://duhq0gxf7veoe"]
 
+[ext_resource type="Script" uid="uid://bqk044sq61hst" path="res://scenes/interfaces/menus/menu_main/main_menu.gd" id="1_6frwu"]
 [ext_resource type="Script" uid="uid://cqxlr0f05b4id" path="res://scenes/interfaces/menus/menu_main/star_button.gd" id="1_xijqv"]
 [ext_resource type="PackedScene" uid="uid://dh075d6am36vf" path="res://scenes/load_scene/load_scene.tscn" id="2_f87hv"]
 [ext_resource type="Script" uid="uid://ihhudwvey5iv" path="res://scenes/interfaces/menus/exit_button.gd" id="2_xijqv"]
 
-[node name="MainMenu" type="Control" unique_id=366997339]
+[node name="MainMenu" type="Control" unique_id=366997339 node_paths=PackedStringArray("containerButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6frwu")
+containerButton = NodePath("ContainerButton")
 
 [node name="BackgroundColor" type="ColorRect" parent="." unique_id=1573540113]
 layout_mode = 0

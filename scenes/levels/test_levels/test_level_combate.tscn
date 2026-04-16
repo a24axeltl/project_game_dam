@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/camera/camera.tscn" id="1_k6scc"]
 [ext_resource type="TileSet" uid="uid://dxdjsbax8tlda" path="res://tilesets/test_assets.tres" id="2_05dpx"]
-[ext_resource type="PackedScene" uid="uid://rb2xnbv14vlt" path="res://scenes/interfaces/in_game/message_level/message_level.tscn" id="2_kanpj"]
 [ext_resource type="TileSet" uid="uid://d1txednftnfjd" path="res://tilesets/tile_floor.tres" id="2_wmjgt"]
 [ext_resource type="PackedScene" uid="uid://dkwvchqp6yarr" path="res://scenes/containers/enemy_container/enemy_container.tscn" id="3_wmjgt"]
 [ext_resource type="PackedScene" uid="uid://d3prqsg8bpdtf" path="res://scenes/characters/enemies/basic_enemy/basic_enemy.tscn" id="4_kanpj"]
@@ -37,7 +36,3 @@ position = Vector2(-191, 143)
 
 [node name="Camera2D" parent="." unique_id=443728676 instance=ExtResource("1_k6scc")]
 zoom = Vector2(0.8, 0.8)
-
-[node name="MessageLevel" parent="Camera2D" unique_id=1186170099 instance=ExtResource("2_kanpj")]
-offset_top = -267.0
-offset_bottom = -267.0

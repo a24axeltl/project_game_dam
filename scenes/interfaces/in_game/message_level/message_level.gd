@@ -12,13 +12,13 @@ func _text_control():
 	queue_free()
 
 func _get_text():
-	if owner.is_in_group("meta"):
+	if owner.owner.is_in_group("meta"):
 		return "!Recolecta las llaves para avanzar¡"
-	elif owner.is_in_group("recorrido"):
+	elif owner.owner.is_in_group("recorrido"):
 		return "!Recorre el nivel y llega a la meta¡"
-	elif owner.is_in_group("combate"):
+	elif owner.owner.is_in_group("combate"):
 		return "!Derrota a todos los enemigos¡"
-	elif owner.is_in_group("boss"):
+	elif owner.owner.is_in_group("boss"):
 		return "!Derrota al jefe¡"
 	else:
-		"Default Message: Completa el nivel"
+		return "Completa el nivel"

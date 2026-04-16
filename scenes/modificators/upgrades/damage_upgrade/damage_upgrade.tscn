@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxuohcyda7qc2"]
 
 [ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="1_agqsf"]
-[ext_resource type="Texture2D" uid="uid://q1j1iiln0i2k" path="res://assets/modificators/upgrades/DamageUpgrade_WIP.png" id="2_0iy82"]
+[ext_resource type="Texture2D" uid="uid://q1j1iiln0i2k" path="res://assets/images/modificators/upgrades/DamageUpgrade_WIP.png" id="2_0iy82"]
 [ext_resource type="Script" uid="uid://cb4cdlh8k3y70" path="res://scenes/modificators/upgrades/damage_upgrade/damage_upgrade.gd" id="3_0iy82"]
 
 [node name="DamageUpgrade" type="Button" unique_id=977702863]

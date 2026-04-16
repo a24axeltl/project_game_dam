@@ -6,7 +6,6 @@
 [ext_resource type="TileSet" uid="uid://dxdjsbax8tlda" path="res://tilesets/test_assets.tres" id="3_ta2om"]
 [ext_resource type="PackedScene" uid="uid://5f4xvt46vnjl" path="res://scenes/characters/player/player.tscn" id="4_tdgcs"]
 [ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/camera/camera.tscn" id="5_tp4le"]
-[ext_resource type="PackedScene" uid="uid://rb2xnbv14vlt" path="res://scenes/interfaces/in_game/message_level/message_level.tscn" id="7_ta2om"]
 
 [node name="TestLevel3" type="Node2D" unique_id=586594975 groups=["meta"]]
 
@@ -45,16 +44,6 @@ tile_set = ExtResource("3_ta2om")
 position = Vector2(0, 96)
 
 [node name="Camera2D" parent="Player" unique_id=443728676 instance=ExtResource("5_tp4le")]
-
-[node name="MessageLevel" parent="Player/Camera2D" unique_id=1186170099 instance=ExtResource("7_ta2om")]
-layout_direction = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.0
-offset_top = -267.0
-offset_bottom = -267.0
-grow_vertical = 1
 
 [node name="Label" type="Label" parent="Player/Camera2D" unique_id=2063044652]
 offset_left = 473.0

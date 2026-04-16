@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bjhwife5qt4v8" path="res://scenes/interfaces/in_game/life_interface/life_interface.tscn" id="1_2ear0"]
 [ext_resource type="Script" uid="uid://wadsj17s8u66" path="res://scenes/camera/camera.gd" id="1_lng1m"]
+[ext_resource type="PackedScene" uid="uid://rb2xnbv14vlt" path="res://scenes/interfaces/in_game/message_level/message_level.tscn" id="3_0jiuk"]
 
 [node name="Camera2D" type="Camera2D" unique_id=443728676 node_paths=PackedStringArray("camera")]
 position_smoothing_speed = 15.0
@@ -13,3 +14,7 @@ offset_left = -530.0
 offset_top = -278.0
 offset_right = -530.0
 offset_bottom = -278.0
+
+[node name="MessageLevel" parent="." unique_id=1186170099 instance=ExtResource("3_0jiuk")]
+offset_top = -231.0
+offset_bottom = -231.0

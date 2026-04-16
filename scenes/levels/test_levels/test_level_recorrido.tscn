@@ -5,7 +5,6 @@
 [ext_resource type="TileSet" uid="uid://dxdjsbax8tlda" path="res://tilesets/test_assets.tres" id="3_11lub"]
 [ext_resource type="PackedScene" uid="uid://d3prqsg8bpdtf" path="res://scenes/characters/enemies/basic_enemy/basic_enemy.tscn" id="4_85v8c"]
 [ext_resource type="PackedScene" uid="uid://bas6p1esj2ubb" path="res://scenes/objects/exit_door/exit_door.tscn" id="5_sr1yv"]
-[ext_resource type="PackedScene" uid="uid://rb2xnbv14vlt" path="res://scenes/interfaces/in_game/message_level/message_level.tscn" id="6_soowu"]
 
 [node name="TestLevel2" type="Node2D" unique_id=517779826 groups=["recorrido"]]
 
@@ -33,7 +32,3 @@ position = Vector2(-78, 10)
 position = Vector2(-3959, 320)
 
 [node name="Camera2D" parent="Player" unique_id=443728676 instance=ExtResource("1_t8pls")]
-
-[node name="MessageLevel" parent="Player/Camera2D" unique_id=1186170099 instance=ExtResource("6_soowu")]
-offset_top = -226.0
-offset_bottom = -226.0

@@ -1,10 +1,9 @@
 extends Control
 
 @export var vbox_container: VBoxContainer
-
 @export var array_modificators: Array [PackedScene]
 
-func _ready() -> void:
+func _ready() -> void:	
 	visibility_changed.connect(reload)
 
 func next():

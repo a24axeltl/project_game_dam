@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpd826kl5bqq0"]
 
 [ext_resource type="Script" uid="uid://ceimp6gy1hmcc" path="res://scenes/characters/enemies/test_boss/test_boss_enemy.gd" id="1_7mfsb"]
-[ext_resource type="Texture2D" uid="uid://dfyttk85mfjgq" path="res://assets/characters/enemie_test.png" id="1_ttd8i"]
+[ext_resource type="Texture2D" uid="uid://dfyttk85mfjgq" path="res://assets/images/characters/enemie_test.png" id="1_ttd8i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mfsb"]
 size = Vector2(184, 314)

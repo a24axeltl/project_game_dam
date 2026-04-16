@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bd0vo2uust4b7" path="res://scenes/modificators/habilitys/vertical_atack_hability/vertical_atack_hability.gd" id="1_6wfj5"]
 [ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="1_r5jnn"]
-[ext_resource type="Texture2D" uid="uid://x3g0mjvcuayf" path="res://assets/modificators/habilitys/VerticalAtackHability_WIP.png" id="2_7ghqp"]
+[ext_resource type="Texture2D" uid="uid://x3g0mjvcuayf" path="res://assets/images/modificators/habilitys/VerticalAtackHability_WIP.png" id="2_7ghqp"]
 
 [node name="VerticalAtackHability" type="Button" unique_id=101550759]
 offset_right = 8.0

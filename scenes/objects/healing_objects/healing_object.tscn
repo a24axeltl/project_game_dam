@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b6q6p3u67ia4q"]
 
 [ext_resource type="Script" uid="uid://di513upgb0ojk" path="res://scenes/objects/healing_objects/healing_object.gd" id="1_pps8u"]
-[ext_resource type="Texture2D" uid="uid://c6f5fwu2u35d5" path="res://assets/objects/healing_object/HealingTreeNoFruit_WIP.png" id="1_pve6o"]
-[ext_resource type="Texture2D" uid="uid://c4rplw62o5pme" path="res://assets/objects/healing_object/HealingTreeFruit_WIP.png" id="2_pps8u"]
+[ext_resource type="Texture2D" uid="uid://c6f5fwu2u35d5" path="res://assets/images/objects/healing_object/HealingTreeNoFruit_WIP.png" id="1_pve6o"]
+[ext_resource type="Texture2D" uid="uid://c4rplw62o5pme" path="res://assets/images/objects/healing_object/HealingTreeFruit_WIP.png" id="2_pps8u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_luxx1"]
 animations = [{
