@@ -2,31 +2,55 @@ extends Node
 
 signal current_life
 
-var _life_max_count: int = 4
-var _life_current_count: int = _life_max_count
+var _life_max_count: int
+var _life_current_count: int
 
-var _damage: int = 1
+var _damage: int
 
-var _jump_count_max: int = 1
-var _jump_count_current: int = 0
+var _jump_count_max: int
+var _jump_count_current: int
 
-var _dash_count_max: int = 1
-var _dash_count_current: int = 0
+var _dash_count_max: int
+var _dash_count_current: int
 
-var _dash_time_max: float = 2.5
-var _dash_timer: float = 0.0
+var _dash_time_max: float
+var _dash_timer: float
 
-var _inmunity_time_max: float = 0.5
-var _inmunity_timer: float = 0.0
+var _inmunity_time_max: float
+var _inmunity_timer: float
 
-var _dash_max_value: float = 0.5
-var _life_max_value: int = 8
-var _damage_max_value: int = 4
+var _dash_max_value: float
+var _life_max_value: int
+var _damage_max_value: int
 
-var _muerto: bool = false
+var _muerto: bool
 
-func reload_player():
-	print("Pendiente")
+func _ready() -> void:
+	load_script()
+
+func load_script():
+	_life_max_count = 4
+	_life_current_count = _life_max_count
+
+	_damage = 1
+
+	_jump_count_max = 1
+	_jump_count_current = 0
+
+	_dash_count_max = 1
+	_dash_count_current = 0
+
+	_dash_time_max = 2.5
+	_dash_timer = 0.0
+
+	_inmunity_time_max = 0.5
+	_inmunity_timer = 0.0
+
+	_dash_max_value = 0.5
+	_life_max_value = 8
+	_damage_max_value = 4
+
+	_muerto = false
 
 func set_inmunity_time_max(inmunity_max: float):
 	_inmunity_time_max = inmunity_max

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://t8dmkn6mjm5u" path="res://scenes/characters/player/player.gd" id="1_oya4h"]
 [ext_resource type="SpriteFrames" uid="uid://b2ecee3gecwiw" path="res://scenes/characters/player/player.tres" id="1_tg20s"]
 [ext_resource type="Material" uid="uid://bc5sxomibst57" path="res://shaders/player/blue_player.tres" id="2_686vu"]
+[ext_resource type="PackedScene" uid="uid://mcdlxgtojbnn" path="res://scenes/interfaces/menus/menu_death/menu_death.tscn" id="2_hss88"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tg20s"]
 size = Vector2(60.5, 122.5)
@@ -16,6 +17,7 @@ size = Vector2(71, 87)
 [node name="Player" type="CharacterBody2D" unique_id=1543182604 node_paths=PackedStringArray("animacion", "hurtboxPivot", "hitbox", "hurtbox", "hurtboxCollision", "colorDebug") groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_oya4h")
+menuDeath = ExtResource("2_hss88")
 blue_shader = ExtResource("2_686vu")
 animacion = NodePath("AnimatedSprite2D")
 hurtboxPivot = NodePath("HurtboxPivot")

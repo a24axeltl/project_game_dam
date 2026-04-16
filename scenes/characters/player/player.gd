@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var menuDeath: PackedScene
 @export var blue_shader: ShaderMaterial
 @export var animacion: AnimatedSprite2D
 @export var hurtboxPivot: Node2D
@@ -33,7 +34,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	# Handle if is "death".
 	if PlayerController.is_muerto():
-		get_tree().change_scene_to_file("res://scenes/interfaces/menus/menu_death/menu_death.tscn")
+		get_tree().change_scene_to_packed(menuDeath)
 		return
 	#Handle inmunity
 	if PlayerController.get_inmunity_time() < PlayerController.get_inmunity_time_max() and _inmunity:

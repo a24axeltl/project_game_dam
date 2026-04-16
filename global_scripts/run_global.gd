@@ -1,13 +1,21 @@
 extends Control
 
-var timer: Timer = Timer.new()
-var _time_in_seconds: int = 0
-var _num_hits: int = 0
+var timer: Timer
+var _time_in_seconds: int
+var _num_hits: int
 
 func _ready() -> void:
+	timer = Timer.new()
 	add_child(timer)
 	timer.wait_time = 1.0
 	timer.timeout.connect(_on_timer_timeout)
+	load_script()
+
+func load_script():
+	_time_in_seconds = 0
+	_num_hits = 0
+	if timer:
+		timer.stop()
 
 func _on_timer_timeout():
 	_time_in_seconds += 1

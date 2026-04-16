@@ -30,10 +30,10 @@ position = Vector2(-1374, 317)
 position = Vector2(-78, 10)
 
 [node name="Player" parent="." unique_id=1543182604 instance=ExtResource("2_11lub")]
-position = Vector2(-3970, 192)
+position = Vector2(-459, 9)
 
 [node name="Camera2D" parent="Player" unique_id=443728676 instance=ExtResource("1_t8pls")]
 
 [node name="MessageLevel" parent="Player/Camera2D" unique_id=1186170099 instance=ExtResource("6_soowu")]
-offset_top = -267.0
-offset_bottom = -267.0
+offset_top = -226.0
+offset_bottom = -226.0

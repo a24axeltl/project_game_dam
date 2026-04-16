@@ -1,23 +1,46 @@
 extends Node
 
-var _explosion_added_damage: int = 2
+var _explosion_added_damage: int
 
-var _defense_time_max: float = 0.5
-var _defense_timer: float = 0.0
+var _defense_time_max: float
+var _defense_timer: float
 
-var _vertical_atack_time_max: float = 5.0
-var _vertical_atack_timer: float = 0.0
+var _vertical_atack_time_max: float
+var _vertical_atack_timer: float
 
-var _explosion_atack_time_max: float = 10.0
-var _explosion_atack_timer: float = 0.0
+var _explosion_atack_time_max: float
+var _explosion_atack_timer: float
 
-var _defense_max_value: float = 2.5
-var _vertical_atack_max_value: float = 3.0
-var _explosion_atack_max_value: float = 4.0
+var _defense_max_value: float
+var _vertical_atack_max_value: float
+var _explosion_atack_max_value: float
 
-var _shield: bool = false
-var _vertical_atack = false
-var _explosion_atack = false
+var _shield: bool
+var _vertical_atack: bool
+var _explosion_atack: bool
+
+func _ready() -> void:
+	load_script()
+
+func load_script():
+	_explosion_added_damage = 2
+
+	_defense_time_max = 0.5
+	_defense_timer = 0.0
+
+	_vertical_atack_time_max = 5.0
+	_vertical_atack_timer = 0.0
+
+	_explosion_atack_time_max = 10.0
+	_explosion_atack_timer = 0.0
+
+	_defense_max_value = 2.5
+	_vertical_atack_max_value = 3.0
+	_explosion_atack_max_value = 4.0
+
+	_shield = false
+	_vertical_atack = false
+	_explosion_atack = false
 
 func ampli_defense_time_max(defense: float):
 	_defense_time_max += defense

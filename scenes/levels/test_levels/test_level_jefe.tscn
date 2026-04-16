@@ -21,10 +21,9 @@ results = ExtResource("5_tsyon")
 position = Vector2(-2, -311)
 
 [node name="Player" parent="." unique_id=1543182604 instance=ExtResource("2_ldeem")]
-position = Vector2(0, 19)
+position = Vector2(1, 18)
 
 [node name="Camera2D" parent="Player" unique_id=443728676 instance=ExtResource("1_nv2co")]
-position = Vector2(0, -19)
 
 [node name="MessageLevel" parent="Player/Camera2D" unique_id=1186170099 instance=ExtResource("4_4mwjm")]
 offset_top = -267.0
