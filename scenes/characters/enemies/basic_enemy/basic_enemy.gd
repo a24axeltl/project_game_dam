@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-enum State {PATROL, CHASE}
+enum State {PATROL, CHASE, HIT}
 
 @export var animacion: AnimatedSprite2D
 @export var hitbox: Area2D
@@ -8,8 +8,9 @@ enum State {PATROL, CHASE}
 @export var rayCastWall: RayCast2D
 
 const damage: int = 1
-const knockback_force_X := 400.0
-const knockback_force_Y := -400.0
+const knockback_force_X := 300.0
+const knockback_force_Y := -300.0
+const knockback_friction := 10.0
 const detection_distance_x: float = 450.0
 const detection_distance_y: float = 250.0
 const walk_velocity: float = 100.0
@@ -46,11 +47,10 @@ func _physics_process(delta: float) -> void:
 			enemy_container.defeated_enemy()
 	
 	# Handle hit.
-	if _hit:
-		velocity = _knockback
-		_hit = false
-		await get_tree().create_timer(0.5).timeout
-		velocity = Vector2.ZERO
+	if _state == State.HIT:
+		velocity.x = move_toward(velocity.x, 0, knockback_friction)
+		velocity.y += get_gravity().y * delta
+		move_and_slide()
 		return
 	
 	# Handle detection.
@@ -80,18 +80,26 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		if area.name == "Hurtbox":
 			_damage_control(area)
 
+func _enter_hit_state():
+	await get_tree().create_timer(0.3).timeout
+	_state = State.PATROL
+
 func _damage_control(area: Area2D):
 	_life_count -= PlayerController.get_damage_player()
-	_hit = true
+
 	var strike_direction = sign(global_position.x - area.get_parent().get_parent().global_position.x)
 	
-	# Aplye knockback.
+	velocity.x = strike_direction * 600.0
+	velocity.y = -450.0
 	_knockback.x = strike_direction * knockback_force_X
 	_knockback.y = knockback_force_Y
 	
+	_state = State.HIT
+	_enter_hit_state()
+	_hit = true
+
 	SoundController.play_sound_atack()
-	print("El enemigo recibio daño:")
-	print(_life_count)
+	print("El enemigo recibió daño:", _life_count)
 
 func _patrol():
 	velocity.x = _direction * walk_velocity
