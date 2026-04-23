@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://cbmlmxbnp0y4d"]
 
+[ext_resource type="PackedScene" uid="uid://dn54eijpejvs0" path="res://scenes/interfaces/buttons/menu_button/menu_button.tscn" id="1_7snj4"]
+[ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="2_unt1x"]
+
 [node name="MenuRegister" type="Control" unique_id=1128665787]
 layout_mode = 3
 anchors_preset = 15
@@ -12,3 +15,12 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 651.0
+
+[node name="MenuButton" parent="." unique_id=784250946 instance=ExtResource("1_7snj4")]
+layout_mode = 0
+offset_left = 899.0
+offset_top = 546.0
+offset_right = 1106.0
+offset_bottom = 600.0
+theme = ExtResource("2_unt1x")
+theme_override_font_sizes/font_size = 23

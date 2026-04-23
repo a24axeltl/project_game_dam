@@ -12,7 +12,6 @@ var _num_time_dash_upgrades: int
 var _num_time_explosion_upgrades: int
 var _num_time_vertical_atack_upgrades: int
 
-
 func _ready() -> void:
 	timer = Timer.new()
 	add_child(timer)
@@ -23,6 +22,14 @@ func _ready() -> void:
 func load_script():
 	_time_in_seconds = 0
 	_num_hits = 0
+	_num_defeated_enemys = 0
+	_num_habilitys = 0
+	_num_damage_upgrades = 0
+	_num_life_upgrades = 0
+	_num_time_shield_upgrades = 0
+	_num_time_dash_upgrades = 0
+	_num_time_explosion_upgrades = 0
+	_num_time_vertical_atack_upgrades = 0
 	if timer:
 		timer.stop()
 
@@ -115,3 +122,33 @@ func get_text_time_explosion_upgrades():
 
 func get_text_time_vertical_atack_upgrades():
 	return str(_num_time_vertical_atack_upgrades,"/",HabilitysController.get_number_max_upgrades())
+
+func save_run_data(success: bool):
+	var value = {
+		"Success": success,
+		"Time": get_time(),
+		"Hits": get_hits(),
+		"Enemys Defeated": get_defeated_enemys(),
+		"Habilitys Obtained": get_num_habilitys(),
+		"Upgrades Damage": get_num_damage_upgrades(),
+		"Upgrades Life": get_num_life_upgrades(),
+		"Time Upgrades Shield": get_num_time_shield_upgrades(),
+		"Time Upgrades Dash": get_num_time_dash_upgrades(),
+		"Time Upgrades Explosion": get_num_time_explosion_upgrades(),
+		"Time Upgrades VerticalAtack": get_num_time_vertical_atack_upgrades()
+	}
+	
+	var full_data = {}
+	
+	# 1. Si el archivo ya existe, cargamos lo que tiene primero
+	if FileAccess.file_exists("user://history_runs.save"):
+		var file_saved = FileAccess.open("user://history_runs.save", FileAccess.READ)
+		full_data = file_saved.get_var()
+	
+	# 2. Añadimos o actualizamos el dato nuevo sin tocar el resto
+	var key_name = str("run_",full_data.size() + 1)
+	full_data[key_name] = value
+	
+	# 3. Guardamos el diccionario completo actualizado
+	var file_save = FileAccess.open("user://history_runs.save", FileAccess.WRITE)
+	file_save.store_var(full_data)

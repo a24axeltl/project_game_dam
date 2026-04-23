@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d2de13gr6gf74"]
 
 [ext_resource type="Script" uid="uid://p0ukummlawyp" path="res://scenes/interfaces/menus/menu_results/menu_results.gd" id="1_w5ssc"]
+[ext_resource type="PackedScene" uid="uid://chqou6d7x3tuw" path="res://scenes/interfaces/run_information_container/run_information_container.tscn" id="2_1eu3v"]
 [ext_resource type="Texture2D" uid="uid://hynnik427ujl" path="res://assets/interface/celebrate_results/frame_0_delay-0.03s.png" id="2_8p8t4"]
 [ext_resource type="PackedScene" uid="uid://dn54eijpejvs0" path="res://scenes/interfaces/buttons/menu_button/menu_button.tscn" id="2_pxgxe"]
 [ext_resource type="PackedScene" uid="uid://c4lyeios8k7ic" path="res://scenes/interfaces/buttons/retry_button/retry_button.tscn" id="3_acbi1"]
@@ -55,18 +56,8 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Results" type="Node2D" unique_id=1736534899 node_paths=PackedStringArray("label_time", "label_hit", "label_defeated_enemys", "label_habilitys", "label_damage_upgrade", "label_life_upgrade", "label_shield_upgrade", "label_dash_upgrade", "label_explosion_upgrade", "label_vertical_atack_upgrade", "animation")]
+[node name="Results" type="Node2D" unique_id=1736534899 node_paths=PackedStringArray("animation")]
 script = ExtResource("1_w5ssc")
-label_time = NodePath("Camera2D/LabelContainer/TimeLabel")
-label_hit = NodePath("Camera2D/LabelContainer/HitsLabel")
-label_defeated_enemys = NodePath("Camera2D/LabelContainer/DefLabel")
-label_habilitys = NodePath("Camera2D/LabelContainer/HabilityLabel")
-label_damage_upgrade = NodePath("Camera2D/LabelContainer/DamageLabel")
-label_life_upgrade = NodePath("Camera2D/LabelContainer/LifeLabel")
-label_shield_upgrade = NodePath("Camera2D/LabelContainer/ShieldLabel")
-label_dash_upgrade = NodePath("Camera2D/LabelContainer/DashLabel")
-label_explosion_upgrade = NodePath("Camera2D/LabelContainer/ExplosionLabel")
-label_vertical_atack_upgrade = NodePath("Camera2D/LabelContainer/VerticalAtackLabel")
 animation = NodePath("CelebrateSprite")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=916238315]
@@ -87,54 +78,7 @@ offset_bottom = -276.0
 theme_override_font_sizes/font_size = 50
 text = "Niveles Finalizados!!"
 
-[node name="LabelContainer" type="VBoxContainer" parent="Camera2D" unique_id=1302349029]
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 133.0
-offset_top = -246.0
-offset_right = 472.0
-offset_bottom = 130.0
-grow_vertical = 2
-
-[node name="TimeLabel" type="Label" parent="Camera2D/LabelContainer" unique_id=1500557222]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-
-[node name="HitsLabel" type="Label" parent="Camera2D/LabelContainer" unique_id=1660590085]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-
-[node name="DefLabel" type="Label" parent="Camera2D/LabelContainer" unique_id=1631744256]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-
-[node name="HabilityLabel" type="Label" parent="Camera2D/LabelContainer" unique_id=502802278]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-
-[node name="DamageLabel" type="Label" parent="Camera2D/LabelContainer" unique_id=77274788]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-
-[node name="LifeLabel" type="Label" parent="Camera2D/LabelContainer" unique_id=2024448998]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-
-[node name="DashLabel" type="Label" parent="Camera2D/LabelContainer" unique_id=2119060370]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-
-[node name="ShieldLabel" type="Label" parent="Camera2D/LabelContainer" unique_id=1851595612]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-
-[node name="ExplosionLabel" type="Label" parent="Camera2D/LabelContainer" unique_id=825209379]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-
-[node name="VerticalAtackLabel" type="Label" parent="Camera2D/LabelContainer" unique_id=70381022]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
+[node name="LabelContainer" parent="Camera2D" unique_id=1624034873 instance=ExtResource("2_1eu3v")]
 
 [node name="ButtonsContainer" type="HBoxContainer" parent="Camera2D" unique_id=1854291569]
 offset_left = 131.0

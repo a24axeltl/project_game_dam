@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://chqou6d7x3tuw"]
+
+[ext_resource type="Script" uid="uid://c6f0p3a2f8g7k" path="res://scenes/interfaces/run_information_container/run_information_container.gd" id="1_kpy8s"]
+
+[node name="LabelContainer" type="VBoxContainer" unique_id=1624034873 node_paths=PackedStringArray("label_time", "label_hit", "label_defeated_enemys", "label_habilitys", "label_damage_upgrade", "label_life_upgrade", "label_shield_upgrade", "label_dash_upgrade", "label_explosion_upgrade", "label_vertical_atack_upgrade")]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 133.0
+offset_top = -246.0
+offset_right = 472.0
+offset_bottom = 130.0
+grow_vertical = 2
+script = ExtResource("1_kpy8s")
+label_time = NodePath("TimeLabel")
+label_hit = NodePath("HitsLabel")
+label_defeated_enemys = NodePath("DefLabel")
+label_habilitys = NodePath("HabilityLabel")
+label_damage_upgrade = NodePath("DamageLabel")
+label_life_upgrade = NodePath("LifeLabel")
+label_shield_upgrade = NodePath("ShieldLabel")
+label_dash_upgrade = NodePath("DashLabel")
+label_explosion_upgrade = NodePath("ExplosionLabel")
+label_vertical_atack_upgrade = NodePath("VerticalAtackLabel")
+
+[node name="TimeLabel" type="Label" parent="." unique_id=518735958]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="HitsLabel" type="Label" parent="." unique_id=660581065]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="DefLabel" type="Label" parent="." unique_id=1024833900]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="HabilityLabel" type="Label" parent="." unique_id=144760783]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="DamageLabel" type="Label" parent="." unique_id=1175115681]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="LifeLabel" type="Label" parent="." unique_id=618543938]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="DashLabel" type="Label" parent="." unique_id=518998721]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="ShieldLabel" type="Label" parent="." unique_id=201762801]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="ExplosionLabel" type="Label" parent="." unique_id=337814848]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="VerticalAtackLabel" type="Label" parent="." unique_id=766935387]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
