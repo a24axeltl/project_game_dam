@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cduk6onpa0e74" path="res://scenes/interfaces/menus/menu_death/menu_death.gd" id="1_ct0de"]
 [ext_resource type="Texture2D" uid="uid://b5qw22e2rnud" path="res://assets/images/joke/death_pose.png" id="1_dp3h3"]
-[ext_resource type="Script" uid="uid://cpg5rnxswo58t" path="res://scenes/interfaces/menus/menu_death/retry_button.gd" id="2_fn2ve"]
-[ext_resource type="Script" uid="uid://ihhudwvey5iv" path="res://scenes/interfaces/menus/exit_button.gd" id="2_xqsv0"]
+[ext_resource type="PackedScene" uid="uid://c4lyeios8k7ic" path="res://scenes/interfaces/buttons/retry_button/retry_button.tscn" id="3_ct0de"]
+[ext_resource type="PackedScene" uid="uid://bhnj4co7jqqhw" path="res://scenes/interfaces/buttons/exit_button/exit_button.tscn" id="4_p3n1m"]
 
 [node name="MenuDeath" type="Control" unique_id=1115627666 node_paths=PackedStringArray("containerButton")]
 layout_mode = 3
@@ -63,14 +63,8 @@ offset_bottom = -55.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="RetryButton" type="Button" parent="ContainerButtons" unique_id=525947211]
+[node name="RetryButton" parent="ContainerButtons" unique_id=1851239433 instance=ExtResource("3_ct0de")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Reintentar"
-script = ExtResource("2_fn2ve")
 
-[node name="ExitButton" type="Button" parent="ContainerButtons" unique_id=919669411]
+[node name="ExitButton" parent="ContainerButtons" unique_id=667873823 instance=ExtResource("4_p3n1m")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Salir"
-script = ExtResource("2_xqsv0")

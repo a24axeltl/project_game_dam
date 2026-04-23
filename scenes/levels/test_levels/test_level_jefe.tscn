@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://5f4xvt46vnjl" path="res://scenes/characters/player/player.tscn" id="2_ldeem"]
 [ext_resource type="PackedScene" uid="uid://bpd826kl5bqq0" path="res://scenes/characters/enemies/test_boss/test_boss_enemy.tscn" id="3_7x184"]
 [ext_resource type="PackedScene" uid="uid://dkwvchqp6yarr" path="res://scenes/containers/enemy_container/enemy_container.tscn" id="4_8yorm"]
-[ext_resource type="PackedScene" uid="uid://d2de13gr6gf74" path="res://scenes/results/results.tscn" id="5_tsyon"]
+[ext_resource type="PackedScene" uid="uid://d2de13gr6gf74" path="res://scenes/interfaces/menus/menu_results/menu_results.tscn" id="5_tsyon"]
 
 [node name="TestBoss" type="Node2D" unique_id=1215064729 groups=["boss"]]
 

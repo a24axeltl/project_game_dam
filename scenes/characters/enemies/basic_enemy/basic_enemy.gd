@@ -42,6 +42,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handle "death".
 	if _muerto:
+		RunScript.add_defeated_enemy()
 		queue_free()
 		if enemy_container != null:
 			enemy_container.defeated_enemy()

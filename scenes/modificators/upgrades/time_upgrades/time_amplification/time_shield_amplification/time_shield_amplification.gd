@@ -8,4 +8,5 @@ func _ready() -> void:
 
 func _button_pressed():
 	HabilitysController.ampli_defense_time_max(time)
+	RunScript.add_num_time_shield_upgrade()
 	selected.emit()

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dmotr6hk3de0h"]
+
+[ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="1_itikg"]
+[ext_resource type="Script" uid="uid://dggqvlm6dwy5d" path="res://scenes/interfaces/buttons/history_button/history_button.gd" id="2_aih4q"]
+
+[node name="HistoryButton" type="Button" unique_id=526662404]
+theme = ExtResource("1_itikg")
+text = "Registro"
+script = ExtResource("2_aih4q")

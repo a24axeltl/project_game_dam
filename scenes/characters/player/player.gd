@@ -182,13 +182,12 @@ func _control_atack():
 func _control_damage(body: Node2D):
 	var enemy_damage = body.owner.get("damage")
 	if !_inmunity:
+		SoundController.play_sound_damage()
 		PlayerController.subtract_life(enemy_damage)
 		RunScript.add_hit()
 		_hit = true
 		_inmunity = true
 	_control_knockback_damage(body)
-	
-	SoundController.play_sound_damage()
 	
 	print("El personaje jugable recibio daño, VIDA: ",PlayerController.get_life_count())
 	print("Muerto: ",PlayerController.is_muerto())

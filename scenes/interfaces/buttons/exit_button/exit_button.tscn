@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bhnj4co7jqqhw"]
+
+[ext_resource type="Script" uid="uid://ihhudwvey5iv" path="res://scenes/interfaces/buttons/exit_button/exit_button.gd" id="1_m1e4i"]
+
+[node name="ExitButton" type="Button" unique_id=667873823]
+theme_override_font_sizes/font_size = 55
+text = "Salir"
+script = ExtResource("1_m1e4i")

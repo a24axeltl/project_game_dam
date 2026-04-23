@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://duhq0gxf7veoe"]
 
 [ext_resource type="Script" uid="uid://bqk044sq61hst" path="res://scenes/interfaces/menus/menu_main/main_menu.gd" id="1_6frwu"]
-[ext_resource type="Script" uid="uid://cqxlr0f05b4id" path="res://scenes/interfaces/menus/menu_main/star_button.gd" id="1_xijqv"]
-[ext_resource type="PackedScene" uid="uid://dh075d6am36vf" path="res://scenes/load_scene/load_scene.tscn" id="2_f87hv"]
-[ext_resource type="Script" uid="uid://ihhudwvey5iv" path="res://scenes/interfaces/menus/exit_button.gd" id="2_xijqv"]
+[ext_resource type="PackedScene" uid="uid://c4lyeios8k7ic" path="res://scenes/interfaces/buttons/retry_button/retry_button.tscn" id="2_f87hv"]
+[ext_resource type="PackedScene" uid="uid://bhnj4co7jqqhw" path="res://scenes/interfaces/buttons/exit_button/exit_button.tscn" id="3_0da7h"]
 
 [node name="MainMenu" type="Control" unique_id=366997339 node_paths=PackedStringArray("containerButton")]
 layout_mode = 3
@@ -59,15 +58,9 @@ offset_bottom = -114.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="StarButton" type="Button" parent="ContainerButton" unique_id=1977199958]
+[node name="RetryButton" parent="ContainerButton" unique_id=1851239433 instance=ExtResource("2_f87hv")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 55
 text = "Iniciar"
-script = ExtResource("1_xijqv")
-loadScene = ExtResource("2_f87hv")
 
-[node name="ExitButton" type="Button" parent="ContainerButton" unique_id=1735855371]
+[node name="ExitButton" parent="ContainerButton" unique_id=667873823 instance=ExtResource("3_0da7h")]
 layout_mode = 2
-theme_override_font_sizes/font_size = 55
-text = "Salir"
-script = ExtResource("2_xijqv")

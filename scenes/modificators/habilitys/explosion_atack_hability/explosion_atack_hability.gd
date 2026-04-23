@@ -7,4 +7,5 @@ func _ready() -> void:
 
 func _button_pressed():
 	HabilitysController.set_explosion_atack(true)
+	RunScript.add_num_hability()
 	selected.emit()

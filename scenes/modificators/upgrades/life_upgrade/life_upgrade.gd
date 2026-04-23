@@ -8,4 +8,5 @@ func _ready() -> void:
 
 func _button_pressed():
 	PlayerController.add_life_max(life)
+	RunScript.add_num_life_upgrade()
 	selected.emit()

@@ -8,4 +8,5 @@ func _ready() -> void:
 
 func _button_pressed():
 	PlayerController.add_damage_player(damage)
+	RunScript.add_num_damage_upgrade()
 	selected.emit()

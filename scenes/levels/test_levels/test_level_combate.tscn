@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://d1txednftnfjd" path="res://tilesets/tile_floor.tres" id="2_wmjgt"]
 [ext_resource type="PackedScene" uid="uid://dkwvchqp6yarr" path="res://scenes/containers/enemy_container/enemy_container.tscn" id="3_wmjgt"]
 [ext_resource type="PackedScene" uid="uid://d3prqsg8bpdtf" path="res://scenes/characters/enemies/basic_enemy/basic_enemy.tscn" id="4_kanpj"]
-[ext_resource type="PackedScene" uid="uid://d2de13gr6gf74" path="res://scenes/results/results.tscn" id="5_kanpj"]
+[ext_resource type="PackedScene" uid="uid://d2de13gr6gf74" path="res://scenes/interfaces/menus/menu_results/menu_results.tscn" id="5_kanpj"]
 [ext_resource type="PackedScene" uid="uid://5f4xvt46vnjl" path="res://scenes/characters/player/player.tscn" id="5_l2cms"]
 
 [node name="TestLevel1" type="Node2D" unique_id=1277095687 groups=["combate"]]

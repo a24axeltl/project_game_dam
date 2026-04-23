@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c4lyeios8k7ic"]
+
+[ext_resource type="Script" uid="uid://cpg5rnxswo58t" path="res://scenes/interfaces/buttons/retry_button/retry_button.gd" id="1_7ngbo"]
+
+[node name="RetryButton" type="Button" unique_id=1851239433]
+theme_override_font_sizes/font_size = 50
+text = "Reintentar"
+script = ExtResource("1_7ngbo")

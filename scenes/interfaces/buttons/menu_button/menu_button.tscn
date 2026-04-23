@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dn54eijpejvs0"]
+
+[ext_resource type="Script" uid="uid://c1egqenk4vdoa" path="res://scenes/interfaces/buttons/menu_button/menu_button.gd" id="1_eevf3"]
+
+[node name="MenuButton" type="Button" unique_id=784250946]
+theme_override_font_sizes/font_size = 55
+text = "Volver al Menú"
+script = ExtResource("1_eevf3")

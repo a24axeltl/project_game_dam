@@ -8,4 +8,5 @@ func _ready() -> void:
 
 func _button_pressed():
 	HabilitysController.reduce_dash_time_max(time)
+	RunScript.add_num_time_dash_upgrade()
 	selected.emit()

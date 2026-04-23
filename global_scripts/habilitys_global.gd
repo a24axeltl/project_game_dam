@@ -1,5 +1,8 @@
 extends Node
 
+const  _number_max_habilitys: int = 3
+const  _number_max_upgrades: int = 4
+
 var _explosion_added_damage: int
 
 var _defense_time_max: float
@@ -134,3 +137,9 @@ func have_explosion_reach_max():
 		return true
 	else:
 		return false
+
+func get_number_max_habilitys():
+	return _number_max_habilitys
+
+func get_number_max_upgrades():
+	return _number_max_upgrades
