@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d2de13gr6gf74"]
 
 [ext_resource type="Script" uid="uid://p0ukummlawyp" path="res://scenes/interfaces/menus/menu_results/menu_results.gd" id="1_w5ssc"]
-[ext_resource type="PackedScene" uid="uid://chqou6d7x3tuw" path="res://scenes/interfaces/run_information_container/run_information_container.tscn" id="2_1eu3v"]
+[ext_resource type="PackedScene" uid="uid://chqou6d7x3tuw" path="res://scenes/interfaces/containers/run_information_container/run_information_container.tscn" id="2_1eu3v"]
 [ext_resource type="Texture2D" uid="uid://hynnik427ujl" path="res://assets/interface/celebrate_results/frame_0_delay-0.03s.png" id="2_8p8t4"]
 [ext_resource type="PackedScene" uid="uid://dn54eijpejvs0" path="res://scenes/interfaces/buttons/menu_button/menu_button.tscn" id="2_pxgxe"]
 [ext_resource type="PackedScene" uid="uid://c4lyeios8k7ic" path="res://scenes/interfaces/buttons/retry_button/retry_button.tscn" id="3_acbi1"]
@@ -56,7 +56,7 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Results" type="Node2D" unique_id=1736534899 node_paths=PackedStringArray("animation")]
+[node name="Results" type="Node2D" unique_id=1736534899 node_paths=PackedStringArray("animation") groups=["results"]]
 script = ExtResource("1_w5ssc")
 animation = NodePath("CelebrateSprite")
 

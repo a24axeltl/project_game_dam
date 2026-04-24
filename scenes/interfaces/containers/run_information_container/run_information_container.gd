@@ -12,9 +12,10 @@ extends VBoxContainer
 @export var label_vertical_atack_upgrade: Label
 
 func _ready() -> void:
-	hide_habilitys_upgrades_labels()
+	if owner.is_in_group("results"):
+		hide_habilitys_upgrades_labels()
+		show_habilitys_upgrades_label()
 	set_text_labels()
-	show_habilitys_upgrades_label()
 
 func set_text_labels():
 	label_time.text = str("Duración: ",RunScript.get_time())

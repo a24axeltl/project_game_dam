@@ -48,6 +48,9 @@ func get_time():
 	var s = _time_in_seconds - m * 60
 	return '%02d:%02d' % [m,s]
 
+func get_time_in_seconds():
+	return _time_in_seconds
+
 func add_hit():
 	_num_hits += 1
 
@@ -126,7 +129,7 @@ func get_text_time_vertical_atack_upgrades():
 func save_run_data(success: bool):
 	var value = {
 		"Success": success,
-		"Time": get_time(),
+		"Time": get_time_in_seconds(),
 		"Hits": get_hits(),
 		"Enemys Defeated": get_defeated_enemys(),
 		"Habilitys Obtained": get_num_habilitys(),
@@ -139,16 +142,35 @@ func save_run_data(success: bool):
 	}
 	
 	var full_data = {}
-	
-	# 1. Si el archivo ya existe, cargamos lo que tiene primero
+	# Si el archivo existe, cargamos lo que tiene primero
 	if FileAccess.file_exists("user://history_runs.save"):
 		var file_saved = FileAccess.open("user://history_runs.save", FileAccess.READ)
 		full_data = file_saved.get_var()
 	
-	# 2. Añadimos o actualizamos el dato nuevo sin tocar el resto
+	# Añadimos o actualizamos los datos nuevos sin tocar el resto
 	var key_name = str("run_",full_data.size() + 1)
 	full_data[key_name] = value
 	
-	# 3. Guardamos el diccionario completo actualizado
+	# Guardamos el diccionario completo actualizado
 	var file_save = FileAccess.open("user://history_runs.save", FileAccess.WRITE)
 	file_save.store_var(full_data)
+
+func load_run_data(run_data: Dictionary):
+	_time_in_seconds = run_data["Time"]
+	_num_hits = run_data["Hits"]
+	_num_defeated_enemys = run_data["Enemys Defeated"]
+	_num_habilitys = run_data["Habilitys Obtained"]
+	_num_damage_upgrades = run_data["Upgrades Damage"]
+	_num_life_upgrades = run_data["Upgrades Life"]
+	_num_time_shield_upgrades = run_data["Time Upgrades Shield"]
+	_num_time_dash_upgrades = run_data["Time Upgrades Dash"]
+	_num_time_explosion_upgrades = run_data["Time Upgrades Explosion"]
+	_num_time_vertical_atack_upgrades = run_data["Time Upgrades VerticalAtack"]
+
+func get_history_file_data():
+	load_script()
+	var load_file: Dictionary = {}
+	if FileAccess.file_exists("user://history_runs.save"):
+		var file_saved = FileAccess.open("user://history_runs.save", FileAccess.READ)
+		load_file = file_saved.get_var()
+	return load_file

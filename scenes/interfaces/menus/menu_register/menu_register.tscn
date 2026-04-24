@@ -1,15 +1,20 @@
 [gd_scene format=3 uid="uid://cbmlmxbnp0y4d"]
 
 [ext_resource type="PackedScene" uid="uid://dn54eijpejvs0" path="res://scenes/interfaces/buttons/menu_button/menu_button.tscn" id="1_7snj4"]
+[ext_resource type="Script" uid="uid://dvqtgwkb206kt" path="res://scenes/interfaces/menus/menu_register/menu_register.gd" id="1_u17v1"]
 [ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="2_unt1x"]
+[ext_resource type="PackedScene" uid="uid://chqou6d7x3tuw" path="res://scenes/interfaces/containers/run_information_container/run_information_container.tscn" id="3_unt1x"]
 
-[node name="MenuRegister" type="Control" unique_id=1128665787]
+[node name="MenuRegister" type="Control" unique_id=1128665787 node_paths=PackedStringArray("buttonsContainer", "labelsContainer") groups=["register"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_u17v1")
+buttonsContainer = NodePath("ButtonsContainer")
+labelsContainer = NodePath("LabelContainer")
 
 [node name="BackgroundColor" type="ColorRect" parent="." unique_id=948930623]
 layout_mode = 0
@@ -24,3 +29,20 @@ offset_right = 1106.0
 offset_bottom = 600.0
 theme = ExtResource("2_unt1x")
 theme_override_font_sizes/font_size = 23
+
+[node name="LabelContainer" parent="." unique_id=1624034873 instance=ExtResource("3_unt1x")]
+layout_mode = 0
+anchors_preset = 0
+anchor_bottom = 0.0
+offset_left = 668.0
+offset_top = 97.0
+offset_right = 1007.0
+offset_bottom = 473.0
+grow_vertical = 1
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="." unique_id=48003570]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 59.0
+offset_right = 90.0
+offset_bottom = 99.0
