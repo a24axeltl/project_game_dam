@@ -2,6 +2,7 @@ extends Control
 
 @export var vbox_container: VBoxContainer
 @export var array_modificators: Array [PackedScene]
+@export var transcitionScene: Control
 
 func _ready() -> void:	
 	visibility_changed.connect(reload)

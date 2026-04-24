@@ -1,5 +1,7 @@
 extends Button
 
+@export var transcitionScene: Control
+
 func _ready() -> void:
 	pressed.connect(_press_button)
 
@@ -8,5 +10,6 @@ func _press_button():
 	HabilitysController.load_script()
 	RunScript.load_script()
 	
-	var loadScene = load("res://scenes/load_scene/load_scene.tscn")
-	get_tree().change_scene_to_packed(loadScene)
+	var loadScene: PackedScene = load("res://scenes/load_scene/load_scene.tscn")
+	transcitionScene.show()
+	transcitionScene.to_dark(loadScene)

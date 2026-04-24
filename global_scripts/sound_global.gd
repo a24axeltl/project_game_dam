@@ -12,6 +12,9 @@ func play_sound_button():
 func play_victory_melody():
 	play_music(preload("res://assets/audio/music/victory/Victory_Melody.mp3"))
 
+func play_register_theme():
+	play_music(preload("res://assets/audio/music/menu_register/RegisterTheme.mp3"))
+
 func play_sound_damage():
 	play_sound(preload("res://assets/audio/sound/damage/damage.mp3"))
 
@@ -42,3 +45,6 @@ func play_music(stream: AudioStream):
 	if musicPlayer.is_playing():
 		musicPlayer.stop()
 	musicPlayer.play()
+
+func stop_music():
+	musicPlayer.stop()

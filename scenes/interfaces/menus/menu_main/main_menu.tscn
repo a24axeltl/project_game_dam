@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bhnj4co7jqqhw" path="res://scenes/interfaces/buttons/exit_button/exit_button.tscn" id="3_0da7h"]
 [ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="3_6frwu"]
 [ext_resource type="PackedScene" uid="uid://c5rnm0dqqks4v" path="res://scenes/interfaces/buttons/register_button/register_button.tscn" id="4_6frwu"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/transition_scene/transcition_scene.tscn" id="6_gasii"]
 
 [node name="MainMenu" type="Control" unique_id=366997339 node_paths=PackedStringArray("containerButton")]
 layout_mode = 3
@@ -60,14 +61,21 @@ offset_bottom = -84.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="RetryButton" parent="ContainerButton" unique_id=1851239433 instance=ExtResource("2_f87hv")]
+[node name="RetryButton" parent="ContainerButton" unique_id=1851239433 node_paths=PackedStringArray("transcitionScene") instance=ExtResource("2_f87hv")]
 layout_mode = 2
 theme = ExtResource("3_6frwu")
 text = "Iniciar"
+transcitionScene = NodePath("../../TranscitionScene")
 
-[node name="RegisterButton" parent="ContainerButton" unique_id=589993138 instance=ExtResource("4_6frwu")]
+[node name="RegisterButton" parent="ContainerButton" unique_id=589993138 node_paths=PackedStringArray("transcitionScene") instance=ExtResource("4_6frwu")]
 layout_mode = 2
+transcitionScene = NodePath("../../TranscitionScene")
 
-[node name="ExitButton" parent="ContainerButton" unique_id=667873823 instance=ExtResource("3_0da7h")]
+[node name="ExitButton" parent="ContainerButton" unique_id=667873823 node_paths=PackedStringArray("transcitionScene") instance=ExtResource("3_0da7h")]
 layout_mode = 2
 theme = ExtResource("3_6frwu")
+transcitionScene = NodePath("../../TranscitionScene")
+
+[node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("6_gasii")]
+visible = false
+layout_mode = 1

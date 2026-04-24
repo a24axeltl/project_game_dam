@@ -6,18 +6,25 @@
 [ext_resource type="PackedScene" uid="uid://cjdtdk3bgbteu" path="res://scenes/levels/test_levels/test_level_metas.tscn" id="4_lhwf4"]
 [ext_resource type="PackedScene" uid="uid://c83l63vw008if" path="res://scenes/levels/test_levels/test_level_jefe.tscn" id="5_ix8gd"]
 [ext_resource type="PackedScene" uid="uid://wunkf12l6vwg" path="res://scenes/interfaces/menus/menu_modificators/menu_modificators.tscn" id="7_4wyme"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/transition_scene/transcition_scene.tscn" id="7_ppdki"]
 
-[node name="ControllerLevels" type="Node2D" unique_id=2080523597 node_paths=PackedStringArray("menu_modificators")]
+[node name="ControllerLevels" type="Node2D" unique_id=2080523597 node_paths=PackedStringArray("menu_modificators", "transiction_scene")]
 script = ExtResource("1_iyxch")
 levels = Array[PackedScene]([ExtResource("3_ppdki"), ExtResource("4_lhwf4"), ExtResource("2_4wyme")])
 bosses = Array[PackedScene]([ExtResource("5_ix8gd")])
 menu_modificators = NodePath("CanvasLayer/MenuModificators")
+transiction_scene = NodePath("CanvasLayer/TranscitionScene")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1616295871]
 
 [node name="MenuModificators" parent="CanvasLayer" unique_id=164326612 instance=ExtResource("7_4wyme")]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+
+[node name="TranscitionScene" parent="CanvasLayer" unique_id=1119988889 instance=ExtResource("7_ppdki")]
+process_mode = 3
+visible = false

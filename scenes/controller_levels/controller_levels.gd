@@ -3,6 +3,7 @@ extends Node2D
 @export var levels: Array[PackedScene]
 @export var bosses: Array[PackedScene]
 @export var menu_modificators: Control
+@export var transiction_scene: Control
 
 var _instance_level: Node
 var _actual_level: int = 1
@@ -41,12 +42,18 @@ func delete_level():
 
 func next_level():
 	unpause()
+	
+	transiction_scene.show()
+	transiction_scene.to_dark_not_load()
+	await transiction_scene.transcition
+	
 	if _actual_level >= _end_level:
 		get_tree().change_scene_to_packed(get_boss())
 	else:
 		_actual_level += 1
 		delete_level()
 		create_level.call_deferred(_actual_level)
+	transiction_scene.hide()
 
 func get_boss():
 	bosses.shuffle()

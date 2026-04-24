@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://fn6p8lf3rrgy" path="res://assets/interface/celebrate_results/frame_6_delay-0.03s.png" id="8_ljjlo"]
 [ext_resource type="Texture2D" uid="uid://bkxpkheraml6t" path="res://assets/interface/celebrate_results/frame_7_delay-0.04s.png" id="9_ca5lo"]
 [ext_resource type="Texture2D" uid="uid://d313di8tkuj8e" path="res://assets/interface/celebrate_results/frame_8_delay-0.04s.png" id="10_dd5hj"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/transition_scene/transcition_scene.tscn" id="15_222ou"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vy634"]
 animations = [{
@@ -86,17 +87,20 @@ offset_top = 167.0
 offset_right = 598.0
 offset_bottom = 217.0
 
-[node name="MenuButton" parent="Camera2D/ButtonsContainer" unique_id=784250946 instance=ExtResource("2_pxgxe")]
+[node name="MenuButton" parent="Camera2D/ButtonsContainer" unique_id=784250946 node_paths=PackedStringArray("transcitionScene") instance=ExtResource("2_pxgxe")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 23
+transcitionScene = NodePath("../../../TranscitionScene")
 
-[node name="RetryButton" parent="Camera2D/ButtonsContainer" unique_id=1851239433 instance=ExtResource("3_acbi1")]
+[node name="RetryButton" parent="Camera2D/ButtonsContainer" unique_id=1851239433 node_paths=PackedStringArray("transcitionScene") instance=ExtResource("3_acbi1")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 23
+transcitionScene = NodePath("../../../TranscitionScene")
 
-[node name="ExitButton" parent="Camera2D/ButtonsContainer" unique_id=667873823 instance=ExtResource("4_m42l6")]
+[node name="ExitButton" parent="Camera2D/ButtonsContainer" unique_id=667873823 node_paths=PackedStringArray("transcitionScene") instance=ExtResource("4_m42l6")]
 layout_mode = 2
 theme_override_font_sizes/font_size = 23
+transcitionScene = NodePath("../../../TranscitionScene")
 
 [node name="CelebrateSprite" type="AnimatedSprite2D" parent="." unique_id=1604032941]
 position = Vector2(-237, -35.999992)
@@ -104,3 +108,10 @@ scale = Vector2(0.82487464, 0.83182734)
 sprite_frames = SubResource("SpriteFrames_vy634")
 autoplay = "default"
 frame_progress = 0.07064526
+
+[node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("15_222ou")]
+visible = false
+offset_left = -573.0
+offset_top = -386.0
+offset_right = -573.0
+offset_bottom = -386.0

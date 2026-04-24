@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b5qw22e2rnud" path="res://assets/images/joke/death_pose.png" id="1_dp3h3"]
 [ext_resource type="PackedScene" uid="uid://c4lyeios8k7ic" path="res://scenes/interfaces/buttons/retry_button/retry_button.tscn" id="3_ct0de"]
 [ext_resource type="PackedScene" uid="uid://bhnj4co7jqqhw" path="res://scenes/interfaces/buttons/exit_button/exit_button.tscn" id="4_p3n1m"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/transition_scene/transcition_scene.tscn" id="5_p3n1m"]
 
 [node name="MenuDeath" type="Control" unique_id=1115627666 node_paths=PackedStringArray("containerButton")]
 layout_mode = 3
@@ -63,8 +64,14 @@ offset_bottom = -55.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="RetryButton" parent="ContainerButtons" unique_id=1851239433 instance=ExtResource("3_ct0de")]
+[node name="RetryButton" parent="ContainerButtons" unique_id=1851239433 node_paths=PackedStringArray("transcitionScene") instance=ExtResource("3_ct0de")]
 layout_mode = 2
+transcitionScene = NodePath("../../TranscitionScene")
 
-[node name="ExitButton" parent="ContainerButtons" unique_id=667873823 instance=ExtResource("4_p3n1m")]
+[node name="ExitButton" parent="ContainerButtons" unique_id=667873823 node_paths=PackedStringArray("transcitionScene") instance=ExtResource("4_p3n1m")]
 layout_mode = 2
+transcitionScene = NodePath("../../TranscitionScene")
+
+[node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("5_p3n1m")]
+visible = false
+layout_mode = 1

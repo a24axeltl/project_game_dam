@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dvqtgwkb206kt" path="res://scenes/interfaces/menus/menu_register/menu_register.gd" id="1_u17v1"]
 [ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="2_unt1x"]
 [ext_resource type="PackedScene" uid="uid://chqou6d7x3tuw" path="res://scenes/interfaces/containers/run_information_container/run_information_container.tscn" id="3_unt1x"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/transition_scene/transcition_scene.tscn" id="5_3wtni"]
 
 [node name="MenuRegister" type="Control" unique_id=1128665787 node_paths=PackedStringArray("buttonsContainer", "labelsContainer") groups=["register"]]
 layout_mode = 3
@@ -21,7 +22,7 @@ layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 651.0
 
-[node name="MenuButton" parent="." unique_id=784250946 instance=ExtResource("1_7snj4")]
+[node name="MenuButton" parent="." unique_id=784250946 node_paths=PackedStringArray("transcitionScene") instance=ExtResource("1_7snj4")]
 layout_mode = 0
 offset_left = 899.0
 offset_top = 546.0
@@ -29,6 +30,7 @@ offset_right = 1106.0
 offset_bottom = 600.0
 theme = ExtResource("2_unt1x")
 theme_override_font_sizes/font_size = 23
+transcitionScene = NodePath("../TranscitionScene")
 
 [node name="LabelContainer" parent="." unique_id=1624034873 instance=ExtResource("3_unt1x")]
 layout_mode = 0
@@ -46,3 +48,9 @@ offset_left = 50.0
 offset_top = 59.0
 offset_right = 90.0
 offset_bottom = 99.0
+
+[node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("5_3wtni")]
+visible = false
+layout_mode = 1
+offset_top = 1.0
+offset_bottom = 1.0

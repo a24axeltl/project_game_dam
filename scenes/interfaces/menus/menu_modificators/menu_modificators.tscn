@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b3nyxfdwae3n8" path="res://scenes/modificators/upgrades/life_upgrade/life_upgrade.tscn" id="6_e78ir"]
 [ext_resource type="PackedScene" uid="uid://bhbx3o2obqpib" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_dash_reduction/time_dash_reduction.tscn" id="8_w7jd6"]
 
-[node name="MenuModificators" type="Control" unique_id=164326612 node_paths=PackedStringArray("vbox_container")]
+[node name="MenuModificators" type="Control" unique_id=164326612 node_paths=PackedStringArray("vbox_container", "transcitionScene")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -19,6 +19,7 @@ grow_vertical = 2
 script = ExtResource("1_y5lxe")
 vbox_container = NodePath("VBoxContainer")
 array_modificators = Array[PackedScene]([ExtResource("4_aqxoi"), ExtResource("5_jgdg1"), ExtResource("5_d26cb"), ExtResource("5_dsik6"), ExtResource("6_e78ir"), ExtResource("8_w7jd6")])
+transcitionScene = NodePath("")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=968497925]
 layout_mode = 1
