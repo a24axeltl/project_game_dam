@@ -29,6 +29,7 @@ boss=""
 meta=""
 recorrido=""
 combate=""
+key=""
 
 [input]
 

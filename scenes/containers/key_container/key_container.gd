@@ -7,10 +7,13 @@ var _total_keys: int
 var _collected_keys: int
 
 func _ready() -> void:
-	var keys := get_children()
-	_total_keys = keys.size()
-	for key in keys:
-		key.key_container = self
+	var children := get_children()
+	var numbers_of_key: int
+	for child in children:
+		if child.is_in_group("key"):
+			child.key_container = self
+			numbers_of_key += 1
+	_total_keys = numbers_of_key
 
 func collecte_key():
 	SoundController.play_sound_key_pick()

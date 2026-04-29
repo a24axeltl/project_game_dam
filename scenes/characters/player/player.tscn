@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://mcdlxgtojbnn" path="res://scenes/interfaces/menus/menu_death/menu_death.tscn" id="2_hss88"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tg20s"]
-size = Vector2(60.5, 122.5)
+size = Vector2(60.5, 118.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oya4h"]
-size = Vector2(61, 122.75)
+size = Vector2(61, 118.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwk1h"]
 size = Vector2(71, 87)
@@ -34,6 +34,7 @@ animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1989449960]
 visible = false
+position = Vector2(0, -2.125)
 shape = SubResource("RectangleShape2D_tg20s")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=2073882041]
@@ -41,6 +42,7 @@ collision_layer = 2
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=838686882]
+position = Vector2(0, -2.1875)
 shape = SubResource("RectangleShape2D_oya4h")
 
 [node name="HurtboxPivot" type="Node2D" parent="." unique_id=200822512]
