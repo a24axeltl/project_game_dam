@@ -9,8 +9,8 @@ extends CharacterBody2D
 @export var hurtboxCollision: CollisionShape2D
 @export var colorDebug: ColorRect
 
-const walk_velocity: float = 300.0
-const jump_velocity: float = -500.0
+const walk_velocity: float = 350.0
+const jump_velocity: float = -570.0
 const knockback_force_X := 400.0
 const knockback_force_Y := -400.0
 const hurtbox_offset = Vector2(38, 38)
