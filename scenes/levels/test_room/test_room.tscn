@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://5f4xvt46vnjl" path="res://scenes/characters/player/player.tscn" id="1_watgw"]
 [ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/camera/camera.tscn" id="2_watgw"]
-[ext_resource type="PackedScene" uid="uid://d3prqsg8bpdtf" path="res://scenes/characters/enemies/basic_enemy/basic_enemy.tscn" id="3_af4j7"]
-[ext_resource type="PackedScene" uid="uid://hpats7kjkppj" path="res://scenes/characters/enemies/attack_enemy/attack_enemy.tscn" id="4_riu6q"]
+[ext_resource type="PackedScene" uid="uid://d3prqsg8bpdtf" path="res://scenes/characters/enemies/normal/basic_enemy/basic_enemy.tscn" id="3_af4j7"]
+[ext_resource type="PackedScene" uid="uid://hpats7kjkppj" path="res://scenes/characters/enemies/normal/attack_enemy/attack_enemy.tscn" id="4_riu6q"]
 [ext_resource type="TileSet" uid="uid://dxdjsbax8tlda" path="res://tilesets/test_assets.tres" id="4_watgw"]
-[ext_resource type="PackedScene" uid="uid://cbw1vab8rgi5l" path="res://scenes/characters/enemies/shooter_enemy/shooter_enemy.tscn" id="6_af4j7"]
+[ext_resource type="PackedScene" uid="uid://cbw1vab8rgi5l" path="res://scenes/characters/enemies/normal/shooter_enemy/shooter_enemy.tscn" id="6_af4j7"]
 [ext_resource type="PackedScene" uid="uid://b6q6p3u67ia4q" path="res://scenes/objects/healing_objects/healing_object.tscn" id="6_perqg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_olv5d"]

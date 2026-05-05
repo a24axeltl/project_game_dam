@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cbw1vab8rgi5l"]
 
-[ext_resource type="Script" uid="uid://cq7xfvmcee6bp" path="res://scenes/characters/enemies/shooter_enemy/shooter_enemy.gd" id="1_mpxuq"]
+[ext_resource type="Script" uid="uid://cq7xfvmcee6bp" path="res://scenes/characters/enemies/normal/shooter_enemy/shooter_enemy.gd" id="1_mpxuq"]
 [ext_resource type="Texture2D" uid="uid://qrg6pa3uhna7" path="res://assets/images/characters/enemy_test/idle_shooter.png" id="1_qpsir"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mpxuq"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hpats7kjkppj"]
 
-[ext_resource type="SpriteFrames" uid="uid://bgy6uhgm771k0" path="res://scenes/characters/enemies/attack_enemy/attack_enemy.tres" id="1_i25l1"]
-[ext_resource type="Script" uid="uid://nr4n3iw6d6rf" path="res://scenes/characters/enemies/attack_enemy/attack_enemy.gd" id="1_ti5qr"]
+[ext_resource type="SpriteFrames" uid="uid://bgy6uhgm771k0" path="res://scenes/characters/enemies/normal/attack_enemy/attack_enemy.tres" id="1_i25l1"]
+[ext_resource type="Script" uid="uid://nr4n3iw6d6rf" path="res://scenes/characters/enemies/normal/attack_enemy/attack_enemy.gd" id="1_ti5qr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ti5qr"]
 size = Vector2(58.46875, 124.63281)

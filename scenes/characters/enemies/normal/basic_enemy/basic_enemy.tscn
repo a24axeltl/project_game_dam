@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d3prqsg8bpdtf"]
 
-[ext_resource type="Script" uid="uid://bh6i4cf3m4a41" path="res://scenes/characters/enemies/basic_enemy/basic_enemy.gd" id="1_v18xu"]
-[ext_resource type="SpriteFrames" uid="uid://w5788deww5vm" path="res://scenes/characters/enemies/basic_enemy/basic_enemy.tres" id="2_p704l"]
+[ext_resource type="Script" uid="uid://bh6i4cf3m4a41" path="res://scenes/characters/enemies/normal/basic_enemy/basic_enemy.gd" id="1_v18xu"]
+[ext_resource type="SpriteFrames" uid="uid://w5788deww5vm" path="res://scenes/characters/enemies/normal/basic_enemy/basic_enemy.tres" id="2_p704l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wxobd"]
 size = Vector2(59.117188, 122.6582)

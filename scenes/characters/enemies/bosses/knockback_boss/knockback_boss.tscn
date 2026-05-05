@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bpd826kl5bqq0"]
 
-[ext_resource type="Script" uid="uid://ceimp6gy1hmcc" path="res://scenes/characters/enemies/test_boss/test_boss_enemy.gd" id="1_7mfsb"]
+[ext_resource type="Script" uid="uid://ceimp6gy1hmcc" path="res://scenes/characters/enemies/bosses/knockback_boss/knockback_boss.gd" id="1_7mfsb"]
 [ext_resource type="Texture2D" uid="uid://dfyttk85mfjgq" path="res://assets/images/characters/enemie_test.png" id="1_ttd8i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mfsb"]
@@ -9,7 +9,7 @@ size = Vector2(184, 314)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ttd8i"]
 size = Vector2(184, 314)
 
-[node name="TestBossEnemy" type="CharacterBody2D" unique_id=264527191 node_paths=PackedStringArray("hitbox", "rayCastDown", "rayCastRight", "rayCastUp", "rayCastLeft") groups=["boss", "enemy"]]
+[node name="KnockBackBoss" type="CharacterBody2D" unique_id=264527191 node_paths=PackedStringArray("hitbox", "rayCastDown", "rayCastRight", "rayCastUp", "rayCastLeft") groups=["boss", "enemy"]]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_7mfsb")
