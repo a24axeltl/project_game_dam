@@ -11,7 +11,8 @@ func _ready() -> void:
 	hitbox.area_entered.connect(_on_hitbox_player_enetered)
 
 func _on_hitbox_player_enetered(_area: Area2D):
-	if !is_pick:
+	if !is_pick and PlayerController.get_life_count() < PlayerController.get_life_max():
+		SoundController.play_sound_key_pick()
 		print("Se cura!")
 		PlayerController.add_life(heal)
 		sprite.play("no_fruit")

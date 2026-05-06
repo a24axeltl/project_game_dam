@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d00vll0sj2a7c" path="res://scenes/levels/test_levels/test_level_recorrido.tscn" id="2_4wyme"]
 [ext_resource type="PackedScene" uid="uid://ctd040saoa64l" path="res://scenes/levels/test_levels/test_level_combate.tscn" id="3_ppdki"]
 [ext_resource type="PackedScene" uid="uid://cjdtdk3bgbteu" path="res://scenes/levels/test_levels/test_level_metas.tscn" id="4_lhwf4"]
-[ext_resource type="PackedScene" uid="uid://c83l63vw008if" path="res://scenes/levels/test_levels/knock_boss_stage.tscn" id="5_ix8gd"]
+[ext_resource type="PackedScene" uid="uid://c83l63vw008if" path="res://scenes/levels/boss_levels/knock_boss_stage.tscn" id="5_ix8gd"]
 [ext_resource type="PackedScene" uid="uid://wunkf12l6vwg" path="res://scenes/interfaces/menus/menu_modificators/menu_modificators.tscn" id="7_4wyme"]
 [ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/transition_scene/transcition_scene.tscn" id="7_ppdki"]
 
