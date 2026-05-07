@@ -1,6 +1,6 @@
 extends Control
 
-var controllerLevelsPath = "res://scenes/controller_levels/controller_levels.tscn"
+var controllerLevelsPath = "res://scenes/controllers/controller_levels/controller_levels.tscn"
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("default")
