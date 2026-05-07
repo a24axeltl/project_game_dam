@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2owqm8ke0db1"]
 
-[ext_resource type="Script" uid="uid://gvjo0c1qxaa6" path="res://scenes/transition_scene/transcition_scene.gd" id="1_tkced"]
+[ext_resource type="Script" uid="uid://gvjo0c1qxaa6" path="res://scenes/interfaces/transition_scene/transcition_scene.gd" id="1_tkced"]
 
 [sub_resource type="Animation" id="Animation_d2j43"]
 length = 0.001

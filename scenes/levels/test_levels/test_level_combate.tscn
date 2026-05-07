@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://ctd040saoa64l"]
 
-[ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/camera/camera.tscn" id="1_k6scc"]
+[ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/interfaces/camera/camera.tscn" id="1_k6scc"]
 [ext_resource type="TileSet" uid="uid://dxdjsbax8tlda" path="res://tilesets/test_assets.tres" id="2_05dpx"]
 [ext_resource type="TileSet" uid="uid://d1txednftnfjd" path="res://tilesets/tile_floor.tres" id="2_wmjgt"]
-[ext_resource type="PackedScene" uid="uid://dkwvchqp6yarr" path="res://scenes/containers/enemy_container/enemy_container.tscn" id="3_wmjgt"]
+[ext_resource type="PackedScene" uid="uid://dkwvchqp6yarr" path="res://scenes/controllers/containers/enemy_container/enemy_container.tscn" id="3_wmjgt"]
 [ext_resource type="PackedScene" uid="uid://d3prqsg8bpdtf" path="res://scenes/characters/enemies/normal/basic_enemy/basic_enemy.tscn" id="4_kanpj"]
 [ext_resource type="PackedScene" uid="uid://d2de13gr6gf74" path="res://scenes/interfaces/menus/menu_results/menu_results.tscn" id="5_kanpj"]
 [ext_resource type="PackedScene" uid="uid://5f4xvt46vnjl" path="res://scenes/characters/player/player.tscn" id="5_l2cms"]

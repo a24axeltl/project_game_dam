@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://daawifurdbyvi"]
 
 [ext_resource type="PackedScene" uid="uid://bjhwife5qt4v8" path="res://scenes/interfaces/in_game/life_interface/life_interface.tscn" id="1_2ear0"]
-[ext_resource type="Script" uid="uid://wadsj17s8u66" path="res://scenes/camera/camera.gd" id="1_lng1m"]
+[ext_resource type="Script" uid="uid://wadsj17s8u66" path="res://scenes/interfaces/camera/camera.gd" id="1_lng1m"]
 [ext_resource type="PackedScene" uid="uid://rb2xnbv14vlt" path="res://scenes/interfaces/in_game/message_level/message_level.tscn" id="3_0jiuk"]
 
 [node name="Camera2D" type="Camera2D" unique_id=443728676 node_paths=PackedStringArray("camera")]

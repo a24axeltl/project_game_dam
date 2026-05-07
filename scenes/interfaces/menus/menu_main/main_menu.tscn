@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bhnj4co7jqqhw" path="res://scenes/interfaces/buttons/exit_button/exit_button.tscn" id="3_0da7h"]
 [ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="3_6frwu"]
 [ext_resource type="PackedScene" uid="uid://c5rnm0dqqks4v" path="res://scenes/interfaces/buttons/register_button/register_button.tscn" id="4_6frwu"]
-[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/transition_scene/transcition_scene.tscn" id="6_gasii"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transition_scene/transcition_scene.tscn" id="6_gasii"]
 
 [node name="MainMenu" type="Control" unique_id=366997339 node_paths=PackedStringArray("containerButton")]
 layout_mode = 3

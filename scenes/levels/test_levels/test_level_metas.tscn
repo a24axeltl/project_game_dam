@@ -1,21 +1,19 @@
 [gd_scene format=4 uid="uid://cjdtdk3bgbteu"]
 
-[ext_resource type="PackedScene" uid="uid://cbw1vab8rgi5l" path="res://scenes/characters/enemies/normal/shooter_enemy/shooter_enemy.tscn" id="1_awn3m"]
-[ext_resource type="PackedScene" uid="uid://bqb5xnj0e1ba8" path="res://scenes/containers/key_container/key_container.tscn" id="1_rc3kj"]
-[ext_resource type="PackedScene" uid="uid://banfe0xannnmh" path="res://scenes/objects/key/key.tscn" id="2_awn3m"]
+[ext_resource type="PackedScene" uid="uid://crqsdplh0tbdm" path="res://scenes/objects/damage_objects/spikes/spikes.tscn" id="1_awn3m"]
+[ext_resource type="PackedScene" uid="uid://bqb5xnj0e1ba8" path="res://scenes/controllers/containers/key_container/key_container.tscn" id="1_rc3kj"]
+[ext_resource type="PackedScene" uid="uid://banfe0xannnmh" path="res://scenes/objects/level_objects/key/key.tscn" id="2_awn3m"]
 [ext_resource type="TileSet" uid="uid://dxdjsbax8tlda" path="res://tilesets/test_assets.tres" id="3_ta2om"]
 [ext_resource type="PackedScene" uid="uid://5f4xvt46vnjl" path="res://scenes/characters/player/player.tscn" id="4_tdgcs"]
-[ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/camera/camera.tscn" id="5_tp4le"]
+[ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/interfaces/camera/camera.tscn" id="5_tp4le"]
 
 [node name="TestLevel3" type="Node2D" unique_id=586594975 groups=["meta"]]
 
-[node name="ShooterEnemy" parent="." unique_id=1355098275 instance=ExtResource("1_awn3m")]
-position = Vector2(-715, 1124.0001)
-rotation = 3.126505
+[node name="Spikes" parent="." unique_id=96220804 instance=ExtResource("1_awn3m")]
+position = Vector2(-727, 1130)
 
-[node name="ShooterEnemy2" parent="." unique_id=773035833 instance=ExtResource("1_awn3m")]
-position = Vector2(769, 1124.0001)
-rotation = 3.126505
+[node name="Spikes2" parent="." unique_id=397330712 instance=ExtResource("1_awn3m")]
+position = Vector2(775, 1129)
 
 [node name="KeyContainer" parent="." unique_id=485478545 node_paths=PackedStringArray("remainKeysLabel") instance=ExtResource("1_rc3kj")]
 remainKeysLabel = NodePath("../Player/Camera2D/Label")

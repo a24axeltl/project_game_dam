@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://bqb5xnj0e1ba8"]
-
-[ext_resource type="Script" uid="uid://cw8smc5ckm302" path="res://scenes/containers/key_container/key_container.gd" id="1_l40ck"]
-
-[node name="KeyContainer" type="Node" unique_id=485478545]
-script = ExtResource("1_l40ck")

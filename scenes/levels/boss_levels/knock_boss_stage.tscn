@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://c83l63vw008if"]
 
 [ext_resource type="TileSet" uid="uid://d1txednftnfjd" path="res://tilesets/tile_floor.tres" id="1_urcxi"]
-[ext_resource type="PackedScene" uid="uid://dkwvchqp6yarr" path="res://scenes/containers/enemy_container/enemy_container.tscn" id="2_u5yf2"]
+[ext_resource type="PackedScene" uid="uid://dkwvchqp6yarr" path="res://scenes/controllers/containers/enemy_container/enemy_container.tscn" id="2_u5yf2"]
 [ext_resource type="PackedScene" uid="uid://d2de13gr6gf74" path="res://scenes/interfaces/menus/menu_results/menu_results.tscn" id="3_kwoyl"]
 [ext_resource type="PackedScene" uid="uid://bpd826kl5bqq0" path="res://scenes/characters/enemies/bosses/knockback_boss/knockback_boss.tscn" id="4_vmm5c"]
 [ext_resource type="PackedScene" uid="uid://5f4xvt46vnjl" path="res://scenes/characters/player/player.tscn" id="5_vbxay"]
-[ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/camera/camera.tscn" id="6_7y1if"]
+[ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/interfaces/camera/camera.tscn" id="6_7y1if"]
 
 [node name="KnockBossStage" type="Node2D" unique_id=1215064729 groups=["boss"]]
 

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dvqtgwkb206kt" path="res://scenes/interfaces/menus/menu_register/menu_register.gd" id="1_u17v1"]
 [ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="2_unt1x"]
 [ext_resource type="PackedScene" uid="uid://chqou6d7x3tuw" path="res://scenes/interfaces/containers/run_information_container/run_information_container.tscn" id="3_unt1x"]
-[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/transition_scene/transcition_scene.tscn" id="5_3wtni"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transition_scene/transcition_scene.tscn" id="5_3wtni"]
 
 [node name="MenuRegister" type="Control" unique_id=1128665787 node_paths=PackedStringArray("buttonsContainer", "labelsContainer") groups=["register"]]
 layout_mode = 3

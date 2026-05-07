@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://chxyg2o8r0i7s"]
 
 [ext_resource type="Shader" uid="uid://cj5575c7v2vrl" path="res://shaders/enemy/black_shader.tres" id="1_838e8"]
-[ext_resource type="Script" uid="uid://c2i2uit55j3rk" path="res://scenes/objects/bullet/bullet.gd" id="1_hwavt"]
+[ext_resource type="Script" uid="uid://c2i2uit55j3rk" path="res://scenes/objects/damage_objects/bullet/bullet.gd" id="1_hwavt"]
 [ext_resource type="Texture2D" uid="uid://dtv5ecswqcw8v" path="res://icon.svg" id="2_hwavt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rj4lm"]

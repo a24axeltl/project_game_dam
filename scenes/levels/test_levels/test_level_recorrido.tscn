@@ -1,12 +1,31 @@
 [gd_scene format=4 uid="uid://d00vll0sj2a7c"]
 
-[ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/camera/camera.tscn" id="1_t8pls"]
+[ext_resource type="PackedScene" uid="uid://crqsdplh0tbdm" path="res://scenes/objects/damage_objects/spikes/spikes.tscn" id="1_soowu"]
+[ext_resource type="PackedScene" uid="uid://daawifurdbyvi" path="res://scenes/interfaces/camera/camera.tscn" id="1_t8pls"]
 [ext_resource type="PackedScene" uid="uid://5f4xvt46vnjl" path="res://scenes/characters/player/player.tscn" id="2_11lub"]
 [ext_resource type="TileSet" uid="uid://dxdjsbax8tlda" path="res://tilesets/test_assets.tres" id="3_11lub"]
 [ext_resource type="PackedScene" uid="uid://d3prqsg8bpdtf" path="res://scenes/characters/enemies/normal/basic_enemy/basic_enemy.tscn" id="4_85v8c"]
-[ext_resource type="PackedScene" uid="uid://bas6p1esj2ubb" path="res://scenes/objects/exit_door/exit_door.tscn" id="5_sr1yv"]
+[ext_resource type="PackedScene" uid="uid://bas6p1esj2ubb" path="res://scenes/objects/level_objects/exit_door/exit_door.tscn" id="5_sr1yv"]
 
 [node name="TestLevel2" type="Node2D" unique_id=517779826 groups=["recorrido"]]
+
+[node name="Spikes" parent="." unique_id=96220804 instance=ExtResource("1_soowu")]
+position = Vector2(-757, 836)
+
+[node name="Spikes2" parent="." unique_id=664281227 instance=ExtResource("1_soowu")]
+position = Vector2(-990, 836)
+
+[node name="Spikes3" parent="." unique_id=1290722435 instance=ExtResource("1_soowu")]
+position = Vector2(-1224, 836)
+
+[node name="Spikes4" parent="." unique_id=1777785715 instance=ExtResource("1_soowu")]
+position = Vector2(-1457, 836)
+
+[node name="Spikes5" parent="." unique_id=1761107606 instance=ExtResource("1_soowu")]
+position = Vector2(-1690, 836)
+
+[node name="Spikes6" parent="." unique_id=1419884155 instance=ExtResource("1_soowu")]
+position = Vector2(-1923, 836)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=183043044]
 position = Vector2(-3846, 780)

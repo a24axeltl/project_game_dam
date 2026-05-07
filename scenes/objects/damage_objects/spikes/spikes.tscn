@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://crqsdplh0tbdm"]
+
+[ext_resource type="Texture2D" uid="uid://d1ft613cm86xl" path="res://assets/images/objects/spikes_object/Spikes_WIP.png" id="1_131y0"]
+[ext_resource type="Script" uid="uid://b6cfqatdvgkfx" path="res://scenes/objects/damage_objects/spikes/spikes.gd" id="1_u6v68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6v68"]
+size = Vector2(235.09375, 50.94893)
+
+[node name="Spikes" type="Node2D" unique_id=96220804 node_paths=PackedStringArray("hitbox") groups=["enemy"]]
+script = ExtResource("1_u6v68")
+hitbox = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=480394970]
+rotation = 0.019476308
+scale = Vector2(0.2971544, 0.28243062)
+texture = ExtResource("1_131y0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=403571407]
+position = Vector2(2, 0)
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1333075113]
+shape = SubResource("RectangleShape2D_u6v68")

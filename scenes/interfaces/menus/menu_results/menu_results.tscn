@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://fn6p8lf3rrgy" path="res://assets/interface/celebrate_results/frame_6_delay-0.03s.png" id="8_ljjlo"]
 [ext_resource type="Texture2D" uid="uid://bkxpkheraml6t" path="res://assets/interface/celebrate_results/frame_7_delay-0.04s.png" id="9_ca5lo"]
 [ext_resource type="Texture2D" uid="uid://d313di8tkuj8e" path="res://assets/interface/celebrate_results/frame_8_delay-0.04s.png" id="10_dd5hj"]
-[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/transition_scene/transcition_scene.tscn" id="15_222ou"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transition_scene/transcition_scene.tscn" id="15_222ou"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vy634"]
 animations = [{

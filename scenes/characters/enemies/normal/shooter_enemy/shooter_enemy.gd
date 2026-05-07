@@ -5,7 +5,7 @@ extends Node2D
 
 const damage: int = 1
 
-var bullet = preload("res://scenes/objects/bullet/bullet.tscn")
+var bullet = preload("res://scenes/objects/damage_objects/bullet/bullet.tscn")
 
 func _ready() -> void:
 	timer.timeout.connect(shoot)

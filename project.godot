@@ -121,8 +121,8 @@ debug_next={
 
 2d_physics/layer_1="suelo"
 2d_physics/layer_2="personaje_principal"
-2d_physics/layer_3="personaje_enemigo"
-2d_physics/layer_4="object"
+2d_physics/layer_3="objeto_enemigo"
+2d_physics/layer_4="objeto"
 
 [physics]
 
