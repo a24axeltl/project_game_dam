@@ -30,6 +30,9 @@ func play_sound_explosion():
 func play_sound_vertical_slice():
 	play_sound(preload("res://assets/audio/sound/vertical_slice/vertical_slice.mp3"))
 
+func play_sound_dash():
+	play_sound(preload("res://assets/audio/sound/dash/dash.mp3"))
+
 func play_sound(stream: AudioStream):
 	var soundPlayer = AudioStreamPlayer.new()
 	add_child(soundPlayer)

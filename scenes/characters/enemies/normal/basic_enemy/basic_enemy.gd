@@ -77,16 +77,19 @@ func _physics_process(delta: float) -> void:
 		_muerto = true
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.get_owner().is_in_group("enemy"):
+		if area.name == "Hitbox":
+			_damage_control(area, 1)
 	if area.get_owner().is_in_group("player"):
 		if area.name == "Hurtbox":
-			_damage_control(area)
+			_damage_control(area, PlayerController.get_damage_player())
 
 func _enter_hit_state():
 	await get_tree().create_timer(0.3).timeout
 	_state = State.PATROL
 
-func _damage_control(area: Area2D):
-	_life_count -= PlayerController.get_damage_player()
+func _damage_control(area: Area2D, damage_value: int):
+	_life_count -= damage_value
 
 	var strike_direction = sign(global_position.x - area.get_parent().get_parent().global_position.x)
 	
