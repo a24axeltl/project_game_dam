@@ -4,37 +4,85 @@
 [ext_resource type="SpriteFrames" uid="uid://b2ecee3gecwiw" path="res://scenes/characters/player/player.tres" id="1_tg20s"]
 [ext_resource type="Material" uid="uid://bc5sxomibst57" path="res://shaders/player/blue_player.tres" id="2_686vu"]
 [ext_resource type="PackedScene" uid="uid://mcdlxgtojbnn" path="res://scenes/interfaces/menus/menu_death/menu_death.tscn" id="2_hss88"]
+[ext_resource type="Texture2D" uid="uid://dihtcf7al1n1q" path="res://assets/images/characters/Lex/Lex_Run/frame0000.png" id="4_bsn6e"]
+[ext_resource type="Texture2D" uid="uid://bu00ocr5s8pnd" path="res://assets/images/characters/Lex/Lex_Run/frame0001.png" id="5_blysn"]
+[ext_resource type="Texture2D" uid="uid://bwdxccla681n6" path="res://assets/images/characters/Lex/Lex_Run/frame0003.png" id="6_hv5x3"]
+[ext_resource type="Texture2D" uid="uid://byanispwg1gfb" path="res://assets/images/characters/Lex/Lex_Run/frame0002.png" id="7_ykrpk"]
+[ext_resource type="Texture2D" uid="uid://c7hyh6dxx7bdg" path="res://assets/images/characters/Lex/Lex_Run/frame0004.png" id="8_i1nod"]
+[ext_resource type="Texture2D" uid="uid://bwmnldwc67se4" path="res://assets/images/characters/Lex/Lex_Run/frame0005.png" id="9_4kqyw"]
+[ext_resource type="Texture2D" uid="uid://dmtgaf0tgycfc" path="res://assets/images/characters/Lex/Lex_Run/frame0006.png" id="10_svuau"]
+[ext_resource type="Texture2D" uid="uid://ddy8l3y72vig4" path="res://assets/images/characters/Lex/Lex_Run/frame0007.png" id="11_ro20i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8y75b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bsn6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_blysn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hv5x3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ykrpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_i1nod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4kqyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_svuau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ro20i")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 13.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tg20s"]
-size = Vector2(60.5, 118.25)
+size = Vector2(60.5, 114.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oya4h"]
-size = Vector2(61, 118.375)
+size = Vector2(61, 114.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwk1h"]
 size = Vector2(71, 87)
 
-[node name="Player" type="CharacterBody2D" unique_id=1543182604 node_paths=PackedStringArray("animacion", "hurtboxPivot", "hitbox", "hurtbox", "hurtboxCollision", "colorDebug") groups=["player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1543182604 node_paths=PackedStringArray("animacion", "animacion_run", "hurtboxPivot", "hitbox", "hurtbox", "hurtboxCollision", "colorDebug") groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_oya4h")
 menuDeath = ExtResource("2_hss88")
 blue_shader = ExtResource("2_686vu")
-animacion = NodePath("AnimatedSprite2D")
+animacion = NodePath("Animacion")
+animacion_run = NodePath("Run")
 hurtboxPivot = NodePath("HurtboxPivot")
 hitbox = NodePath("Hitbox")
 hurtbox = NodePath("HurtboxPivot/Hurtbox")
 hurtboxCollision = NodePath("HurtboxPivot/Hurtbox/CollisionShape2D")
 colorDebug = NodePath("HurtboxPivot/Hurtbox/CollisionShape2D/ColorDebug")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1156699237]
-position = Vector2(3.8146973e-06, 0.97656095)
-scale = Vector2(0.9350649, 0.9842491)
+[node name="Run" type="AnimatedSprite2D" parent="." unique_id=558623041]
+position = Vector2(-7, 1.000001)
+scale = Vector2(0.036826488, 0.04218928)
+sprite_frames = SubResource("SpriteFrames_8y75b")
+animation = &"walk"
+frame_progress = 0.8813774
+
+[node name="Animacion" type="AnimatedSprite2D" parent="." unique_id=1156699237]
+visible = false
+position = Vector2(1, -6)
+scale = Vector2(0.041289594, 0.042895444)
 sprite_frames = ExtResource("1_tg20s")
-animation = &"idle"
+animation = &"atack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1989449960]
-visible = false
-position = Vector2(0, -2.125)
+position = Vector2(0, -4.125)
 shape = SubResource("RectangleShape2D_tg20s")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=2073882041]
@@ -42,7 +90,7 @@ collision_layer = 2
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=838686882]
-position = Vector2(0, -2.1875)
+position = Vector2(0, -4.1875)
 shape = SubResource("RectangleShape2D_oya4h")
 
 [node name="HurtboxPivot" type="Node2D" parent="." unique_id=200822512]

@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var menuDeath: PackedScene
 @export var blue_shader: ShaderMaterial
 @export var animacion: AnimatedSprite2D
+@export var animacion_run: AnimatedSprite2D
 @export var hurtboxPivot: Node2D
 @export var hitbox: Area2D
 @export var hurtbox: Area2D
@@ -64,9 +65,11 @@ func _physics_process(delta: float) -> void:
 	# Handle movemnt.
 	if Input.is_action_pressed("der"):
 		velocity.x = walk_velocity
+		animacion_run.flip_h = false
 		animacion.flip_h = false
 	elif Input.is_action_pressed("izq"):
 		velocity.x = -walk_velocity
+		animacion_run.flip_h = true
 		animacion.flip_h = true
 	else:
 		velocity.x = 0
@@ -216,20 +219,27 @@ func _control_animation():
 		return
 	elif animacion.animation == "hit" and animacion.is_playing():
 		return
+	elif  animacion_run.is_playing() and !is_on_floor():
+		hide_animation_run()
+		animacion.play("jump")
 	
 	if !is_on_floor():
 		animacion.play("jump")
 		if _atacking:
 			_atack_animation()
 	elif (velocity.x != 0):
-		animacion.play("walk")
+		show_animation_run()
+		animacion_run.play("walk")
 		if _atacking:
 			_atack_animation()
+		if !is_on_floor():
+			animacion_run.play("jump")
 	elif _atacking:
 		_atack_animation()
 	elif _defending:
 		_defense_animation()
 	else:
+		hide_animation_run()
 		animacion.play("idle")
 
 	if _dashing:
@@ -259,6 +269,14 @@ func _set_last_position():
 
 func _resize_hurtbox(size: Vector2):
 	hurtboxCollision.shape.set_deferred("size", size)
+
+func show_animation_run():
+	animacion.hide()
+	animacion_run.show()
+
+func hide_animation_run():
+	animacion.show()
+	animacion_run.hide()
 
 func _health():
 	PlayerController.add_life(1)

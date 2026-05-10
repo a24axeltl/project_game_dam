@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://dph7mm0w31l0p"]
+
+[ext_resource type="Texture2D" uid="uid://c0hnkmpkg6ept" path="res://assets/images/scenario/background/Background.png" id="1_vfpdf"]
+[ext_resource type="Texture2D" uid="uid://cpn5pltq67rh8" path="res://assets/images/scenario/building_zone/BuildingsZone1.png" id="2_jfl41"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1853426432]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=82183141]
+position = Vector2(-170.99988, -569.4999)
+scale = Vector2(1.4590845, 1.1487783)
+texture = ExtResource("1_vfpdf")
+
+[node name="Buildings2" type="Sprite2D" parent="." unique_id=1871294699]
+visible = false
+position = Vector2(269.00003, 182)
+scale = Vector2(0.40894288, 0.6980096)
+texture = ExtResource("2_jfl41")
+
+[node name="Buildings" type="Sprite2D" parent="." unique_id=1945145930]
+visible = false
+position = Vector2(305.8125, 478.00003)
+scale = Vector2(0.18924396, 0.74811256)
+texture = ExtResource("2_jfl41")
+
+[node name="Buildings5" type="Sprite2D" parent="." unique_id=1334244898]
+visible = false
+position = Vector2(1676.5938, 47.5)
+scale = Vector2(0.40894288, 0.6980096)
+texture = ExtResource("2_jfl41")
+
+[node name="Buildings6" type="Sprite2D" parent="." unique_id=329308173]
+visible = false
+position = Vector2(1713.4063, 343.50003)
+scale = Vector2(0.18924396, 0.74811256)
+texture = ExtResource("2_jfl41")
+
+[node name="Buildings7" type="Sprite2D" parent="." unique_id=1371283562]
+visible = false
+position = Vector2(-1173.4063, 249.5)
+scale = Vector2(0.40894288, 0.6980096)
+texture = ExtResource("2_jfl41")
+
+[node name="Buildings8" type="Sprite2D" parent="." unique_id=2060615300]
+visible = false
+position = Vector2(-1136.5938, 545.5)
+scale = Vector2(0.18924396, 0.74811256)
+texture = ExtResource("2_jfl41")
+
+[node name="Buildings9" type="Sprite2D" parent="." unique_id=2109059780]
+visible = false
+position = Vector2(-2211.4063, 244.5)
+scale = Vector2(0.40894288, 0.6980096)
+texture = ExtResource("2_jfl41")
+
+[node name="Buildings10" type="Sprite2D" parent="." unique_id=1492696857]
+visible = false
+position = Vector2(-2174.5938, 540.5)
+scale = Vector2(0.18924396, 0.74811256)
+texture = ExtResource("2_jfl41")
+
+[node name="Buildings11" type="Sprite2D" parent="." unique_id=1851892785]
+visible = false
+position = Vector2(-1116.4063, 273.99997)
+scale = Vector2(0.23783083, 0.74811256)
+texture = ExtResource("2_jfl41")
+
+[node name="Buildings12" type="Sprite2D" parent="." unique_id=1204545355]
+visible = false
+position = Vector2(-2800, 156)
+scale = Vector2(0.38502136, 0.74811256)
+texture = ExtResource("2_jfl41")
+
+[node name="Buildings13" type="Sprite2D" parent="." unique_id=1894618761]
+visible = false
+position = Vector2(-2800, 156)
+scale = Vector2(0.38502136, 0.74811256)
+texture = ExtResource("2_jfl41")
+
+[node name="Buildings14" type="Sprite2D" parent="." unique_id=1107871779]
+visible = false
+position = Vector2(2617.0002, 163)
+scale = Vector2(0.38502136, 0.74811256)
+texture = ExtResource("2_jfl41")
