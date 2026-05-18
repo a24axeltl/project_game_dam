@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var blue_shader: ShaderMaterial
 @export var animacion: AnimatedSprite2D
 @export var animacion_run: AnimatedSprite2D
+@export var animacion_atack: AnimatedSprite2D
 @export var hurtboxPivot: Node2D
 @export var hitbox: Area2D
 @export var hurtbox: Area2D
@@ -66,11 +67,15 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("der"):
 		velocity.x = walk_velocity
 		animacion_run.flip_h = false
+		animacion_atack.flip_h = false
 		animacion.flip_h = false
+		_fix_position_animation_atack()
 	elif Input.is_action_pressed("izq"):
 		velocity.x = -walk_velocity
 		animacion_run.flip_h = true
+		animacion_atack.flip_h = true
 		animacion.flip_h = true
+		_fix_position_animation_atack()
 	else:
 		velocity.x = 0
 
@@ -215,45 +220,70 @@ func _control_knockback_atack(area: Area2D):
 	velocity = _knockback
 
 func _control_animation():
-	if animacion.animation == "atack" and animacion.is_playing():
+	if animacion.animation == "hit" and animacion.is_playing():
 		return
-	elif animacion.animation == "hit" and animacion.is_playing():
+	elif animacion_atack.is_playing():
 		return
 	elif  animacion_run.is_playing() and !is_on_floor():
-		hide_animation_run()
+		_show_animation()
 		animacion.play("jump")
 	
 	if !is_on_floor():
+		_show_animation()
 		animacion.play("jump")
 		if _atacking:
+			_show_animation_atack()
 			_atack_animation()
 	elif (velocity.x != 0):
-		show_animation_run()
+		_show_animation_run()
 		animacion_run.play("walk")
 		if _atacking:
+			_show_animation_atack()
 			_atack_animation()
 		if !is_on_floor():
+			_show_animation()
 			animacion_run.play("jump")
 	elif _atacking:
+		_show_animation_atack()
 		_atack_animation()
 	elif _defending:
+		_show_animation()
 		_defense_animation()
 	else:
-		hide_animation_run()
+		_show_animation()
 		animacion.play("idle")
 
 	if _dashing:
 		animacion.material = blue_shader
+		animacion_run.material = blue_shader
+		animacion_atack.material = blue_shader
 	else:
 		animacion.material = null
+		animacion_run.material = null
+		animacion_atack.material = null
 	if _hit:
 		animacion.play("hit")
 		_hit = false
 	if PlayerController.is_muerto():
 		animacion.play("dead")
 
-func _atack_animation():	
-	animacion.play("atack")
+func _show_animation():
+	animacion_atack.hide()
+	animacion_run.hide()
+	animacion.show()
+
+func _show_animation_atack():
+	animacion_run.hide()
+	animacion.hide()
+	animacion_atack.show()
+
+func _show_animation_run():
+	animacion.hide()
+	animacion_atack.hide()
+	animacion_run.show()
+
+func _atack_animation():
+	animacion_atack.play("atack")
 	_atacking = false
 
 func _defense_animation():
@@ -267,16 +297,14 @@ func _set_last_position():
 		_hurtbox_pos.x = -hurtbox_offset.x
 		_hurtbox_pos.y = 0
 
+func _fix_position_animation_atack():
+	if animacion_atack.position.x > 0 and animacion_atack.flip_h:
+		animacion_atack.position.x *= -1
+	elif animacion_atack.position.x < 0 and !animacion_atack.flip_h:
+		animacion_atack.position.x *= -1
+
 func _resize_hurtbox(size: Vector2):
 	hurtboxCollision.shape.set_deferred("size", size)
-
-func show_animation_run():
-	animacion.hide()
-	animacion_run.show()
-
-func hide_animation_run():
-	animacion.show()
-	animacion_run.hide()
 
 func _health():
 	PlayerController.add_life(1)

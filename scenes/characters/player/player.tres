@@ -1,15 +1,9 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://b2ecee3gecwiw"]
 
-[ext_resource type="Texture2D" uid="uid://cfdxef63kxfyg" path="res://assets/images/characters/Lex/Lex_Atack/frame0000.png" id="1_f4d43"]
-[ext_resource type="Texture2D" uid="uid://cb0tloscewe6u" path="res://assets/images/characters/Lex/Lex_Atack/frame0001.png" id="2_4los2"]
 [ext_resource type="Texture2D" uid="uid://thm65p28npf7" path="res://assets/images/characters/principal_test/run_spritesheet.png" id="2_doydv"]
 [ext_resource type="Texture2D" uid="uid://y58v3hr71y0c" path="res://assets/images/characters/principal_test/death_spritesheet.png" id="3_quio4"]
-[ext_resource type="Texture2D" uid="uid://dhpm52eoc00bm" path="res://assets/images/characters/Lex/Lex_Atack/frame0002.png" id="3_sn5oh"]
-[ext_resource type="Texture2D" uid="uid://c4qjdlw3d6gvq" path="res://assets/images/characters/Lex/Lex_Atack/frame0003.png" id="4_nunld"]
 [ext_resource type="Texture2D" uid="uid://yjhyruktjgbm" path="res://assets/images/characters/principal_test/hurt_spritesheet.png" id="5_6r2b1"]
-[ext_resource type="Texture2D" uid="uid://ca1s5gq2jbla6" path="res://assets/images/characters/Lex/Lex_Atack/frame0004.png" id="5_hvbix"]
 [ext_resource type="Texture2D" uid="uid://rpoqm0asmvdr" path="res://assets/images/characters/Lex/Lex_Idle/frame0000.png" id="6_nunld"]
-[ext_resource type="Texture2D" uid="uid://wdfa3xut5l11" path="res://assets/images/characters/Lex/Lex_Atack/frame0005.png" id="6_xso5k"]
 [ext_resource type="Texture2D" uid="uid://cr64v7x0or5fh" path="res://assets/images/characters/Lex/Lex_Idle/frame0003.png" id="7_hvbix"]
 [ext_resource type="Texture2D" uid="uid://cacl4f22dewrb" path="res://assets/images/characters/Lex/Lex_Idle/frame0005.png" id="8_xso5k"]
 [ext_resource type="Texture2D" uid="uid://bct8tgninrt27" path="res://assets/images/characters/Lex/Lex_Jump/frame0000.png" id="9_thua6"]
@@ -85,29 +79,6 @@ region = Rect2(318, 0, 71, 123)
 
 [resource]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_f4d43")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_4los2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_sn5oh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_nunld")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_hvbix")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_xso5k")
-}],
-"loop": false,
-"name": &"atack",
-"speed": 30.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pdsew")

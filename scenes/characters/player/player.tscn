@@ -12,6 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://bwmnldwc67se4" path="res://assets/images/characters/Lex/Lex_Run/frame0005.png" id="9_4kqyw"]
 [ext_resource type="Texture2D" uid="uid://dmtgaf0tgycfc" path="res://assets/images/characters/Lex/Lex_Run/frame0006.png" id="10_svuau"]
 [ext_resource type="Texture2D" uid="uid://ddy8l3y72vig4" path="res://assets/images/characters/Lex/Lex_Run/frame0007.png" id="11_ro20i"]
+[ext_resource type="Texture2D" uid="uid://cfdxef63kxfyg" path="res://assets/images/characters/Lex/Lex_Atack/frame0000.png" id="13_8y75b"]
+[ext_resource type="Texture2D" uid="uid://c4qjdlw3d6gvq" path="res://assets/images/characters/Lex/Lex_Atack/frame0003.png" id="16_3hnlq"]
+[ext_resource type="Texture2D" uid="uid://ca1s5gq2jbla6" path="res://assets/images/characters/Lex/Lex_Atack/frame0004.png" id="17_d73qs"]
+[ext_resource type="Texture2D" uid="uid://wdfa3xut5l11" path="res://assets/images/characters/Lex/Lex_Atack/frame0005.png" id="18_u6wme"]
+[ext_resource type="Texture2D" uid="uid://cwjmet3ij1bvj" path="res://assets/images/characters/Lex/Lex_Atack/frame0006.png" id="19_bxwvg"]
+[ext_resource type="Texture2D" uid="uid://dci6nc4qe5h5k" path="res://assets/images/characters/Lex/Lex_Atack/frame0007.png" id="20_2v4cy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8y75b"]
 animations = [{
@@ -45,6 +51,32 @@ animations = [{
 "speed": 13.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_j8rto"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_8y75b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3hnlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_d73qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_u6wme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_bxwvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2v4cy")
+}],
+"loop": false,
+"name": &"atack",
+"speed": 20.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tg20s"]
 size = Vector2(60.5, 114.25)
 
@@ -54,32 +86,43 @@ size = Vector2(61, 114.375)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwk1h"]
 size = Vector2(71, 87)
 
-[node name="Player" type="CharacterBody2D" unique_id=1543182604 node_paths=PackedStringArray("animacion", "animacion_run", "hurtboxPivot", "hitbox", "hurtbox", "hurtboxCollision", "colorDebug") groups=["player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1543182604 node_paths=PackedStringArray("animacion", "animacion_run", "animacion_atack", "hurtboxPivot", "hitbox", "hurtbox", "hurtboxCollision", "colorDebug") groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_oya4h")
 menuDeath = ExtResource("2_hss88")
 blue_shader = ExtResource("2_686vu")
 animacion = NodePath("Animacion")
 animacion_run = NodePath("Run")
+animacion_atack = NodePath("Atack")
 hurtboxPivot = NodePath("HurtboxPivot")
 hitbox = NodePath("Hitbox")
 hurtbox = NodePath("HurtboxPivot/Hurtbox")
 hurtboxCollision = NodePath("HurtboxPivot/Hurtbox/CollisionShape2D")
 colorDebug = NodePath("HurtboxPivot/Hurtbox/CollisionShape2D/ColorDebug")
 
-[node name="Run" type="AnimatedSprite2D" parent="." unique_id=558623041]
-position = Vector2(-7, 1.000001)
-scale = Vector2(0.036826488, 0.04218928)
-sprite_frames = SubResource("SpriteFrames_8y75b")
-animation = &"walk"
-frame_progress = 0.8813774
-
 [node name="Animacion" type="AnimatedSprite2D" parent="." unique_id=1156699237]
-visible = false
 position = Vector2(1, -6)
 scale = Vector2(0.041289594, 0.042895444)
 sprite_frames = ExtResource("1_tg20s")
+animation = &"idle"
+frame = 2
+frame_progress = 0.3913788
+
+[node name="Run" type="AnimatedSprite2D" parent="." unique_id=558623041]
+visible = false
+position = Vector2(4, 4)
+scale = Vector2(0.035243057, 0.038799025)
+sprite_frames = SubResource("SpriteFrames_8y75b")
+animation = &"walk"
+
+[node name="Atack" type="AnimatedSprite2D" parent="." unique_id=417076469]
+visible = false
+position = Vector2(27, -3.5)
+scale = Vector2(0.041064385, 0.04159843)
+sprite_frames = SubResource("SpriteFrames_j8rto")
 animation = &"atack"
+frame = 1
+frame_progress = 0.9234897
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1989449960]
 position = Vector2(0, -4.125)
