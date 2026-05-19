@@ -18,6 +18,20 @@
 [ext_resource type="Texture2D" uid="uid://wdfa3xut5l11" path="res://assets/images/characters/Lex/Lex_Atack/frame0005.png" id="18_u6wme"]
 [ext_resource type="Texture2D" uid="uid://cwjmet3ij1bvj" path="res://assets/images/characters/Lex/Lex_Atack/frame0006.png" id="19_bxwvg"]
 [ext_resource type="Texture2D" uid="uid://dci6nc4qe5h5k" path="res://assets/images/characters/Lex/Lex_Atack/frame0007.png" id="20_2v4cy"]
+[ext_resource type="Texture2D" uid="uid://861lcl22md41" path="res://assets/images/characters/Lex/Lex_Atack/Down/frame0003.png" id="22_qe74o"]
+[ext_resource type="Texture2D" uid="uid://dtyqvbov6kiw8" path="res://assets/images/characters/Lex/Lex_Atack/Down/frame0004.png" id="23_s4se6"]
+[ext_resource type="Texture2D" uid="uid://csdtwmy8o5v5s" path="res://assets/images/characters/Lex/Lex_Atack/Down/frame0005.png" id="24_4c5ab"]
+[ext_resource type="Texture2D" uid="uid://dpkwgj4wvrlam" path="res://assets/images/characters/Lex/Lex_Atack/Down/frame0006.png" id="25_omk8d"]
+[ext_resource type="Texture2D" uid="uid://cgspm2rfegyhr" path="res://assets/images/characters/Lex/Lex_Atack/Down/frame0007.png" id="26_kghjy"]
+[ext_resource type="Texture2D" uid="uid://vsbypmxt854a" path="res://assets/images/characters/Lex/Lex_Atack/Down/frame0008.png" id="27_72eiu"]
+[ext_resource type="Texture2D" uid="uid://xaqr8gljhwsn" path="res://assets/images/characters/Lex/Lex_Atack/Down/frame0009.png" id="28_rr0sw"]
+[ext_resource type="Texture2D" uid="uid://bp5oscrs5n5o6" path="res://assets/images/characters/Lex/Lex_Atack/Up/frame0003.png" id="32_qiw4v"]
+[ext_resource type="Texture2D" uid="uid://4dccpxvnfgrw" path="res://assets/images/characters/Lex/Lex_Atack/Up/frame0004.png" id="33_35rnk"]
+[ext_resource type="Texture2D" uid="uid://botqvxjnif55d" path="res://assets/images/characters/Lex/Lex_Atack/Up/frame0005.png" id="34_8clsk"]
+[ext_resource type="Texture2D" uid="uid://dlr5rw0dem5hr" path="res://assets/images/characters/Lex/Lex_Atack/Up/frame0006.png" id="35_ba42v"]
+[ext_resource type="Texture2D" uid="uid://c7qljrdt2a3qy" path="res://assets/images/characters/Lex/Lex_Atack/Up/frame0007.png" id="36_em43t"]
+[ext_resource type="Texture2D" uid="uid://b8smlcdq71bk" path="res://assets/images/characters/Lex/Lex_Atack/Up/frame0008.png" id="37_fvt27"]
+[ext_resource type="Texture2D" uid="uid://cc54qq8d27hyh" path="res://assets/images/characters/Lex/Lex_Atack/Up/frame0009.png" id="38_d4s5w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8y75b"]
 animations = [{
@@ -75,6 +89,58 @@ animations = [{
 "loop": false,
 "name": &"atack",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_qe74o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_s4se6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4c5ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_omk8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_kghjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_72eiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_rr0sw")
+}],
+"loop": false,
+"name": &"atack_down",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_qiw4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_35rnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_8clsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ba42v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_em43t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_fvt27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_d4s5w")
+}],
+"loop": false,
+"name": &"atack_up",
+"speed": 20.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tg20s"]
@@ -101,12 +167,11 @@ hurtboxCollision = NodePath("HurtboxPivot/Hurtbox/CollisionShape2D")
 colorDebug = NodePath("HurtboxPivot/Hurtbox/CollisionShape2D/ColorDebug")
 
 [node name="Animacion" type="AnimatedSprite2D" parent="." unique_id=1156699237]
-position = Vector2(1, -6)
+visible = false
+position = Vector2(0, -3)
 scale = Vector2(0.041289594, 0.042895444)
 sprite_frames = ExtResource("1_tg20s")
-animation = &"idle"
-frame = 2
-frame_progress = 0.3913788
+animation = &"defense"
 
 [node name="Run" type="AnimatedSprite2D" parent="." unique_id=558623041]
 visible = false
@@ -116,13 +181,10 @@ sprite_frames = SubResource("SpriteFrames_8y75b")
 animation = &"walk"
 
 [node name="Atack" type="AnimatedSprite2D" parent="." unique_id=417076469]
-visible = false
-position = Vector2(27, -3.5)
+position = Vector2(27, -1)
 scale = Vector2(0.041064385, 0.04159843)
 sprite_frames = SubResource("SpriteFrames_j8rto")
-animation = &"atack"
-frame = 1
-frame_progress = 0.9234897
+animation = &"atack_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1989449960]
 position = Vector2(0, -4.125)
@@ -146,6 +208,7 @@ collision_mask = 4
 shape = SubResource("RectangleShape2D_fwk1h")
 
 [node name="ColorDebug" type="ColorRect" parent="HurtboxPivot/Hurtbox/CollisionShape2D" unique_id=664729203]
+visible = false
 offset_left = -36.0
 offset_top = -43.0
 offset_right = 35.0

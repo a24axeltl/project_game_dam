@@ -19,9 +19,13 @@ const hurtbox_offset = Vector2(38, 38)
 const hurtbox_size = Vector2(71,87)
 const hurtbox_vertical_size = Vector2(300,20)
 const hurtbox_explosion_size = Vector2(200,200)
+const position_x_animation_atack = 27.0
+const position_y_animation_atack = -1.0
 
 var _hit: bool = false
 var _atacking: bool = false
+var _atacking_up: bool = false
+var _atacking_down: bool = false
 var _defending: bool = false
 var _inmunity: bool = false
 var _dashing: bool = false
@@ -88,10 +92,16 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("up"):
 		_hurtbox_pos.x = 0
 		_hurtbox_pos.y = -hurtbox_offset.y * 2
-	elif Input.is_action_pressed("down"):
+		_atacking_up = true
+		_atacking_down = false
+	elif Input.is_action_pressed("down") and !is_on_floor():
 		_hurtbox_pos.x = 0
 		_hurtbox_pos.y = hurtbox_offset.y * 2
+		_atacking_up = false
+		_atacking_down = true
 	else:
+		_atacking_up = false
+		_atacking_down = false
 		_set_last_position()
 	if !_vertical_atacking:
 		hurtboxPivot.position = _hurtbox_pos
@@ -283,7 +293,20 @@ func _show_animation_run():
 	animacion_run.show()
 
 func _atack_animation():
-	animacion_atack.play("atack")
+	if(_atacking_up):
+		animacion_atack.position.x = 6.5
+		animacion_atack.position.y = -15.0
+		animacion_atack.play("atack_up")
+	elif(_atacking_down):
+		animacion_atack.position.x = 3
+		animacion_atack.play("atack_down")
+	else:
+		if(animacion_atack.flip_h):
+			animacion_atack.position.x = -position_x_animation_atack
+		else:
+			animacion_atack.position.x = position_x_animation_atack
+		animacion_atack.position.y = position_y_animation_atack
+		animacion_atack.play("atack")
 	_atacking = false
 
 func _defense_animation():
@@ -299,9 +322,9 @@ func _set_last_position():
 
 func _fix_position_animation_atack():
 	if animacion_atack.position.x > 0 and animacion_atack.flip_h:
-		animacion_atack.position.x *= -1
+		animacion_atack.position.x = -position_x_animation_atack
 	elif animacion_atack.position.x < 0 and !animacion_atack.flip_h:
-		animacion_atack.position.x *= -1
+		animacion_atack.position.x = position_x_animation_atack
 
 func _resize_hurtbox(size: Vector2):
 	hurtboxCollision.shape.set_deferred("size", size)
