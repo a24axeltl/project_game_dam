@@ -1,9 +1,12 @@
 extends Node
 
 var musicPlayer: AudioStreamPlayer
+const volumen_sound = 0.5
+const volumen_music = 0.3
 
 func _ready() -> void:
 	musicPlayer = AudioStreamPlayer.new()
+	musicPlayer.volume_linear = volumen_music
 	add_child(musicPlayer)
 
 func play_sound_button():
@@ -35,6 +38,7 @@ func play_sound_dash():
 
 func play_sound(stream: AudioStream):
 	var soundPlayer = AudioStreamPlayer.new()
+	soundPlayer.volume_linear = volumen_sound
 	add_child(soundPlayer)
 	
 	soundPlayer.stream = stream

@@ -18,8 +18,10 @@ containerButton = NodePath("ContainerButtons")
 
 [node name="BackgroundColor" type="ColorRect" parent="." unique_id=1031743625]
 layout_mode = 0
-offset_right = 1156.0
-offset_bottom = 651.0
+offset_left = -85.0
+offset_top = -76.0
+offset_right = 1257.0
+offset_bottom = 766.0
 color = Color(2.9329676e-08, 0, 0.058501996, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=762443808]

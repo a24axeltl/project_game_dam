@@ -24,7 +24,7 @@ hurtbox = NodePath("HurtboxPivot/Hurtbox")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1466066703]
 sprite_frames = ExtResource("1_i25l1")
-animation = &"idle"
+animation = &"hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=805364112]
 shape = SubResource("RectangleShape2D_ti5qr")

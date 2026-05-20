@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://be5biuda27glk" path="res://scenes/interfaces/load_scene/load_scene.gd" id="1_hwygt"]
 [ext_resource type="Texture2D" uid="uid://drduut3661fkj" path="res://assets/images/joke/luigi-spin.png" id="2_1slvp"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transition_scene/transcition_scene.tscn" id="3_g6x1i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ynxig"]
 atlas = ExtResource("2_1slvp")
@@ -102,7 +103,7 @@ animations = [{
 "speed": 20.0
 }]
 
-[node name="LoadScene" type="Control" unique_id=859323465]
+[node name="LoadScene" type="Control" unique_id=859323465 node_paths=PackedStringArray("transcitionScene")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -110,11 +111,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hwygt")
+transcitionScene = NodePath("TranscitionScene")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=973961327]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 649.0
+offset_left = -41.0
+offset_top = -70.0
+offset_right = 1197.0
+offset_bottom = 725.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="." unique_id=529856828]
@@ -133,3 +137,6 @@ sprite_frames = SubResource("SpriteFrames_7thnc")
 autoplay = "default"
 frame = 1
 frame_progress = 0.017860183
+
+[node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("3_g6x1i")]
+layout_mode = 1

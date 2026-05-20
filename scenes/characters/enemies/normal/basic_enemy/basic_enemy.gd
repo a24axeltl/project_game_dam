@@ -85,6 +85,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			_damage_control(area, PlayerController.get_damage_player())
 
 func _enter_hit_state():
+	animacion.play("hit")
 	await get_tree().create_timer(0.3).timeout
 	_state = State.PATROL
 

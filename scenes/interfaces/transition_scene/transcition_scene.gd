@@ -17,3 +17,8 @@ func to_dark_not_load():
 	animationPlayer.play("transicion_2")
 	await animationPlayer.animation_finished
 	transcition.emit()
+
+func to_light_not_load():
+	animationPlayer.play("transicion")
+	await animationPlayer.animation_finished
+	transcition.emit()

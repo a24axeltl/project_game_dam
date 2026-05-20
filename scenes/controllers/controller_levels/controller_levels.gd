@@ -36,6 +36,11 @@ func unpause():
 func create_level(number_level: int):
 	_instance_level = levels[number_level - 1].instantiate()
 	add_child(_instance_level)
+	
+	transiction_scene.show()
+	transiction_scene.to_light_not_load()
+	await transiction_scene.transcition
+	transiction_scene.hide()
 
 func delete_level():
 	_instance_level.queue_free()

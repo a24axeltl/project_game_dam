@@ -1,6 +1,7 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://bgy6uhgm771k0"]
 
 [ext_resource type="Texture2D" uid="uid://bv2bdclyi42i7" path="res://assets/images/characters/enemy_test/attack-sword_spritesheet.png" id="1_42q4c"]
+[ext_resource type="Texture2D" uid="uid://y58v3hr71y0c" path="res://assets/images/characters/principal_test/death_spritesheet.png" id="2_ng52s"]
 [ext_resource type="Texture2D" uid="uid://o1dsj5ye5jm8" path="res://assets/images/characters/enemy_test/idle_spritesheet.png" id="2_xqcgj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gwpu4"]
@@ -14,6 +15,14 @@ region = Rect2(76, 0, 76, 124)
 [sub_resource type="AtlasTexture" id="AtlasTexture_cgw5g"]
 atlas = ExtResource("1_42q4c")
 region = Rect2(152, 0, 152, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcru0"]
+atlas = ExtResource("2_ng52s")
+region = Rect2(0, 0, 83, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otlj8"]
+atlas = ExtResource("2_ng52s")
+region = Rect2(83, 0, 83, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jnnkf"]
 atlas = ExtResource("2_xqcgj")
@@ -38,6 +47,17 @@ animations = [{
 "loop": false,
 "name": &"attack",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcru0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otlj8")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,

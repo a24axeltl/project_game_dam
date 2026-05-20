@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="ProyectoDAM"
+config/name="Cracked Mind"
 run/main_scene="uid://duhq0gxf7veoe"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/stretch_mode=3
+boot_splash/image="uid://cuqabaeal3ofl"
+config/icon="uid://bntasqvtmutx3"
+boot_splash/minimum_display_time=2000
 
 [autoload]
 
@@ -21,6 +25,11 @@ PlayerController="*uid://buqdglywdhnlr"
 HabilitysController="*uid://blcn7oygexw1a"
 RunScript="*uid://bg1rq0oac5tco"
 SoundController="*uid://uagme33f7w8o"
+
+[display]
+
+window/size/mode=4
+window/stretch/mode="canvas_items"
 
 [global_group]
 
@@ -133,4 +142,5 @@ debug_next={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+anti_aliasing/quality/msaa_2d=2
 environment/defaults/default_clear_color=Color(0.66656864, 0.6665687, 0.6665685, 1)
