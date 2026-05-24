@@ -4,10 +4,10 @@
 [ext_resource type="SpriteFrames" uid="uid://w5788deww5vm" path="res://scenes/characters/enemies/normal/basic_enemy/basic_enemy.tres" id="2_p704l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wxobd"]
-size = Vector2(59.117188, 122.6582)
+size = Vector2(76.55859, 87)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v18xu"]
-size = Vector2(60, 125)
+size = Vector2(77, 86.5)
 
 [node name="BasicEnemy" type="CharacterBody2D" unique_id=593271527 node_paths=PackedStringArray("animacion", "hitbox", "rayCastFloor", "rayCastWall") groups=["enemy"]]
 collision_layer = 4
@@ -18,16 +18,21 @@ rayCastFloor = NodePath("RayCastFloor")
 rayCastWall = NodePath("RayCastWall")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1385138826]
+position = Vector2(12.750002, 14.000003)
+scale = Vector2(0.031911142, 0.04868549)
 sprite_frames = ExtResource("2_p704l")
-animation = &"hit"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=733232570]
+position = Vector2(8.720703, 19.5)
 shape = SubResource("RectangleShape2D_wxobd")
 
 [node name="RayCastFloor" type="RayCast2D" parent="." unique_id=1763874505]
-target_position = Vector2(40, 66)
+position = Vector2(9, 19)
+target_position = Vector2(31, 48)
 
 [node name="RayCastWall" type="RayCast2D" parent="." unique_id=1709168446]
+position = Vector2(9, 19)
 target_position = Vector2(41, 0)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=882578229]
@@ -35,4 +40,5 @@ collision_layer = 4
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1981372748]
+position = Vector2(8.5, 19.25)
 shape = SubResource("RectangleShape2D_v18xu")

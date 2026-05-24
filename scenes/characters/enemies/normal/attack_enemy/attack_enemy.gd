@@ -139,12 +139,17 @@ func _attack():
 	hurtbox.monitorable = true
 
 func _control_animation():
+	if animacion.animation == "attack" and animacion.is_playing():
+		return
+	
 	if _atacking:
 		_atack_animation()
 	else:
 		animacion.play("idle")
+		animacion.position.x = 0
 
 func _atack_animation():
+	animacion.position.x = 24
 	animacion.play("attack")
 	_atacking = false
 	hurtbox.monitoring  = false

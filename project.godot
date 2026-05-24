@@ -17,6 +17,7 @@ boot_splash/bg_color=Color(1, 1, 1, 1)
 boot_splash/stretch_mode=3
 boot_splash/image="uid://cuqabaeal3ofl"
 config/icon="uid://bntasqvtmutx3"
+config/windows_native_icon="res://assets/images/icons/app_icon/app_icon.ico"
 boot_splash/minimum_display_time=2000
 
 [autoload]
@@ -28,7 +29,7 @@ SoundController="*uid://uagme33f7w8o"
 
 [display]
 
-window/size/mode=4
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [global_group]

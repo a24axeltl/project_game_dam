@@ -1,7 +1,11 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://w5788deww5vm"]
 
 [ext_resource type="Texture2D" uid="uid://y58v3hr71y0c" path="res://assets/images/characters/principal_test/death_spritesheet.png" id="1_a5gve"]
-[ext_resource type="Texture2D" uid="uid://o1dsj5ye5jm8" path="res://assets/images/characters/enemy_test/idle_spritesheet.png" id="1_bgtlr"]
+[ext_resource type="Texture2D" uid="uid://c0123g8uj0jiw" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0000.png" id="2_d3msg"]
+[ext_resource type="Texture2D" uid="uid://b0gry6cb7ucp" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0001.png" id="3_sd3oc"]
+[ext_resource type="Texture2D" uid="uid://dr24gf4lmr48q" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0002.png" id="4_ubaj0"]
+[ext_resource type="Texture2D" uid="uid://bo6ea1vn0y1f8" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0003.png" id="5_p7co7"]
+[ext_resource type="Texture2D" uid="uid://bpci71t34hdjn" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0004.png" id="6_4sfo0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_unm8a"]
 atlas = ExtResource("1_a5gve")
@@ -10,14 +14,6 @@ region = Rect2(0, 0, 83, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_gltys"]
 atlas = ExtResource("1_a5gve")
 region = Rect2(83, 0, 83, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_weed7"]
-atlas = ExtResource("1_bgtlr")
-region = Rect2(0, 0, 64, 124)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jum0u"]
-atlas = ExtResource("1_bgtlr")
-region = Rect2(64, 0, 64, 124)
 
 [resource]
 animations = [{
@@ -34,12 +30,21 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_weed7")
+"texture": ExtResource("2_d3msg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jum0u")
+"texture": ExtResource("3_sd3oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ubaj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p7co7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4sfo0")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 4.0
+"speed": 8.0
 }]

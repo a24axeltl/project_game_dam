@@ -4,13 +4,13 @@
 [ext_resource type="Script" uid="uid://nr4n3iw6d6rf" path="res://scenes/characters/enemies/normal/attack_enemy/attack_enemy.gd" id="1_ti5qr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ti5qr"]
-size = Vector2(58.46875, 124.63281)
+size = Vector2(51.234375, 106.31641)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i25l1"]
-size = Vector2(60.5, 125)
+size = Vector2(51, 106.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nswak"]
-size = Vector2(71, 87)
+size = Vector2(71, 47)
 
 [node name="AttackEnemy" type="CharacterBody2D" unique_id=786959747 node_paths=PackedStringArray("animacion", "hitbox", "rayCastFloor", "rayCastWall", "hurtboxPivot", "hurtbox") groups=["enemy"]]
 collision_layer = 4
@@ -23,10 +23,13 @@ hurtboxPivot = NodePath("HurtboxPivot")
 hurtbox = NodePath("HurtboxPivot/Hurtbox")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1466066703]
+position = Vector2(0, 5.0000005)
+scale = Vector2(0.03515625, 0.044353314)
 sprite_frames = ExtResource("1_i25l1")
-animation = &"hit"
+animation = &"attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=805364112]
+position = Vector2(-3.6171875, 9.158203)
 shape = SubResource("RectangleShape2D_ti5qr")
 
 [node name="RayCastFloor" type="RayCast2D" parent="." unique_id=2012054326]
@@ -40,7 +43,7 @@ collision_layer = 4
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1029439214]
-position = Vector2(1.25, 0)
+position = Vector2(-3.5, 9.25)
 shape = SubResource("RectangleShape2D_i25l1")
 
 [node name="HurtboxPivot" type="Node2D" parent="." unique_id=167842300]
@@ -51,4 +54,5 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxPivot/Hurtbox" unique_id=364971061]
+position = Vector2(0, 19.5)
 shape = SubResource("RectangleShape2D_nswak")
