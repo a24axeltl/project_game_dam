@@ -1,4 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://iqax3mw7anee"]
 
+[ext_resource type="FontFile" uid="uid://cc0nb2tt1qknw" path="res://assets/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="1_phej3"]
+
 [resource]
 Button/font_sizes/font_size = 80
+Button/fonts/font = ExtResource("1_phej3")

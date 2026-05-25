@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://rb2xnbv14vlt"]
 
 [ext_resource type="Script" uid="uid://8lpeoaa4ojbh" path="res://scenes/interfaces/in_game/message_level/message_level.gd" id="1_n5604"]
+[ext_resource type="FontFile" uid="uid://cc0nb2tt1qknw" path="res://assets/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="2_ecfkf"]
 
 [node name="MessageLevel" type="Control" unique_id=1186170099 node_paths=PackedStringArray("label")]
 layout_mode = 3
@@ -22,4 +23,5 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=542268347]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ecfkf")
 theme_override_font_sizes/font_size = 50

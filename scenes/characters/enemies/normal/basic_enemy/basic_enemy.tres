@@ -1,28 +1,21 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://w5788deww5vm"]
 
-[ext_resource type="Texture2D" uid="uid://y58v3hr71y0c" path="res://assets/images/characters/principal_test/death_spritesheet.png" id="1_a5gve"]
+[ext_resource type="Texture2D" uid="uid://dg0bllaw155ry" path="res://assets/images/characters/enemys/BasicEnemy/hit/frame00.png" id="1_sd3oc"]
 [ext_resource type="Texture2D" uid="uid://c0123g8uj0jiw" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0000.png" id="2_d3msg"]
+[ext_resource type="Texture2D" uid="uid://bktfln882nml" path="res://assets/images/characters/enemys/BasicEnemy/hit/frame01.png" id="2_ubaj0"]
 [ext_resource type="Texture2D" uid="uid://b0gry6cb7ucp" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0001.png" id="3_sd3oc"]
 [ext_resource type="Texture2D" uid="uid://dr24gf4lmr48q" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0002.png" id="4_ubaj0"]
 [ext_resource type="Texture2D" uid="uid://bo6ea1vn0y1f8" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0003.png" id="5_p7co7"]
 [ext_resource type="Texture2D" uid="uid://bpci71t34hdjn" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0004.png" id="6_4sfo0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_unm8a"]
-atlas = ExtResource("1_a5gve")
-region = Rect2(0, 0, 83, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gltys"]
-atlas = ExtResource("1_a5gve")
-region = Rect2(83, 0, 83, 128)
-
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_unm8a")
+"texture": ExtResource("1_sd3oc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gltys")
+"texture": ExtResource("2_ubaj0")
 }],
 "loop": false,
 "name": &"hit",

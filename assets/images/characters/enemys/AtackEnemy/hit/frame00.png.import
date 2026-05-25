@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjkiaqglopqjo"
-path="res://.godot/imported/frame_2_delay-0.03s.png-f593807effcbb3f1566f6203b6764d85.ctex"
+uid="uid://bv2ga28bg43wc"
+path="res://.godot/imported/frame00.png-9ed4b2e4b19f7fbb5a0030cd3b28cd0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interface/celebrate_results/frame_2_delay-0.03s.png"
-dest_files=["res://.godot/imported/frame_2_delay-0.03s.png-f593807effcbb3f1566f6203b6764d85.ctex"]
+source_file="res://assets/images/characters/enemys/AtackEnemy/hit/frame00.png"
+dest_files=["res://.godot/imported/frame00.png-9ed4b2e4b19f7fbb5a0030cd3b28cd0c.ctex"]
 
 [params]
 

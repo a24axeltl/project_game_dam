@@ -16,6 +16,15 @@
 [ext_resource type="Texture2D" uid="uid://cacl4f22dewrb" path="res://assets/images/characters/Lex/Lex_Idle/frame0005.png" id="8_xso5k"]
 [ext_resource type="Texture2D" uid="uid://bct8tgninrt27" path="res://assets/images/characters/Lex/Lex_Jump/frame0000.png" id="9_thua6"]
 [ext_resource type="Texture2D" uid="uid://de2r0fpdu0xw3" path="res://assets/images/characters/Lex/Lex_Jump/frame0005.png" id="10_6r2b1"]
+[ext_resource type="Texture2D" uid="uid://d3qublv872nm" path="res://assets/images/characters/Lex/Lex_Shield/frame0000.png" id="17_g5sta"]
+[ext_resource type="Texture2D" uid="uid://cop3d82f6aux7" path="res://assets/images/characters/Lex/Lex_Shield/frame0001.png" id="18_yt1yl"]
+[ext_resource type="Texture2D" uid="uid://dxd5r4hrmec77" path="res://assets/images/characters/Lex/Lex_Shield/frame0002.png" id="19_7m0ag"]
+[ext_resource type="Texture2D" uid="uid://bap2qupno0d5s" path="res://assets/images/characters/Lex/Lex_Shield/frame0003.png" id="20_1dyw7"]
+[ext_resource type="Texture2D" uid="uid://bpnt44kky25uj" path="res://assets/images/characters/Lex/Lex_Shield/frame0004.png" id="21_np1op"]
+[ext_resource type="Texture2D" uid="uid://c2vjvksrmj4rx" path="res://assets/images/characters/Lex/Lex_Shield/frame0005.png" id="22_1f7mm"]
+[ext_resource type="Texture2D" uid="uid://ddsxsqyd2imrh" path="res://assets/images/characters/Lex/Lex_Shield/frame0006.png" id="23_u0fjm"]
+[ext_resource type="Texture2D" uid="uid://doxrmcvqqmb85" path="res://assets/images/characters/Lex/Lex_Shield/frame0007.png" id="24_jorpq"]
+[ext_resource type="Texture2D" uid="uid://dbkbnh322igyu" path="res://assets/images/characters/Lex/Lex_Shield/frame0008.png" id="25_6ly15"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uvhh5"]
 atlas = ExtResource("3_quio4")
@@ -110,4 +119,36 @@ animations = [{
 "loop": true,
 "name": &"jump",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_g5sta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_yt1yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7m0ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1dyw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_np1op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1f7mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_u0fjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_jorpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_6ly15")
+}],
+"loop": false,
+"name": &"shield",
+"speed": 20.0
 }]

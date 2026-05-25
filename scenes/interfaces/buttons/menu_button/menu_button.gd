@@ -7,7 +7,7 @@ func _ready() -> void:
 
 func _press_button():
 	SoundController.play_sound_button()
-	
+	SoundController.stop_music()
 	var loadScene: PackedScene = load("res://scenes/interfaces/menus/menu_main/main_menu.tscn")
 	transcitionScene.show()
 	transcitionScene.to_dark(loadScene)

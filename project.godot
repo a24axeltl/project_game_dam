@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Cracked Mind"
-run/main_scene="uid://duhq0gxf7veoe"
+run/main_scene="uid://cieb2ciwd8asq"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(1, 1, 1, 1)
 boot_splash/stretch_mode=3

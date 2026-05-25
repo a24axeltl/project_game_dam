@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bhnj4co7jqqhw"]
 
 [ext_resource type="Script" uid="uid://ihhudwvey5iv" path="res://scenes/interfaces/buttons/exit_button/exit_button.gd" id="1_m1e4i"]
+[ext_resource type="FontFile" uid="uid://cc0nb2tt1qknw" path="res://assets/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="1_vcml8"]
 
 [node name="ExitButton" type="Button" unique_id=667873823]
+theme_override_fonts/font = ExtResource("1_vcml8")
 theme_override_font_sizes/font_size = 55
 text = "Salir"
 script = ExtResource("1_m1e4i")

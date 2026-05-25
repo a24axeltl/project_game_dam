@@ -10,6 +10,7 @@ func _press_button():
 	HabilitysController.load_script()
 	RunScript.load_script()
 	
+	SoundController.stop_music()
 	var loadScene: PackedScene = load("res://scenes/interfaces/load_scene/load_scene.tscn")
 	transcitionScene.show()
 	transcitionScene.to_dark(loadScene)

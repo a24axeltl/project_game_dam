@@ -15,18 +15,18 @@ size = Vector2(71, 47)
 [node name="AttackEnemy" type="CharacterBody2D" unique_id=786959747 node_paths=PackedStringArray("animacion", "hitbox", "rayCastFloor", "rayCastWall", "hurtboxPivot", "hurtbox") groups=["enemy"]]
 collision_layer = 4
 script = ExtResource("1_ti5qr")
-animacion = NodePath("AnimatedSprite2D")
+animacion = NodePath("MainAnimated")
 hitbox = NodePath("Hitbox")
 rayCastFloor = NodePath("RayCastFloor")
 rayCastWall = NodePath("RayCastWall")
 hurtboxPivot = NodePath("HurtboxPivot")
 hurtbox = NodePath("HurtboxPivot/Hurtbox")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1466066703]
+[node name="MainAnimated" type="AnimatedSprite2D" parent="." unique_id=1466066703]
 position = Vector2(0, 5.0000005)
 scale = Vector2(0.03515625, 0.044353314)
 sprite_frames = ExtResource("1_i25l1")
-animation = &"attack"
+animation = &"hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=805364112]
 position = Vector2(-3.6171875, 9.158203)

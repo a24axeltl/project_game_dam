@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cieb2ciwd8asq"]
+
+[ext_resource type="Script" uid="uid://bi2qxukv5h7tu" path="res://scenes/interfaces/intro_scene/intro_scene.gd" id="1_bxmlx"]
+[ext_resource type="FontFile" uid="uid://cc0nb2tt1qknw" path="res://assets/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="2_xf2uv"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transition_scene/transcition_scene.tscn" id="3_x1lbr"]
+
+[node name="IntroScene" type="Control" unique_id=483367038 node_paths=PackedStringArray("filosophicLabel", "authorLabel", "transcitionScene")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bxmlx")
+filosophicLabel = NodePath("FilosophicLabel")
+authorLabel = NodePath("AuthorLabel")
+transcitionScene = NodePath("TranscitionScene")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1325127142]
+layout_mode = 0
+offset_left = -11.0
+offset_top = -11.0
+offset_right = 1182.0
+offset_bottom = 672.0
+color = Color(0, 0, 0, 1)
+
+[node name="FilosophicLabel" type="Label" parent="." unique_id=1031796432]
+layout_mode = 0
+offset_left = -66.0
+offset_top = 230.0
+offset_right = 1232.0
+offset_bottom = 373.0
+theme_override_fonts/font = ExtResource("2_xf2uv")
+theme_override_font_sizes/font_size = 40
+text = "Procuramos olvidar lo que traído a la
+memoria nos ha entristecido"
+horizontal_alignment = 1
+
+[node name="AuthorLabel" type="Label" parent="." unique_id=1020913935]
+visible = false
+layout_mode = 0
+offset_left = 817.0
+offset_top = 403.0
+offset_right = 1117.0
+offset_bottom = 443.0
+theme_override_fonts/font = ExtResource("2_xf2uv")
+theme_override_font_sizes/font_size = 22
+text = "- Lucio Anneo Séneca"
+
+[node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("3_x1lbr")]
+visible = false
+layout_mode = 1

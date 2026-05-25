@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3wqjmmae0yh3"
-path="res://.godot/imported/frame_3_delay-0.03s.png-b3a7d79cb6fb6422f71552344c6d82d9.ctex"
+uid="uid://b5qw22e2rnud"
+path="res://.godot/imported/death_pose.png-1777e03182d8b55a87aef787bca9a9d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interface/celebrate_results/frame_3_delay-0.03s.png"
-dest_files=["res://.godot/imported/frame_3_delay-0.03s.png-b3a7d79cb6fb6422f71552344c6d82d9.ctex"]
+source_file="res://assets/images/interface/joke/death_pose.png"
+dest_files=["res://.godot/imported/death_pose.png-1777e03182d8b55a87aef787bca9a9d8.ctex"]
 
 [params]
 

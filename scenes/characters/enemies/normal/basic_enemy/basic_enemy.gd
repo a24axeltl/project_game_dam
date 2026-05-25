@@ -14,6 +14,8 @@ const knockback_friction := 10.0
 const detection_distance_x: float = 450.0
 const detection_distance_y: float = 250.0
 const walk_velocity: float = 100.0
+const position_x: float = 12.0
+const position_y: float = 14.0
 
 var _hit: bool = false
 var _muerto: bool = false
@@ -85,6 +87,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			_damage_control(area, PlayerController.get_damage_player())
 
 func _enter_hit_state():
+	animacion.position.x = -position_x
 	animacion.play("hit")
 	await get_tree().create_timer(0.3).timeout
 	_state = State.PATROL
@@ -107,6 +110,7 @@ func _damage_control(area: Area2D, damage_value: int):
 	print("El enemigo recibió daño:", _life_count)
 
 func _patrol():
+	animacion.position.x = position_x
 	velocity.x = _direction * walk_velocity
 	animacion.flip_h = velocity.x < 0
 

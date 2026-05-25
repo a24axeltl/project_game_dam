@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://bboepieirfv4" path="res://assets/images/characters/enemys/AtackEnemy/atack/frame0000.png" id="1_c0n0m"]
 [ext_resource type="Texture2D" uid="uid://bkjxivxdr4tmk" path="res://assets/images/characters/enemys/AtackEnemy/atack/frame0001.png" id="2_d3ghj"]
-[ext_resource type="Texture2D" uid="uid://y58v3hr71y0c" path="res://assets/images/characters/principal_test/death_spritesheet.png" id="2_ng52s"]
 [ext_resource type="Texture2D" uid="uid://bjprgfqqqyeyt" path="res://assets/images/characters/enemys/AtackEnemy/atack/frame0002.png" id="3_pim2g"]
 [ext_resource type="Texture2D" uid="uid://6mxaejccdguv" path="res://assets/images/characters/enemys/AtackEnemy/atack/frame0003.png" id="4_1ib47"]
 [ext_resource type="Texture2D" uid="uid://fvx7fdvckqv8" path="res://assets/images/characters/enemys/AtackEnemy/atack/frame0004.png" id="5_whemc"]
@@ -16,17 +15,11 @@
 [ext_resource type="Texture2D" uid="uid://d3pgoq17jnqa7" path="res://assets/images/characters/enemys/AtackEnemy/atack/frame0013.png" id="13_roxm5"]
 [ext_resource type="Texture2D" uid="uid://yq6oj7mtksni" path="res://assets/images/characters/enemys/AtackEnemy/atack/frame0014.png" id="14_ams5e"]
 [ext_resource type="Texture2D" uid="uid://l3ldlwiagnaw" path="res://assets/images/characters/enemys/AtackEnemy/atack/frame0015.png" id="15_7u4sw"]
+[ext_resource type="Texture2D" uid="uid://bv2ga28bg43wc" path="res://assets/images/characters/enemys/AtackEnemy/hit/frame00.png" id="16_d3ghj"]
+[ext_resource type="Texture2D" uid="uid://2g4m4t15duq0" path="res://assets/images/characters/enemys/AtackEnemy/hit/frame01.png" id="17_pim2g"]
 [ext_resource type="Texture2D" uid="uid://kd85y87rgih4" path="res://assets/images/characters/enemys/AtackEnemy/idle/frame0000.png" id="17_ymkcj"]
 [ext_resource type="Texture2D" uid="uid://v6ng3au1dthr" path="res://assets/images/characters/enemys/AtackEnemy/idle/frame0001.png" id="18_j2iqp"]
 [ext_resource type="Texture2D" uid="uid://dq8smbrhdpda0" path="res://assets/images/characters/enemys/AtackEnemy/idle/frame0002.png" id="19_wdyr2"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vcru0"]
-atlas = ExtResource("2_ng52s")
-region = Rect2(0, 0, 83, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_otlj8"]
-atlas = ExtResource("2_ng52s")
-region = Rect2(83, 0, 83, 128)
 
 [resource]
 animations = [{
@@ -82,10 +75,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vcru0")
+"texture": ExtResource("16_d3ghj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_otlj8")
+"texture": ExtResource("17_pim2g")
 }],
 "loop": true,
 "name": &"hit",

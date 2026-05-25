@@ -12,16 +12,16 @@ size = Vector2(77, 86.5)
 [node name="BasicEnemy" type="CharacterBody2D" unique_id=593271527 node_paths=PackedStringArray("animacion", "hitbox", "rayCastFloor", "rayCastWall") groups=["enemy"]]
 collision_layer = 4
 script = ExtResource("1_v18xu")
-animacion = NodePath("AnimatedSprite2D")
+animacion = NodePath("MainAnimated")
 hitbox = NodePath("Hitbox")
 rayCastFloor = NodePath("RayCastFloor")
 rayCastWall = NodePath("RayCastWall")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1385138826]
-position = Vector2(12.750002, 14.000003)
+[node name="MainAnimated" type="AnimatedSprite2D" parent="." unique_id=1385138826]
+position = Vector2(12, 14)
 scale = Vector2(0.031911142, 0.04868549)
 sprite_frames = ExtResource("2_p704l")
-animation = &"idle"
+animation = &"hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=733232570]
 position = Vector2(8.720703, 19.5)

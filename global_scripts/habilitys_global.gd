@@ -42,7 +42,7 @@ func load_script():
 	_explosion_atack_max_value = 4.0
 
 	_shield = false
-	_vertical_atack = false
+	_vertical_atack = true
 	_explosion_atack = false
 
 func ampli_defense_time_max(defense: float):

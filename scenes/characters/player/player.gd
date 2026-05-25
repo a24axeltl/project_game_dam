@@ -29,7 +29,7 @@ var _atacking_down: bool = false
 var _defending: bool = false
 var _inmunity: bool = false
 var _dashing: bool = false
-var _vertical_atacking = false
+var _horizontal_atacking = false
 var _explosion_atacking = false
 var _knockback := Vector2.ZERO
 var _hurtbox_pos = Vector2.ZERO
@@ -103,7 +103,7 @@ func _physics_process(delta: float) -> void:
 		_atacking_up = false
 		_atacking_down = false
 		_set_last_position()
-	if !_vertical_atacking:
+	if !_horizontal_atacking:
 		hurtboxPivot.position = _hurtbox_pos
 	
 	# Handle dash.
@@ -122,7 +122,7 @@ func _physics_process(delta: float) -> void:
 		PlayerController.reset_dash_timer()
 
 	# Handle atack.
-	if Input.is_action_just_pressed("atq") and !_vertical_atacking:
+	if Input.is_action_just_pressed("atq") and !_horizontal_atacking:
 		_control_atack()
 	
 	# Handle hability def.
@@ -137,9 +137,9 @@ func _physics_process(delta: float) -> void:
 		HabilitysController.reset_defense_timer()
 	
 	# Handle hability vertical atack.
-	if Input.is_action_just_pressed("vertical_atq") and !_vertical_atacking and HabilitysController.get_vertical_atack_time() < HabilitysController.get_vertical_atack_time_max() and HabilitysController.have_vertical_atack():
+	if Input.is_action_just_pressed("vertical_atq") and !_horizontal_atacking and HabilitysController.get_vertical_atack_time() < HabilitysController.get_vertical_atack_time_max() and HabilitysController.have_vertical_atack():
 		SoundController.play_sound_vertical_slice()
-		_vertical_atacking = true
+		_horizontal_atacking = true
 		_control_atack()
 		_resize_hurtbox(hurtbox_vertical_size)
 		hurtboxPivot.position.x = 0
@@ -147,10 +147,10 @@ func _physics_process(delta: float) -> void:
 		await get_tree().create_timer(0.2).timeout
 		_resize_hurtbox(hurtbox_size)
 		HabilitysController.reset_vertical_atack_timer()
-	if HabilitysController.get_vertical_atack_time() < HabilitysController.get_vertical_atack_time_max() and _vertical_atacking:
+	if HabilitysController.get_vertical_atack_time() < HabilitysController.get_vertical_atack_time_max() and _horizontal_atacking:
 		HabilitysController.add_vertical_atack_time(delta)
 	else:
-		_vertical_atacking = false
+		_horizontal_atacking = false
 		HabilitysController.reset_vertical_atack_timer()
 	
 	# Handle hability explosion.
@@ -263,7 +263,7 @@ func _control_animation():
 		_show_animation()
 		animacion.play("idle")
 
-	if _dashing:
+	if _dashing or _horizontal_atacking:
 		animacion.material = blue_shader
 		animacion_run.material = blue_shader
 		animacion_atack.material = blue_shader
@@ -293,13 +293,17 @@ func _show_animation_run():
 	animacion_run.show()
 
 func _atack_animation():
-	if(_atacking_up):
+	if _atacking_up:
 		animacion_atack.position.x = 6.5
 		animacion_atack.position.y = -15.0
 		animacion_atack.play("atack_up")
-	elif(_atacking_down):
+	elif _atacking_down:
 		animacion_atack.position.x = 3
 		animacion_atack.play("atack_down")
+	elif  _horizontal_atacking:
+		animacion_atack.position.x = 0
+		animacion_atack.position.y = 0
+		_horizontal_atack_animation()
 	else:
 		if(animacion_atack.flip_h):
 			animacion_atack.position.x = -position_x_animation_atack
@@ -310,7 +314,10 @@ func _atack_animation():
 	_atacking = false
 
 func _defense_animation():
-	animacion.play("defense")
+	animacion.play("shield")
+
+func _horizontal_atack_animation():
+	animacion_atack.play("horizontal_atack")
 
 func _set_last_position():
 	if !animacion.flip_h:

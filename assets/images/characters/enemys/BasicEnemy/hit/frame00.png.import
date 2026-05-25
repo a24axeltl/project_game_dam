@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fn6p8lf3rrgy"
-path="res://.godot/imported/frame_6_delay-0.03s.png-d538abea677cb0c6300775dcce39f3a8.ctex"
+uid="uid://dg0bllaw155ry"
+path="res://.godot/imported/frame00.png-fd4320ce10979bff4869dc3fc6feea2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interface/celebrate_results/frame_6_delay-0.03s.png"
-dest_files=["res://.godot/imported/frame_6_delay-0.03s.png-d538abea677cb0c6300775dcce39f3a8.ctex"]
+source_file="res://assets/images/characters/enemys/BasicEnemy/hit/frame00.png"
+dest_files=["res://.godot/imported/frame00.png-fd4320ce10979bff4869dc3fc6feea2e.ctex"]
 
 [params]
 

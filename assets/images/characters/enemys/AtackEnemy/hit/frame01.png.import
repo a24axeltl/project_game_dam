@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drduut3661fkj"
-path="res://.godot/imported/luigi-spin.png-2951ef66b985d6ff444d85a760536297.ctex"
+uid="uid://2g4m4t15duq0"
+path="res://.godot/imported/frame01.png-097322f4c5c43281c7ff2f522735d6ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/joke/luigi-spin.png"
-dest_files=["res://.godot/imported/luigi-spin.png-2951ef66b985d6ff444d85a760536297.ctex"]
+source_file="res://assets/images/characters/enemys/AtackEnemy/hit/frame01.png"
+dest_files=["res://.godot/imported/frame01.png-097322f4c5c43281c7ff2f522735d6ba.ctex"]
 
 [params]
 
