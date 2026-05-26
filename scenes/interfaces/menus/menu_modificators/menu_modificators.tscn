@@ -6,7 +6,88 @@
 [ext_resource type="PackedScene" uid="uid://bxuohcyda7qc2" path="res://scenes/modificators/upgrades/damage_upgrade/damage_upgrade.tscn" id="5_dsik6"]
 [ext_resource type="PackedScene" uid="uid://gmw5uvwnf8dv" path="res://scenes/modificators/habilitys/vertical_atack_hability/vertical_atack_hability.tscn" id="5_jgdg1"]
 [ext_resource type="PackedScene" uid="uid://b3nyxfdwae3n8" path="res://scenes/modificators/upgrades/life_upgrade/life_upgrade.tscn" id="6_e78ir"]
+[ext_resource type="Texture2D" uid="uid://dbm2aulcojbht" path="res://assets/images/interface/menu_modificator/frame_00_delay-0.08s.png" id="8_e7hs5"]
 [ext_resource type="PackedScene" uid="uid://bhbx3o2obqpib" path="res://scenes/modificators/upgrades/time_upgrades/time_reduction/time_dash_reduction/time_dash_reduction.tscn" id="8_w7jd6"]
+[ext_resource type="Texture2D" uid="uid://cuu2lbok0cf8o" path="res://assets/images/interface/menu_modificator/frame_01_delay-0.04s.png" id="9_12i1i"]
+[ext_resource type="Texture2D" uid="uid://ck13xxscdow1j" path="res://assets/images/interface/menu_modificator/frame_02_delay-0.04s.png" id="10_7bgop"]
+[ext_resource type="Texture2D" uid="uid://qaqgrxpkgc2i" path="res://assets/images/interface/menu_modificator/frame_03_delay-0.04s.png" id="11_poxut"]
+[ext_resource type="Texture2D" uid="uid://df8rjlk11qpb4" path="res://assets/images/interface/menu_modificator/frame_04_delay-0.04s.png" id="12_bh47n"]
+[ext_resource type="Texture2D" uid="uid://dr5y5ejp6odtj" path="res://assets/images/interface/menu_modificator/frame_05_delay-0.04s.png" id="13_chl74"]
+[ext_resource type="Texture2D" uid="uid://b2vimwr3cnyy6" path="res://assets/images/interface/menu_modificator/frame_06_delay-0.12s.png" id="14_ae3ka"]
+[ext_resource type="Texture2D" uid="uid://da5rxyqc5hsnc" path="res://assets/images/interface/menu_modificator/frame_07_delay-0.12s.png" id="15_cod64"]
+[ext_resource type="Texture2D" uid="uid://dieqc3h21jj8x" path="res://assets/images/interface/menu_modificator/frame_08_delay-0.08s.png" id="16_h4h2k"]
+[ext_resource type="Texture2D" uid="uid://cao8v22j3c6ri" path="res://assets/images/interface/menu_modificator/frame_09_delay-0.08s.png" id="17_pisaj"]
+[ext_resource type="Texture2D" uid="uid://r1wr8fqlpxex" path="res://assets/images/interface/menu_modificator/frame_10_delay-0.04s.png" id="18_xxg3s"]
+[ext_resource type="Texture2D" uid="uid://c5hma2ureff7p" path="res://assets/images/interface/menu_modificator/frame_11_delay-0.04s.png" id="19_w0dvx"]
+[ext_resource type="Texture2D" uid="uid://jcxt5gr8kksx" path="res://assets/images/interface/menu_modificator/frame_12_delay-0.04s.png" id="20_5f1n4"]
+[ext_resource type="Texture2D" uid="uid://dvvam5jksimn4" path="res://assets/images/interface/menu_modificator/frame_13_delay-0.04s.png" id="21_fqau7"]
+[ext_resource type="Texture2D" uid="uid://dlikykoy8ufqy" path="res://assets/images/interface/menu_modificator/frame_14_delay-0.04s.png" id="22_no8rr"]
+[ext_resource type="Texture2D" uid="uid://cacpswm7ko7of" path="res://assets/images/interface/menu_modificator/frame_15_delay-0.12s.png" id="23_8w305"]
+[ext_resource type="Texture2D" uid="uid://lbsr4flnflwa" path="res://assets/images/interface/menu_modificator/frame_16_delay-0.12s.png" id="24_3cxhm"]
+[ext_resource type="Texture2D" uid="uid://ccwnavxj8imfh" path="res://assets/images/interface/menu_modificator/frame_17_delay-0.08s.png" id="25_tvqrx"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transicitions/transition_scene/transcition_scene.tscn" id="26_12i1i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f3lrs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_e7hs5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_12i1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7bgop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_poxut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bh47n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_chl74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ae3ka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_cod64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_h4h2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_pisaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xxg3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_w0dvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_5f1n4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fqau7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_no8rr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_8w305")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_3cxhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tvqrx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 17.0
+}]
 
 [node name="MenuModificators" type="Control" unique_id=164326612 node_paths=PackedStringArray("vbox_container", "transcitionScene")]
 process_mode = 3
@@ -17,20 +98,66 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y5lxe")
-vbox_container = NodePath("VBoxContainer")
+vbox_container = NodePath("Control/VBoxContainer")
 array_modificators = Array[PackedScene]([ExtResource("4_aqxoi"), ExtResource("5_jgdg1"), ExtResource("5_d26cb"), ExtResource("5_dsik6"), ExtResource("6_e78ir"), ExtResource("8_w7jd6")])
-transcitionScene = NodePath("")
+transcitionScene = NodePath("TranscitionScene")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=968497925]
+[node name="Control" type="Control" parent="." unique_id=2098588550]
+process_mode = 3
+anchors_preset = 0
+offset_left = 178.0
+offset_top = 342.0
+offset_right = 218.0
+offset_bottom = 382.0
+
+[node name="BackgroundColor" type="ColorRect" parent="Control" unique_id=1314500170]
+layout_mode = 0
+offset_left = -247.0
+offset_top = -391.0
+offset_right = 1040.0
+offset_bottom = 357.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=2050875808]
+layout_mode = 0
+offset_left = -266.00003
+offset_top = -4.0
+offset_right = 242.25595
+offset_bottom = 305.43457
+rotation = 0.24184647
+color = Color(0.7647059, 1, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Control" unique_id=166765989]
+layout_mode = 0
+offset_left = -37.0
+offset_top = 258.0
+offset_right = 262.65692
+offset_bottom = 567.4345
+rotation = -0.4894663
+color = Color(0.7647059, 1, 1, 1)
+
+[node name="SillyGF" type="AnimatedSprite2D" parent="Control" unique_id=1851706251]
+scale = Vector2(0.6834862, 0.7147505)
+sprite_frames = SubResource("SpriteFrames_f3lrs")
+autoplay = "default"
+frame_progress = 0.4119539
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=968497925]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -432.0
-offset_top = -179.0
-offset_right = 432.0
-offset_bottom = 179.0
+offset_left = 383.0
+offset_top = -224.0
+offset_right = 903.0
+offset_bottom = 333.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("26_12i1i")]
+layout_mode = 1
+offset_left = -67.0
+offset_top = -71.0
+offset_right = 75.0
+offset_bottom = 75.0

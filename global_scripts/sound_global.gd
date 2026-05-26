@@ -7,19 +7,23 @@ const volumen_music = 0.5
 func _ready() -> void:
 	musicPlayer = AudioStreamPlayer.new()
 	musicPlayer.volume_linear = volumen_music
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(musicPlayer)
 
 func play_sound_button():
 	play_sound(preload("res://assets/audio/sound/press_sound/press.mp3"))
 
 func play_victory_melody():
-	_play_music(preload("res://assets/audio/music/victory/Victory_Melody.mp3"))
+	play_music(preload("res://assets/audio/music/victory/Victory_Melody.mp3"))
 
 func play_menu_theme():
-	_play_music(preload("res://assets/audio/music/menu_main/menu_theme.mp3"))
+	play_music(preload("res://assets/audio/music/menus/menu_main/menu_theme.mp3"))
 
 func play_register_theme():
-	_play_music(preload("res://assets/audio/music/menu_register/RegisterTheme.mp3"))
+	play_music(preload("res://assets/audio/music/menus/menu_register/RegisterTheme.mp3"))
+
+func play_upgrade_theme():
+	play_music(preload("res://assets/audio/music/menus/menu_upgrade/upgrade_menu_theme.mp3"))
 
 func play_sound_damage():
 	play_sound(preload("res://assets/audio/sound/damage/damage.mp3"))

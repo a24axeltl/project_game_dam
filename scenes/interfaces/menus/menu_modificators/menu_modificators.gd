@@ -4,23 +4,32 @@ extends Control
 @export var array_modificators: Array [PackedScene]
 @export var transcitionScene: Control
 
-func _ready() -> void:	
+func _ready() -> void:
+	vbox_container.modulate.a = 0.0
 	visibility_changed.connect(reload)
 
 func next():
+	SoundController.stop_music()
+	
+	transcitionScene.show()
+	transcitionScene.to_dark_not_load()
+	await transcitionScene.transcition
+	
 	owner.hide_menu_modificators()
 	owner.next_level.call_deferred()
 
 func reload():
 	if is_visible_in_tree():
+		transcitionScene.show()
+		transcitionScene.to_light_white_not_load()
+		await transcitionScene.transcition
+		SoundController.play_upgrade_theme()
 		set_block_signals(true)
 		remove_modificators()
 		add_modificators()
 		set_block_signals(false)
-		
-		for button: Button in vbox_container.get_children():
-			if !button.pressed:
-				button.pressed.connect(SoundController.play_sound_button)
+		transcitionScene.hide()
+		appear_buttons()
 
 func remove_modificators():
 	for modificator in vbox_container.get_children():
@@ -76,3 +85,8 @@ func add_modificator(new_scene: PackedScene):
 	)
 	if not exists:
 		array_modificators.append(new_scene)
+
+func appear_buttons() -> void:
+	var tween: Tween = create_tween()
+	tween.tween_interval(1.5) 
+	tween.tween_property(vbox_container, "modulate:a", 1.5, 1.5)

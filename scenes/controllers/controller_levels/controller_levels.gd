@@ -48,10 +48,6 @@ func delete_level():
 func next_level():
 	unpause()
 	
-	transiction_scene.show()
-	transiction_scene.to_dark_not_load()
-	await transiction_scene.transcition
-	
 	if _actual_level >= _end_level:
 		get_tree().change_scene_to_packed(get_boss())
 	else:
@@ -65,6 +61,9 @@ func get_boss():
 	return bosses[0]
 
 func init_menu_modificators():
+	transiction_scene.show()
+	transiction_scene.to_dark_white_not_load()
+	await transiction_scene.transcition
 	menu_modificators.show()
 	pause()
 

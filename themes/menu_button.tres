@@ -3,5 +3,11 @@
 [ext_resource type="FontFile" uid="uid://cc0nb2tt1qknw" path="res://assets/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="1_phej3"]
 
 [resource]
-Button/font_sizes/font_size = 80
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 50
 Button/fonts/font = ExtResource("1_phej3")
