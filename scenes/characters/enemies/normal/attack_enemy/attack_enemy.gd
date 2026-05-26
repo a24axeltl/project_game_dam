@@ -35,6 +35,10 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	_player = get_tree().get_first_node_in_group("player")
 	
+	# Handle life.
+	if _life_count <= 0:
+		_muerto = true
+	
 	# Handle gravity.
 	if !is_on_floor():
 		velocity += get_gravity() * delta
@@ -82,12 +86,6 @@ func _physics_process(delta: float) -> void:
 			_chase()
 
 	move_and_slide()
-	animacion.play("idle")
-	
-	# Handle life.
-	if _life_count <= 0:
-		_muerto = true
-	
 	_control_animation()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -139,18 +137,18 @@ func _attack():
 	hurtbox.monitorable = true
 
 func _control_animation():
-	if animacion.animation == "attack" and animacion.is_playing():
+	if animacion.animation == "atack" and animacion.is_playing():
 		return
 	
 	if _atacking:
 		_atack_animation()
 	else:
-		animacion.play("idle")
 		animacion.position.x = 0
+		animacion.play("idle")
 
 func _atack_animation():
 	animacion.position.x = 24
-	animacion.play("attack")
+	animacion.play("atack")
 	_atacking = false
 	hurtbox.monitoring  = false
 	hurtbox.monitorable = false

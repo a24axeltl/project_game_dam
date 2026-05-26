@@ -9,7 +9,6 @@ enum State {PATROL, CHASE, HIT}
 
 const damage: int = 1
 const knockback_force_X := 300.0
-const knockback_force_Y := -300.0
 const knockback_friction := 10.0
 const detection_distance_x: float = 450.0
 const detection_distance_y: float = 250.0
@@ -31,6 +30,10 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	_player = get_tree().get_first_node_in_group("player")
+	
+	# Handle life.
+	if _life_count <= 0:
+		_muerto = true
 	
 	# Handle gravity.
 	if !is_on_floor():
@@ -73,10 +76,6 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	animacion.play("idle")
-	
-	# Handle life.
-	if _life_count <= 0:
-		_muerto = true
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.get_owner().is_in_group("enemy"):
@@ -98,9 +97,7 @@ func _damage_control(area: Area2D, damage_value: int):
 	var strike_direction = sign(global_position.x - area.get_parent().get_parent().global_position.x)
 	
 	velocity.x = strike_direction * 600.0
-	velocity.y = -450.0
 	_knockback.x = strike_direction * knockback_force_X
-	_knockback.y = knockback_force_Y
 	
 	_state = State.HIT
 	_enter_hit_state()

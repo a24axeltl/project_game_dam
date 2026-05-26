@@ -70,7 +70,7 @@ animations = [{
 "texture": ExtResource("15_7u4sw")
 }],
 "loop": false,
-"name": &"attack",
+"name": &"atack",
 "speed": 20.0
 }, {
 "frames": [{

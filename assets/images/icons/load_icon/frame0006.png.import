@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6f5fwu2u35d5"
-path="res://.godot/imported/HealingTreeNoFruit_WIP.png-08eb744dcd65911850c016ddf932957f.ctex"
+uid="uid://b4jt6r0s5poys"
+path="res://.godot/imported/frame0006.png-383839991fbf4d80f5d51b39ca27df46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/objects/healing_object/HealingTreeNoFruit_WIP.png"
-dest_files=["res://.godot/imported/HealingTreeNoFruit_WIP.png-08eb744dcd65911850c016ddf932957f.ctex"]
+source_file="res://assets/images/icons/load_icon/frame0006.png"
+dest_files=["res://.godot/imported/frame0006.png-383839991fbf4d80f5d51b39ca27df46.ctex"]
 
 [params]
 

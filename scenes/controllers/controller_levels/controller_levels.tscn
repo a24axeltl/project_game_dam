@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cd1ghncltdlx6" path="res://scenes/levels/m_levels/m_level_2.scn" id="6_rk3o2"]
 [ext_resource type="PackedScene" uid="uid://bjogs3drf3y5b" path="res://scenes/levels/r_levels/r_level_3.scn" id="7_2a67p"]
 [ext_resource type="PackedScene" uid="uid://wunkf12l6vwg" path="res://scenes/interfaces/menus/menu_modificators/menu_modificators.tscn" id="7_4wyme"]
-[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transition_scene/transcition_scene.tscn" id="7_ppdki"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transicitions/transition_scene/transcition_scene.tscn" id="7_ppdki"]
 
 [node name="ControllerLevels" type="Node2D" unique_id=2080523597 node_paths=PackedStringArray("menu_modificators", "transiction_scene")]
 script = ExtResource("1_iyxch")

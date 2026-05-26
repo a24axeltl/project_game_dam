@@ -1,12 +1,10 @@
 extends Control
 
 @export var filosophicLabel: Label
-@export var authorLabel: Label
 @export var transcitionScene: Control
 
 func _ready() -> void:
 	filosophicLabel.modulate.a = 0.0
-	authorLabel.modulate.a = 0.0
 	SoundController.play_menu_theme()
 	aparecer_texto()
 
@@ -15,9 +13,6 @@ func aparecer_texto() -> void:
 	
 	tween.tween_interval(1.0) 
 	tween.tween_property(filosophicLabel, "modulate:a", 1.0, 1.0)
-	
-	tween.tween_interval(1.0) 
-	tween.tween_property(authorLabel, "modulate:a", 1.0, 1.0)
 	
 	tween.tween_interval(1.0)
 	tween.tween_callback(to_main_menu)

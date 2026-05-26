@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dh075d6am36vf"]
+
+[ext_resource type="Script" uid="uid://be5biuda27glk" path="res://scenes/interfaces/transicitions/load_scene/load_scene.gd" id="1_hwygt"]
+[ext_resource type="FontFile" uid="uid://cc0nb2tt1qknw" path="res://assets/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="2_bgvxc"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transicitions/transition_scene/transcition_scene.tscn" id="3_g6x1i"]
+[ext_resource type="Texture2D" uid="uid://bkee5dnqfm06b" path="res://assets/images/icons/load_icon/frame0000.png" id="3_om23x"]
+[ext_resource type="Texture2D" uid="uid://c33x5ne1ijosf" path="res://assets/images/icons/load_icon/frame0001.png" id="4_f25wb"]
+[ext_resource type="Texture2D" uid="uid://cprmvguv5o3jk" path="res://assets/images/icons/load_icon/frame0002.png" id="5_wyja8"]
+[ext_resource type="Texture2D" uid="uid://dsckvwoyjpnqa" path="res://assets/images/icons/load_icon/frame0003.png" id="6_jtlak"]
+[ext_resource type="Texture2D" uid="uid://dult5hs1kiagr" path="res://assets/images/icons/load_icon/frame0004.png" id="7_q31ty"]
+[ext_resource type="Texture2D" uid="uid://d123uqtm3flne" path="res://assets/images/icons/load_icon/frame0005.png" id="8_hm5o2"]
+[ext_resource type="Texture2D" uid="uid://b4jt6r0s5poys" path="res://assets/images/icons/load_icon/frame0006.png" id="9_obamr"]
+[ext_resource type="Texture2D" uid="uid://dclhnl3ys2tdi" path="res://assets/images/icons/load_icon/frame0007.png" id="10_ov20b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7thnc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_om23x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f25wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wyja8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jtlak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q31ty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hm5o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_obamr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ov20b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="LoadScene" type="Control" unique_id=859323465 node_paths=PackedStringArray("transcitionScene", "label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hwygt")
+transcitionScene = NodePath("TranscitionScene")
+label = NodePath("Label")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=973961327]
+layout_mode = 0
+offset_left = -41.0
+offset_top = -70.0
+offset_right = 1197.0
+offset_bottom = 725.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=529856828]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 77.0
+offset_right = 927.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("2_bgvxc")
+theme_override_font_sizes/font_size = 52
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1010814864]
+position = Vector2(1074.125, 579.6875)
+scale = Vector2(0.033420157, 0.034528267)
+sprite_frames = SubResource("SpriteFrames_7thnc")
+autoplay = "default"
+
+[node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("3_g6x1i")]
+layout_mode = 1

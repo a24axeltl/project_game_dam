@@ -56,7 +56,7 @@ func is_playing():
 	else:
 		return false
 
-func _play_music(stream: AudioStream):
+func play_music(stream: AudioStream):
 	musicPlayer.stream = stream
 	if musicPlayer.is_playing():
 		musicPlayer.stop()
