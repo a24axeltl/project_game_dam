@@ -13,6 +13,9 @@ func _ready() -> void:
 func play_sound_button():
 	play_sound(preload("res://assets/audio/sound/press_sound/press.mp3"))
 
+func play_sound_hover():
+	play_sound(preload("res://assets/audio/sound/hover_sound/hover_sound.mp3"))
+
 func play_victory_melody():
 	play_music(preload("res://assets/audio/music/victory/Victory_Melody.mp3"))
 
@@ -31,8 +34,11 @@ func play_sound_damage():
 func play_sound_atack():
 	play_sound(preload("res://assets/audio/sound/punch/punch.mp3"))
 
-func play_sound_key_pick():
+func play_sound_item_pick():
 	play_sound(preload("res://assets/audio/sound/item_pick/key_pick.mp3"))
+
+func play_sound_key_pick():
+	play_sound(preload("res://assets/audio/sound/key_pick/key_sound.mp3"))
 
 func play_sound_explosion():
 	play_sound(preload("res://assets/audio/sound/explosion/explosion.mp3"))

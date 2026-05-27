@@ -2,14 +2,15 @@ extends Control
 
 @export var label: Label
 
+signal finish
+
 func _ready() -> void:
 	_text_control()
 
 func _text_control():
-	label.show()
 	label.text = str(_get_text())
-	await get_tree().create_timer(5.0).timeout
-	queue_free()
+	label.modulate.a = 0.0
+	show_message()
 
 func _get_text():
 	if owner.owner.is_in_group("meta"):
@@ -22,3 +23,14 @@ func _get_text():
 		return "!Derrota al jefe¡"
 	else:
 		return "Completa el nivel"
+
+func show_message() -> void:
+	var tween: Tween = create_tween()
+	tween.tween_interval(0.5) 
+	tween.tween_property(label, "modulate:a", 1.5, 1.5)
+	tween.tween_interval(1.5)
+	tween.tween_property(label, "modulate:a", 0.0, 1.5)
+	tween.finished.connect(finish_signal)
+
+func finish_signal():
+	finish.emit()

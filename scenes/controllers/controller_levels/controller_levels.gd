@@ -40,6 +40,7 @@ func create_level(number_level: int):
 	transiction_scene.show()
 	transiction_scene.to_light_not_load()
 	await transiction_scene.transcition
+	
 	transiction_scene.hide()
 
 func delete_level():

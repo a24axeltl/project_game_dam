@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bastixidjfm5i" path="res://assets/images/interface/celebrate_results/frame_1_delay-0.04s.png" id="3_gxgws"]
 [ext_resource type="Texture2D" uid="uid://bjkiaqglopqjo" path="res://assets/images/interface/celebrate_results/frame_2_delay-0.03s.png" id="4_37f5i"]
 [ext_resource type="PackedScene" uid="uid://bhnj4co7jqqhw" path="res://scenes/interfaces/buttons/exit_button/exit_button.tscn" id="4_m42l6"]
+[ext_resource type="FontFile" uid="uid://cc0nb2tt1qknw" path="res://assets/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="4_sxffe"]
 [ext_resource type="Texture2D" uid="uid://c3wqjmmae0yh3" path="res://assets/images/interface/celebrate_results/frame_3_delay-0.03s.png" id="5_pxgxe"]
 [ext_resource type="Texture2D" uid="uid://c2qjsqceetbkj" path="res://assets/images/interface/celebrate_results/frame_4_delay-0.04s.png" id="6_acbi1"]
 [ext_resource type="Texture2D" uid="uid://cw8h86y8fno3l" path="res://assets/images/interface/celebrate_results/frame_5_delay-0.03s.png" id="7_m42l6"]
@@ -89,6 +90,7 @@ offset_bottom = 217.0
 
 [node name="MenuButton" parent="Camera2D/ButtonsContainer" unique_id=784250946 node_paths=PackedStringArray("transcitionScene") instance=ExtResource("2_pxgxe")]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_sxffe")
 theme_override_font_sizes/font_size = 23
 transcitionScene = NodePath("../../../TranscitionScene")
 

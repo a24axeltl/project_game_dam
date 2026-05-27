@@ -3,14 +3,18 @@ extends Control
 @export var vbox_container: VBoxContainer
 @export var array_modificators: Array [PackedScene]
 @export var transcitionScene: Control
+@export var label: Label
+@export var animation: AnimatedSprite2D
 
 func _ready() -> void:
-	vbox_container.modulate.a = 0.0
 	visibility_changed.connect(reload)
 
 func next():
-	SoundController.stop_music()
+	hide_interface()
+	await get_tree().create_timer(1.5).timeout
 	
+	SoundController.stop_music()
+	animation.play("down")
 	transcitionScene.show()
 	transcitionScene.to_dark_not_load()
 	await transcitionScene.transcition
@@ -20,6 +24,9 @@ func next():
 
 func reload():
 	if is_visible_in_tree():
+		animation.play("default")
+		vbox_container.modulate.a = 0.0
+		label.modulate.a = 0.0
 		transcitionScene.show()
 		transcitionScene.to_light_white_not_load()
 		await transcitionScene.transcition
@@ -27,9 +34,10 @@ func reload():
 		set_block_signals(true)
 		remove_modificators()
 		add_modificators()
+		appear_label()
+		appear_buttons()
 		set_block_signals(false)
 		transcitionScene.hide()
-		appear_buttons()
 
 func remove_modificators():
 	for modificator in vbox_container.get_children():
@@ -86,7 +94,18 @@ func add_modificator(new_scene: PackedScene):
 	if not exists:
 		array_modificators.append(new_scene)
 
+func appear_label() -> void:
+	var tween: Tween = create_tween()
+	tween.tween_interval(0.5) 
+	tween.tween_property(label, "modulate:a", 1.5, 1.5)
+
 func appear_buttons() -> void:
 	var tween: Tween = create_tween()
 	tween.tween_interval(1.5) 
 	tween.tween_property(vbox_container, "modulate:a", 1.5, 1.5)
+
+func hide_interface() -> void:
+	var tween_buttons: Tween = create_tween()
+	var tween_label: Tween = create_tween()
+	tween_buttons.tween_property(vbox_container, "modulate:a", 0.0, 1.0)
+	tween_label.tween_property(label, "modulate:a", 0.0, 1.0)

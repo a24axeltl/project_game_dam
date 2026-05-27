@@ -6,10 +6,8 @@ extends Control
 func _ready() -> void:
 	if !SoundController.is_playing():
 		SoundController.play_menu_theme()
-	
 	containerButton.modulate.a = 0.0 
-	for button: Button in containerButton.get_children():
-		button.pressed.connect(SoundController.play_sound_button)
+	
 	_transicition_menu()
 	aparecer_menu()
 

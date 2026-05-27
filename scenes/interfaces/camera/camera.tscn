@@ -2,7 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bjhwife5qt4v8" path="res://scenes/interfaces/in_game/life_interface/life_interface.tscn" id="1_2ear0"]
 [ext_resource type="Script" uid="uid://wadsj17s8u66" path="res://scenes/interfaces/camera/camera.gd" id="1_lng1m"]
+[ext_resource type="Script" uid="uid://c5qablrji5fyl" path="res://scenes/interfaces/camera/interface.gd" id="2_vohlb"]
 [ext_resource type="PackedScene" uid="uid://rb2xnbv14vlt" path="res://scenes/interfaces/in_game/message_level/message_level.tscn" id="3_0jiuk"]
+[ext_resource type="Script" uid="uid://bx87y3fiobdwg" path="res://scenes/interfaces/camera/control_transcition.gd" id="4_ntlb4"]
 
 [node name="Camera2D" type="Camera2D" unique_id=443728676 node_paths=PackedStringArray("camera")]
 zoom = Vector2(0.8, 0.8)
@@ -10,12 +12,40 @@ position_smoothing_speed = 15.0
 script = ExtResource("1_lng1m")
 camera = NodePath(".")
 
-[node name="LifeInterface" parent="." unique_id=1294108106 instance=ExtResource("1_2ear0")]
+[node name="Interface" type="Control" parent="." unique_id=1004210070 node_paths=PackedStringArray("messageLevel", "controlTranscition")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_vohlb")
+messageLevel = NodePath("MessageLevel")
+controlTranscition = NodePath("ControlTranscition")
+
+[node name="ControlTranscition" type="Control" parent="Interface" unique_id=666467488 node_paths=PackedStringArray("blackColor")]
+anchors_preset = 0
+offset_left = -36.0
+offset_top = -35.0
+offset_right = 4.0
+offset_bottom = 5.0
+script = ExtResource("4_ntlb4")
+blackColor = NodePath("BlackColor")
+
+[node name="BlackColor" type="ColorRect" parent="Interface/ControlTranscition" unique_id=118694964]
+layout_mode = 0
+offset_left = -728.0
+offset_top = -416.0
+offset_right = 779.0
+offset_bottom = 524.0
+color = Color(0, 0, 0, 1)
+
+[node name="LifeInterface" parent="Interface" unique_id=1294108106 instance=ExtResource("1_2ear0")]
+layout_mode = 1
 offset_left = -641.0
 offset_top = -327.0
 offset_right = -641.0
 offset_bottom = -327.0
 
-[node name="MessageLevel" parent="." unique_id=1186170099 instance=ExtResource("3_0jiuk")]
+[node name="MessageLevel" parent="Interface" unique_id=1186170099 instance=ExtResource("3_0jiuk")]
+layout_mode = 1
 offset_top = -231.0
 offset_bottom = -231.0
