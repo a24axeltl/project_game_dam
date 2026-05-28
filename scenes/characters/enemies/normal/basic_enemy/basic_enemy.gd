@@ -6,9 +6,10 @@ enum State {PATROL, CHASE, HIT}
 @export var hitbox: Area2D
 @export var rayCastFloor: RayCast2D
 @export var rayCastWall: RayCast2D
+@export var particles: GPUParticles2D
 
 const damage: int = 1
-const knockback_force_X := 300.0
+const knockback_force_X := 100.0
 const knockback_friction := 10.0
 const detection_distance_x: float = 450.0
 const detection_distance_y: float = 250.0
@@ -48,6 +49,7 @@ func _physics_process(delta: float) -> void:
 	# Handle "death".
 	if _muerto:
 		RunScript.add_defeated_enemy()
+		await particles.finished 
 		queue_free()
 		if enemy_container != null:
 			enemy_container.defeated_enemy()
@@ -93,11 +95,15 @@ func _enter_hit_state():
 
 func _damage_control(area: Area2D, damage_value: int):
 	_life_count -= damage_value
-
+	
 	var strike_direction = sign(global_position.x - area.get_parent().get_parent().global_position.x)
 	
 	velocity.x = strike_direction * 600.0
 	_knockback.x = strike_direction * knockback_force_X
+	
+	particles.restart()
+	particles.emitting = true
+	particles.restart()
 	
 	_state = State.HIT
 	_enter_hit_state()

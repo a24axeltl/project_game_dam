@@ -10,8 +10,8 @@ enum State {PATROL, CHASE, HIT}
 @export var hurtbox: Area2D
 
 const damage: int = 1
-const knockback_force_X := 300.0
-const knockback_force_Y := -300.0
+const knockback_force_X := 200.0
+const knockback_force_Y := -200.0
 const knockback_friction := 10.0
 const detection_distance_x: float = 450.0
 const detection_distance_y: float = 250.0

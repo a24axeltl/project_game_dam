@@ -219,7 +219,9 @@ visible = false
 position = Vector2(27, -1)
 scale = Vector2(0.041064385, 0.04159843)
 sprite_frames = SubResource("SpriteFrames_j8rto")
-animation = &"horizontal_atack"
+animation = &"atack"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1989449960]
 visible = false
@@ -235,7 +237,7 @@ position = Vector2(0, -4.1875)
 shape = SubResource("RectangleShape2D_oya4h")
 
 [node name="HurtboxPivot" type="Node2D" parent="." unique_id=200822512]
-position = Vector2(38, 0)
+position = Vector2(53, 0)
 
 [node name="Hurtbox" type="Area2D" parent="HurtboxPivot" unique_id=616019100]
 collision_mask = 4

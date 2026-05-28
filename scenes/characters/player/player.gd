@@ -15,7 +15,7 @@ const walk_velocity: float = 350.0
 const jump_velocity: float = -570.0
 const knockback_force_X := 400.0
 const knockback_force_Y := -400.0
-const hurtbox_offset = Vector2(38, 38)
+const hurtbox_offset = Vector2(66, 66)
 const hurtbox_size = Vector2(71,87)
 const hurtbox_vertical_size = Vector2(300,20)
 const hurtbox_explosion_size = Vector2(200,200)
@@ -91,12 +91,12 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_pressed("up"):
 		_hurtbox_pos.x = 0
-		_hurtbox_pos.y = -hurtbox_offset.y * 2
+		_hurtbox_pos.y = -32 * 2
 		_atacking_up = true
 		_atacking_down = false
 	elif Input.is_action_pressed("down") and !is_on_floor():
 		_hurtbox_pos.x = 0
-		_hurtbox_pos.y = hurtbox_offset.y * 2
+		_hurtbox_pos.y = 32 * 2
 		_atacking_up = false
 		_atacking_down = true
 	else:
@@ -293,6 +293,7 @@ func _show_animation_run():
 	animacion_run.show()
 
 func _atack_animation():
+	SoundController.play_sound_dash()
 	if _atacking_up:
 		animacion_atack.position.x = 6.5
 		animacion_atack.position.y = -15.0
