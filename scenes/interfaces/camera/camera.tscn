@@ -40,10 +40,10 @@ color = Color(0, 0, 0, 1)
 
 [node name="LifeInterface" parent="Interface" unique_id=1294108106 instance=ExtResource("1_2ear0")]
 layout_mode = 1
-offset_left = -641.0
-offset_top = -327.0
-offset_right = -641.0
-offset_bottom = -327.0
+offset_left = -628.0
+offset_top = -407.0
+offset_right = -628.0
+offset_bottom = -407.0
 
 [node name="MessageLevel" parent="Interface" unique_id=1186170099 instance=ExtResource("3_0jiuk")]
 layout_mode = 1

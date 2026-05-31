@@ -22,10 +22,10 @@ scale_curve = SubResource("CurveTexture_kfboh")
 color = Color(0.20152658, 0.20152658, 0.20152658, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wxobd"]
-size = Vector2(76.55859, 87)
+size = Vector2(83.55859, 91)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v18xu"]
-size = Vector2(77, 86.5)
+size = Vector2(84, 90.25)
 
 [node name="BasicEnemy" type="CharacterBody2D" unique_id=593271527 node_paths=PackedStringArray("animacion", "hitbox", "rayCastFloor", "rayCastWall", "particles") groups=["enemy"]]
 collision_layer = 4
@@ -42,6 +42,7 @@ self_modulate = Color(0, 0, 0, 1)
 texture_filter = 2
 position = Vector2(16, 1)
 rotation = 0.6968324
+emitting = false
 amount = 30
 texture = ExtResource("3_kfboh")
 one_shot = true
@@ -58,21 +59,21 @@ sprite_frames = ExtResource("2_p704l")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=733232570]
-position = Vector2(8.720703, 19.5)
+position = Vector2(9, 19)
 shape = SubResource("RectangleShape2D_wxobd")
 
 [node name="RayCastFloor" type="RayCast2D" parent="." unique_id=1763874505]
 position = Vector2(9, 19)
-target_position = Vector2(31, 48)
+target_position = Vector2(44, 48)
 
 [node name="RayCastWall" type="RayCast2D" parent="." unique_id=1709168446]
 position = Vector2(9, 19)
-target_position = Vector2(41, 0)
+target_position = Vector2(45, 0)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=882578229]
 collision_layer = 4
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1981372748]
-position = Vector2(8.5, 19.25)
+position = Vector2(9, 18.875)
 shape = SubResource("RectangleShape2D_v18xu")

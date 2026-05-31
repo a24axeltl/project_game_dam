@@ -28,13 +28,13 @@ func _ready() -> void:
 func load_script():
 	_explosion_added_damage = 2
 
-	_defense_time_max = 0.5
+	_defense_time_max = 1.0
 	_defense_timer = 0.0
 
-	_vertical_atack_time_max = 5.0
+	_vertical_atack_time_max = 15.0
 	_vertical_atack_timer = 0.0
 
-	_explosion_atack_time_max = 10.0
+	_explosion_atack_time_max = 90.0
 	_explosion_atack_timer = 0.0
 
 	_defense_max_value = 2.5

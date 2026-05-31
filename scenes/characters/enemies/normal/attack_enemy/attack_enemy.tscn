@@ -22,13 +22,13 @@ scale_curve = SubResource("CurveTexture_numpw")
 color = Color(0.20152658, 0.20152658, 0.20152658, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ti5qr"]
-size = Vector2(51.234375, 106.31641)
+size = Vector2(69, 114)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i25l1"]
-size = Vector2(51, 106.5)
+size = Vector2(69, 114)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nswak"]
-size = Vector2(53.5, 23)
+size = Vector2(56.75, 22.75)
 
 [node name="AttackEnemy" type="CharacterBody2D" unique_id=786959747 node_paths=PackedStringArray("animacion", "hitbox", "rayCastFloor", "rayCastWall", "hurtboxPivot", "hurtbox") groups=["enemy"]]
 collision_layer = 4
@@ -61,11 +61,11 @@ position = Vector2(0, 5)
 scale = Vector2(0.03515625, 0.044353314)
 sprite_frames = ExtResource("1_i25l1")
 animation = &"atack"
-frame = 8
-frame_progress = 0.37706587
+frame = 7
+frame_progress = 0.86418444
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=805364112]
-position = Vector2(-3.6171875, 9.158203)
+position = Vector2(0.5, 8)
 shape = SubResource("RectangleShape2D_ti5qr")
 
 [node name="RayCastFloor" type="RayCast2D" parent="." unique_id=2012054326]
@@ -79,7 +79,7 @@ collision_layer = 4
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1029439214]
-position = Vector2(-3.5, 9.25)
+position = Vector2(0.5, 8)
 shape = SubResource("RectangleShape2D_i25l1")
 
 [node name="HurtboxPivot" type="Node2D" parent="." unique_id=167842300]
@@ -90,5 +90,5 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxPivot/Hurtbox" unique_id=364971061]
-position = Vector2(-8.75, 27.5)
+position = Vector2(-11.375, 27.375)
 shape = SubResource("RectangleShape2D_nswak")

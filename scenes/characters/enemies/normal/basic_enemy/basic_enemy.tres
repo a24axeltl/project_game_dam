@@ -1,14 +1,14 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://w5788deww5vm"]
 
-[ext_resource type="Texture2D" uid="uid://xicjptml63qd" path="res://assets/images/characters/enemys/BasicEnemy/hit/frame0000.png" id="1_p7co7"]
-[ext_resource type="Texture2D" uid="uid://bxdtgfch2lls0" path="res://assets/images/characters/enemys/BasicEnemy/hit/frame0001.png" id="2_4sfo0"]
-[ext_resource type="Texture2D" uid="uid://c0123g8uj0jiw" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0000.png" id="2_d3msg"]
-[ext_resource type="Texture2D" uid="uid://d4abd2u0y67an" path="res://assets/images/characters/enemys/BasicEnemy/hit/frame0002.png" id="3_i2awc"]
-[ext_resource type="Texture2D" uid="uid://b0gry6cb7ucp" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0001.png" id="3_sd3oc"]
-[ext_resource type="Texture2D" uid="uid://oy588ou7drh7" path="res://assets/images/characters/enemys/BasicEnemy/hit/frame0004.png" id="4_4cshi"]
-[ext_resource type="Texture2D" uid="uid://dr24gf4lmr48q" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0002.png" id="4_ubaj0"]
-[ext_resource type="Texture2D" uid="uid://bo6ea1vn0y1f8" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0003.png" id="5_p7co7"]
-[ext_resource type="Texture2D" uid="uid://bpci71t34hdjn" path="res://assets/images/characters/enemys/BasicEnemy/idle/frame0004.png" id="6_4sfo0"]
+[ext_resource type="Texture2D" uid="uid://xicjptml63qd" path="res://assets/images/characters/enemys/basic_enemy/hit/frame0000.png" id="1_p7co7"]
+[ext_resource type="Texture2D" uid="uid://bxdtgfch2lls0" path="res://assets/images/characters/enemys/basic_enemy/hit/frame0001.png" id="2_4sfo0"]
+[ext_resource type="Texture2D" uid="uid://c0123g8uj0jiw" path="res://assets/images/characters/enemys/basic_enemy/idle/frame0000.png" id="2_d3msg"]
+[ext_resource type="Texture2D" uid="uid://d4abd2u0y67an" path="res://assets/images/characters/enemys/basic_enemy/hit/frame0002.png" id="3_i2awc"]
+[ext_resource type="Texture2D" uid="uid://b0gry6cb7ucp" path="res://assets/images/characters/enemys/basic_enemy/idle/frame0001.png" id="3_sd3oc"]
+[ext_resource type="Texture2D" uid="uid://oy588ou7drh7" path="res://assets/images/characters/enemys/basic_enemy/hit/frame0004.png" id="4_4cshi"]
+[ext_resource type="Texture2D" uid="uid://dr24gf4lmr48q" path="res://assets/images/characters/enemys/basic_enemy/idle/frame0002.png" id="4_ubaj0"]
+[ext_resource type="Texture2D" uid="uid://bo6ea1vn0y1f8" path="res://assets/images/characters/enemys/basic_enemy/idle/frame0003.png" id="5_p7co7"]
+[ext_resource type="Texture2D" uid="uid://bpci71t34hdjn" path="res://assets/images/characters/enemys/basic_enemy/idle/frame0004.png" id="6_4sfo0"]
 
 [resource]
 animations = [{

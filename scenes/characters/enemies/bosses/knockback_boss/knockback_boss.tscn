@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bpd826kl5bqq0"]
 
 [ext_resource type="Script" uid="uid://ceimp6gy1hmcc" path="res://scenes/characters/enemies/bosses/knockback_boss/knockback_boss.gd" id="1_7mfsb"]
-[ext_resource type="Texture2D" uid="uid://dfyttk85mfjgq" path="res://assets/images/characters/enemie_test.png" id="1_ttd8i"]
+[ext_resource type="Texture2D" uid="uid://dfyttk85mfjgq" path="res://assets/images/characters/enemys/boss/frame00.png" id="1_ttd8i"]
 [ext_resource type="Texture2D" uid="uid://bmm7kndxnrjmx" path="res://assets/images/particle/blackSpot.png" id="2_4f6s7"]
+[ext_resource type="Texture2D" uid="uid://ckgexujcttmmn" path="res://assets/images/characters/enemys/boss/frame002.png" id="4_7b2pc"]
 
 [sub_resource type="Curve" id="Curve_7b2pc"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -20,6 +21,20 @@ scale_min = 0.5
 scale_max = 0.5
 scale_curve = SubResource("CurveTexture_kfboh")
 color = Color(0.20152658, 0.20152658, 0.20152658, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y0t3v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ttd8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7b2pc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mfsb"]
 size = Vector2(184, 314)
@@ -53,9 +68,11 @@ randomness = 0.15
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_y0t3v")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1926456816]
-scale = Vector2(2.9126985, 2.8761468)
-texture = ExtResource("1_ttd8i")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=134538320]
+scale = Vector2(2.6999009, 2.7086442)
+sprite_frames = SubResource("SpriteFrames_y0t3v")
+autoplay = "default"
+frame_progress = 0.1278472
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=444683996]
 shape = SubResource("RectangleShape2D_7mfsb")

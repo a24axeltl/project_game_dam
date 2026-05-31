@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cbw1vab8rgi5l"]
 
 [ext_resource type="Script" uid="uid://cq7xfvmcee6bp" path="res://scenes/characters/enemies/normal/shooter_enemy/shooter_enemy.gd" id="1_mpxuq"]
-[ext_resource type="Texture2D" uid="uid://v0t17x8mcra8" path="res://assets/images/characters/enemys/ShooterEnemy/frame0000.png" id="2_0535d"]
-[ext_resource type="Texture2D" uid="uid://dmngjgcl2ivru" path="res://assets/images/characters/enemys/ShooterEnemy/frame0001.png" id="3_mpkjx"]
-[ext_resource type="Texture2D" uid="uid://drtsh08rmogwl" path="res://assets/images/characters/enemys/ShooterEnemy/frame0002.png" id="4_ynl0j"]
-[ext_resource type="Texture2D" uid="uid://cpqdcus5gesp0" path="res://assets/images/characters/enemys/ShooterEnemy/frame0003.png" id="5_swfwm"]
+[ext_resource type="Texture2D" uid="uid://v0t17x8mcra8" path="res://assets/images/characters/enemys/shooter_enemy/frame0000.png" id="2_0535d"]
+[ext_resource type="Texture2D" uid="uid://dmngjgcl2ivru" path="res://assets/images/characters/enemys/shooter_enemy/frame0001.png" id="3_mpkjx"]
+[ext_resource type="Texture2D" uid="uid://drtsh08rmogwl" path="res://assets/images/characters/enemys/shooter_enemy/frame0002.png" id="4_ynl0j"]
+[ext_resource type="Texture2D" uid="uid://cpqdcus5gesp0" path="res://assets/images/characters/enemys/shooter_enemy/frame0003.png" id="5_swfwm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k11xq"]
 animations = [{
