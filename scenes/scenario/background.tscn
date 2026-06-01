@@ -6,8 +6,7 @@
 [node name="Sprite2D" type="Sprite2D" unique_id=1853426432]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=82183141]
-position = Vector2(-170.99988, -569.4999)
-scale = Vector2(1.4590845, 1.1487783)
+scale = Vector2(1.9229875, 1.8176194)
 texture = ExtResource("1_vfpdf")
 
 [node name="Buildings2" type="Sprite2D" parent="." unique_id=1871294699]

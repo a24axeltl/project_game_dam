@@ -9,6 +9,7 @@ enum State {PATROL, CHASE, HIT}
 @export var hurtboxPivot: Node2D
 @export var hurtbox: Area2D
 
+const particles_damage = preload("res://scenes/characters/particles/particles_damage.tscn")
 const damage: int = 1
 const knockback_force_X := 200.0
 const knockback_force_Y := -200.0
@@ -44,10 +45,10 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle hurtbox.
-	if !animacion.flip_h:
-		_hurtbox_pos.x = hurtbox_offset.x
+	if _direction > 0:
+		_hurtbox_pos.x = abs(hurtbox_offset.x)
 	else:
-		_hurtbox_pos.x = -hurtbox_offset.x
+		_hurtbox_pos.x = -abs(hurtbox_offset.x)
 	hurtboxPivot.position = _hurtbox_pos
 
 	# Handle RayCast.
@@ -59,6 +60,9 @@ func _physics_process(delta: float) -> void:
 	# Handle "death".
 	if _muerto:
 		RunScript.add_defeated_enemy()
+		_desactive_collisions()
+		_disappear_enemy()
+		await get_tree().create_timer(1.0).timeout
 		queue_free()
 		if enemy_container != null:
 			enemy_container.defeated_enemy()
@@ -102,6 +106,7 @@ func _enter_hit_state():
 	_state = State.PATROL
 
 func _damage_control(area: Area2D, damage_value: int):
+	_init_particles()
 	_life_count -= damage_value
 	_hit = true
 	var strike_direction = sign(global_position.x - area.get_parent().get_parent().global_position.x)
@@ -118,6 +123,26 @@ func _damage_control(area: Area2D, damage_value: int):
 	SoundController.play_sound_atack()
 	print("El enemigo recibio daño:")
 	print(_life_count)
+
+func _init_particles():
+	var particles = particles_damage.instantiate() as GPUParticles2D
+	particles.position.x = 16.0
+	particles.position.y = 1.0
+	add_child(particles)
+	
+	particles.restart()
+	particles.emitting = true 
+	particles.restart()
+
+func _desactive_collisions():
+	hitbox.set_deferred("monitoring", false)
+	set_deferred("monitoring",false)
+
+func _disappear_enemy():
+	animacion.modulate.a = 1.5
+	
+	var tween: Tween = create_tween()
+	tween.tween_property(animacion, "modulate:a", 0.0, 1.0)
 
 func _patrol():
 	velocity.x = _direction * walk_velocity

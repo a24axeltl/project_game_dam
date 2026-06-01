@@ -1,9 +1,98 @@
 [gd_scene format=3 uid="uid://bjhwife5qt4v8"]
 
 [ext_resource type="Script" uid="uid://bbowlopcda3hy" path="res://scenes/interfaces/in_game/life_interface/life_interface.gd" id="1_24qka"]
+[ext_resource type="Shader" uid="uid://beko3hogim0h7" path="res://scenes/interfaces/in_game/life_interface/life_interface.tres" id="2_fn00e"]
 [ext_resource type="Texture2D" uid="uid://ck4k08kespsv1" path="res://assets/images/interface/camera_icons/life/heart.png" id="2_kkvy6"]
 
-[node name="LifeInterface" type="Control" unique_id=1294108106 node_paths=PackedStringArray("label", "icon")]
+[sub_resource type="Animation" id="Animation_kkvy6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.16, 0.15)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fn00e"]
+resource_name = "life_icon"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.16, 0.15), Vector2(0.2, 0.188), Vector2(0.16, 0.15)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath(".:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7b6er"]
+_data = {
+&"RESET": SubResource("Animation_kkvy6"),
+&"life_icon": SubResource("Animation_fn00e")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7b6er"]
+shader = ExtResource("2_fn00e")
+
+[node name="LifeInterface" type="Control" unique_id=1294108106 node_paths=PackedStringArray("label", "icon", "animation")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +102,7 @@ grow_vertical = 2
 script = ExtResource("1_24qka")
 label = NodePath("Label")
 icon = NodePath("Icon")
+animation = NodePath("AnimationPlayer")
 
 [node name="Label" type="Label" parent="." unique_id=2028704715]
 layout_mode = 0
@@ -20,7 +110,14 @@ offset_right = 652.0
 offset_bottom = 83.0
 theme_override_font_sizes/font_size = 60
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=626290998]
+root_node = NodePath("../Icon")
+libraries/ = SubResource("AnimationLibrary_7b6er")
+
 [node name="Icon" type="Sprite2D" parent="." unique_id=758740282]
-position = Vector2(-48, 51)
-scale = Vector2(0.14648438, 0.13671875)
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+material = SubResource("ShaderMaterial_7b6er")
+position = Vector2(-47, 47)
+scale = Vector2(0.16, 0.15)
 texture = ExtResource("2_kkvy6")

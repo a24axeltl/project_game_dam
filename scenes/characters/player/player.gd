@@ -110,9 +110,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("dash") and PlayerController.get_dash_count() < 1 and !_dashing:
 		SoundController.play_sound_dash()
 		if !animacion.flip_h:
-			velocity.x = walk_velocity * 30
+			velocity.x = walk_velocity * 50
 		else:
-			velocity.x = -walk_velocity * 30
+			velocity.x = -walk_velocity * 50
 		PlayerController.add_dash_count(1)
 		_dashing = true
 	if PlayerController.get_dash_time() < PlayerController.get_dash_time_max() and _dashing:

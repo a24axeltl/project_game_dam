@@ -10,12 +10,6 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(musicPlayer)
 
-func play_sound_button():
-	play_sound(preload("res://assets/audio/sound/press_sound/press.mp3"))
-
-func play_sound_hover():
-	play_sound(preload("res://assets/audio/sound/hover_sound/hover_sound.mp3"))
-
 func play_victory_melody():
 	play_music(preload("res://assets/audio/music/victory/Victory_Melody.mp3"))
 
@@ -27,6 +21,18 @@ func play_register_theme():
 
 func play_upgrade_theme():
 	play_music(preload("res://assets/audio/music/menus/menu_upgrade/upgrade_menu_theme.mp3"))
+
+func play_game_over_theme():
+	play_music(preload("res://assets/audio/music/menus/menu_game_over/game_over.mp3"))
+
+func play_results_theme():
+	play_music(preload("res://assets/audio/music/menus/menu_results/results_theme.mp3"))
+
+func play_r_level_theme():
+	play_music(preload("res://assets/audio/music/levels/r/r_level_theme.mp3"))
+
+func play_m_level_theme():
+	play_music(preload("res://assets/audio/music/levels/m/m_level_theme.mp3"))
 
 func play_sound_damage():
 	play_sound(preload("res://assets/audio/sound/damage/damage.mp3"))
@@ -48,6 +54,15 @@ func play_sound_vertical_slice():
 
 func play_sound_dash():
 	play_sound(preload("res://assets/audio/sound/dash/dash.mp3"))
+
+func play_sound_button():
+	play_sound(preload("res://assets/audio/sound/press_sound/press.mp3"))
+
+func play_sound_hover():
+	play_sound(preload("res://assets/audio/sound/hover_sound/hover_sound.mp3"))
+
+func play_sound_boss_scream():
+	play_sound(preload("res://assets/audio/sound/boss_scream/boss_scream.mp3"))
 
 func play_sound(stream: AudioStream):
 	var soundPlayer = AudioStreamPlayer.new()

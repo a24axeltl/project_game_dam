@@ -37,6 +37,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Handle "death".
 	if _muerto:
+		SoundController.play_sound_boss_scream()
 		RunScript.add_defeated_enemy()
 		queue_free()
 		if enemy_container != null:

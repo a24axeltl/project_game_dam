@@ -42,6 +42,7 @@ func create_level(number_level: int):
 	await transiction_scene.transcition
 	
 	transiction_scene.hide()
+	_play_theme_level()
 
 func delete_level():
 	_instance_level.queue_free()
@@ -62,6 +63,8 @@ func get_boss():
 	return bosses[0]
 
 func init_menu_modificators():
+	SoundController.play_victory_melody()
+	_slow_camera()
 	transiction_scene.show()
 	transiction_scene.to_dark_white_not_load()
 	await transiction_scene.transcition
@@ -70,3 +73,16 @@ func init_menu_modificators():
 
 func hide_menu_modificators():
 	menu_modificators.hide()
+
+func _slow_camera():
+	var escala_tiempo: float = 0.5
+	
+	Engine.time_scale = escala_tiempo
+	await get_tree().create_timer(2.0 * escala_tiempo, false).timeout
+	Engine.time_scale = 1.0
+
+func _play_theme_level():
+	if _instance_level.is_in_group("recorrido"):
+		SoundController.play_r_level_theme()
+	elif _instance_level.is_in_group("meta"):
+		SoundController.play_m_level_theme()

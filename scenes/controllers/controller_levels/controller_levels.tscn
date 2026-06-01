@@ -3,15 +3,25 @@
 [ext_resource type="Script" uid="uid://ck41eqyt38wau" path="res://scenes/controllers/controller_levels/controller_levels.gd" id="1_iyxch"]
 [ext_resource type="PackedScene" uid="uid://keb1fdatn3ap" path="res://scenes/levels/r_levels/r_level_2.scn" id="4_rk3o2"]
 [ext_resource type="PackedScene" uid="uid://dej0v7frq26od" path="res://scenes/levels/r_levels/r_level_1.scn" id="5_0j6ok"]
+[ext_resource type="PackedScene" uid="uid://dlr5ym4rmnuq7" path="res://scenes/levels/m_levels/m_level_1.scn" id="5_ikrcb"]
 [ext_resource type="PackedScene" uid="uid://c83l63vw008if" path="res://scenes/levels/boss_levels/knock_boss_stage.tscn" id="5_ix8gd"]
 [ext_resource type="PackedScene" uid="uid://cd1ghncltdlx6" path="res://scenes/levels/m_levels/m_level_2.scn" id="6_rk3o2"]
 [ext_resource type="PackedScene" uid="uid://bjogs3drf3y5b" path="res://scenes/levels/r_levels/r_level_3.scn" id="7_2a67p"]
 [ext_resource type="PackedScene" uid="uid://wunkf12l6vwg" path="res://scenes/interfaces/menus/menu_modificators/menu_modificators.tscn" id="7_4wyme"]
 [ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transicitions/transition_scene/transcition_scene.tscn" id="7_ppdki"]
 
+[sub_resource type="Environment" id="Environment_ikrcb"]
+background_mode = 3
+glow_enabled = true
+glow_bloom = 0.05
+glow_hdr_threshold = 1.1
+glow_hdr_luminance_cap = 2.0
+adjustment_enabled = true
+adjustment_contrast = 1.15
+
 [node name="ControllerLevels" type="Node2D" unique_id=2080523597 node_paths=PackedStringArray("menu_modificators", "transiction_scene")]
 script = ExtResource("1_iyxch")
-levels = Array[PackedScene]([ExtResource("5_0j6ok"), ExtResource("4_rk3o2"), ExtResource("7_2a67p"), ExtResource("6_rk3o2")])
+levels = Array[PackedScene]([ExtResource("5_0j6ok"), ExtResource("4_rk3o2"), ExtResource("7_2a67p"), ExtResource("5_ikrcb"), ExtResource("6_rk3o2")])
 bosses = Array[PackedScene]([ExtResource("5_ix8gd")])
 menu_modificators = NodePath("CanvasLayer/CenterContainer/MenuModificators")
 transiction_scene = NodePath("CanvasLayer/CenterContainer/TranscitionScene")
@@ -32,3 +42,6 @@ transcitionScene = NodePath("../TranscitionScene")
 process_mode = 3
 visible = false
 layout_mode = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=320853493]
+environment = SubResource("Environment_ikrcb")

@@ -272,6 +272,14 @@ animations = [{
 "speed": 40.0
 }]
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_afciy"]
+particle_flag_disable_z = true
+spread = 91.588
+initial_velocity_max = 96.78
+scale_min = 0.0
+scale_max = 5.38
+color = Color(0.9999998, 0.95637566, 0.3582006, 1)
+
 [node name="MenuModificators" type="Control" unique_id=164326612 node_paths=PackedStringArray("vbox_container", "transcitionScene", "label", "animation")]
 process_mode = 3
 layout_mode = 3
@@ -321,6 +329,7 @@ rotation = -0.4894663
 color = Color(0.7647059, 1, 1, 1)
 
 [node name="SillyGF" type="AnimatedSprite2D" parent="Control" unique_id=1851706251]
+visible = false
 scale = Vector2(0.6834862, 0.7147505)
 sprite_frames = SubResource("SpriteFrames_f3lrs")
 
@@ -331,24 +340,31 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 383.0
-offset_top = -224.0
-offset_right = 903.0
-offset_bottom = 333.0
+offset_left = 132.0
+offset_top = -229.0
+offset_right = 652.0
+offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="Control" unique_id=673430902]
 layout_mode = 0
-offset_left = 492.0
-offset_top = -290.0
-offset_right = 872.0
-offset_bottom = -227.0
+offset_left = 227.0
+offset_top = -291.0
+offset_right = 607.0
+offset_bottom = -228.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.1764706, 0, 0, 0.47058824)
 theme_override_fonts/font = ExtResource("26_7bgop")
 theme_override_font_sizes/font_size = 36
 text = "¡Escoge tú mejora!"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Control" unique_id=131295770]
+position = Vector2(429, 297)
+rotation = -1.5707964
+amount = 82
+lifetime = 10.0
+process_material = SubResource("ParticleProcessMaterial_afciy")
 
 [node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("26_12i1i")]
 layout_mode = 1

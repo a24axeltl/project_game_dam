@@ -1,7 +1,51 @@
 [gd_scene format=3 uid="uid://bas6p1esj2ubb"]
 
-[ext_resource type="Texture2D" uid="uid://b40xa5fh8oh1q" path="res://assets/images/objects/exit_object/test_exit.png" id="1_1oyid"]
 [ext_resource type="Script" uid="uid://irw8a3msrqv0" path="res://scenes/objects/level_objects/exit_door/exit_door.gd" id="1_oc1in"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_b1rck"]
+particle_flag_disable_z = true
+initial_velocity_max = 96.78
+scale_min = 0.0
+scale_max = 5.38
+color = Color(0.9999998, 0.95637566, 0.3582006, 1)
+
+[sub_resource type="Animation" id="Animation_b1rck"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_avuy5"]
+resource_name = "loop_exit"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gjkdf"]
+_data = {
+&"RESET": SubResource("Animation_b1rck"),
+&"loop_exit": SubResource("Animation_avuy5")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1oyid"]
 size = Vector2(150, 217)
@@ -10,9 +54,22 @@ size = Vector2(150, 217)
 script = ExtResource("1_oc1in")
 area = NodePath("Area2D")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1809533607]
-scale = Vector2(0.13911843, 0.13839287)
-texture = ExtResource("1_1oyid")
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1546555672]
+offset_left = -71.99999
+offset_top = -106.99999
+offset_right = 69.00001
+offset_bottom = 108.00001
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1091422136]
+position = Vector2(2, 111)
+rotation = -1.5707964
+amount = 80
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_b1rck")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1656341459]
+libraries/ = SubResource("AnimationLibrary_gjkdf")
+autoplay = &"loop_exit"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1690384155]
 collision_layer = 8

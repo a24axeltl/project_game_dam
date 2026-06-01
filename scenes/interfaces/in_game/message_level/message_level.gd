@@ -14,13 +14,13 @@ func _text_control():
 
 func _get_text():
 	if owner.owner.is_in_group("meta"):
-		return "!Recolecta las llaves para avanzar¡"
+		return "¡Recolecta las llaves para avanzar!"
 	elif owner.owner.is_in_group("recorrido"):
-		return "!Recorre el nivel y llega a la meta¡"
+		return "¡Recorre el nivel y llega a la meta!"
 	elif owner.owner.is_in_group("combate"):
-		return "!Derrota a todos los enemigos¡"
+		return "¡Derrota a todos los enemigos!"
 	elif owner.owner.is_in_group("boss"):
-		return "!Derrota al jefe¡"
+		return "¡Derrota al jefe!"
 	else:
 		return "Completa el nivel"
 
