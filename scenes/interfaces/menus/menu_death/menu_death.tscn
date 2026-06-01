@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://mcdlxgtojbnn"]
 
 [ext_resource type="Script" uid="uid://cduk6onpa0e74" path="res://scenes/interfaces/menus/menu_death/menu_death.gd" id="1_ct0de"]
-[ext_resource type="Texture2D" uid="uid://b5qw22e2rnud" path="res://assets/images/interface/joke/death_pose.png" id="1_dp3h3"]
 [ext_resource type="PackedScene" uid="uid://c4lyeios8k7ic" path="res://scenes/interfaces/buttons/retry_button/retry_button.tscn" id="3_ct0de"]
 [ext_resource type="PackedScene" uid="uid://bhnj4co7jqqhw" path="res://scenes/interfaces/buttons/exit_button/exit_button.tscn" id="4_p3n1m"]
 [ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transicitions/transition_scene/transcition_scene.tscn" id="5_p3n1m"]
@@ -23,11 +22,6 @@ offset_top = -76.0
 offset_right = 1257.0
 offset_bottom = 766.0
 color = Color(2.9329676e-08, 0, 0.058501996, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=762443808]
-position = Vector2(576.00006, 318.99997)
-scale = Vector2(0.381735, 0.3091588)
-texture = ExtResource("1_dp3h3")
 
 [node name="ContainerLabel" type="VBoxContainer" parent="." unique_id=1009156984]
 layout_mode = 1

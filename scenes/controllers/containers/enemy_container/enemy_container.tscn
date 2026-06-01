@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://dkwvchqp6yarr"]
 
 [ext_resource type="Script" uid="uid://cdtyvmqaq0y6y" path="res://scenes/controllers/containers/enemy_container/enemy_container.gd" id="1_dcc5j"]
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transicitions/transition_scene/transcition_scene.tscn" id="2_xwaka"]
 
-[node name="EnemyContainer" type="Node" unique_id=670086898]
+[node name="EnemyContainer" type="Node" unique_id=670086898 node_paths=PackedStringArray("transciction")]
 script = ExtResource("1_dcc5j")
+transciction = NodePath("TranscitionScene")
+
+[node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("2_xwaka")]
+offset_left = -569.0
+offset_top = -342.0
+offset_right = -569.0
+offset_bottom = -342.0

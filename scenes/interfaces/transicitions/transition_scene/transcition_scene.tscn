@@ -111,19 +111,19 @@ animationPlayer = NodePath("AnimationPlayer")
 [node name="BlackColor" type="ColorRect" parent="." unique_id=1053802856]
 visible = false
 layout_mode = 0
-offset_left = -197.0
-offset_top = -198.0
-offset_right = 1394.0
-offset_bottom = 837.0
+offset_left = -1161.0
+offset_top = -907.0
+offset_right = 2520.0
+offset_bottom = 1344.0
 color = Color(0, 0, 0, 1)
 
 [node name="WhiteColor" type="ColorRect" parent="." unique_id=1190684493]
 visible = false
 layout_mode = 0
-offset_left = -197.0
-offset_top = -198.0
-offset_right = 1393.0
-offset_bottom = 836.0
+offset_left = -1159.0
+offset_top = -912.0
+offset_right = 2515.0
+offset_bottom = 1341.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=567730493]
 libraries/ = SubResource("AnimationLibrary_b34j0")

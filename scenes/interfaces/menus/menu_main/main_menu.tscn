@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="3_6frwu"]
 [ext_resource type="PackedScene" uid="uid://c5rnm0dqqks4v" path="res://scenes/interfaces/buttons/register_button/register_button.tscn" id="4_6frwu"]
 [ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transicitions/transition_scene/transcition_scene.tscn" id="6_gasii"]
+[ext_resource type="PackedScene" uid="uid://bp1rl0vtlcs2l" path="res://scenes/interfaces/buttons/credits_button/credits_button.tscn" id="8_lcrad"]
 
 [node name="MainMenu" type="Control" unique_id=366997339 node_paths=PackedStringArray("containerButton", "transcitionScene")]
 layout_mode = 3
@@ -37,17 +38,10 @@ offset_bottom = 223.0
 grow_horizontal = 2
 
 [node name="TitleLabel" type="Sprite2D" parent="ContainerLabel" unique_id=1697627587]
-position = Vector2(244.00003, 116)
+position = Vector2(238.00003, 81)
 rotation = 0.21907164
 scale = Vector2(0.58203965, 0.5543588)
 texture = ExtResource("2_myafy")
-
-[node name="Label" type="Label" parent="ContainerLabel" unique_id=2055090998]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "(Prototype)"
-horizontal_alignment = 1
 
 [node name="ContainerButton" type="VBoxContainer" parent="." unique_id=1629617544]
 layout_mode = 1
@@ -57,9 +51,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -127.0
-offset_top = -353.0
+offset_top = -333.0
 offset_right = 127.0
-offset_bottom = -51.0
+offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -81,3 +75,11 @@ transcitionScene = NodePath("../../TranscitionScene")
 [node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("6_gasii")]
 visible = false
 layout_mode = 1
+
+[node name="CreditsButton" parent="." unique_id=1972384510 node_paths=PackedStringArray("transcitionScene") instance=ExtResource("8_lcrad")]
+layout_mode = 0
+offset_left = 972.0
+offset_top = 557.0
+offset_right = 1132.0
+offset_bottom = 619.0
+transcitionScene = NodePath("../TranscitionScene")

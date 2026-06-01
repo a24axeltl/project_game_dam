@@ -311,6 +311,7 @@ func _atack_animation():
 		else:
 			animacion_atack.position.x = position_x_animation_atack
 		animacion_atack.position.y = position_y_animation_atack
+		velocity.x *= 0.3
 		animacion_atack.play("atack")
 	_atacking = false
 

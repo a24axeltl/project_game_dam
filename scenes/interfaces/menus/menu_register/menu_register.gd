@@ -16,6 +16,7 @@ func _ready() -> void:
 			var run_data: Dictionary = history_data[key_name]
 			
 			var button_run = Button.new()
+			button_run.add_theme_font_override("font", load("res://assets/fonts/architect-s-daughter/ArchitectsDaughter.ttf"))
 			button_run.text = str("Run ",i + 1)
 			if  run_data["Success"] == false:
 				button_run.add_theme_color_override("font_color",Color.RED)

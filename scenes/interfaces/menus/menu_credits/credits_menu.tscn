@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://c2q4mghqxo5i3"]
+
+[ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transicitions/transition_scene/transcition_scene.tscn" id="1_2smyf"]
+[ext_resource type="Script" uid="uid://dc5ovlrubr7ox" path="res://scenes/interfaces/menus/menu_credits/credits_menu.gd" id="1_qadah"]
+[ext_resource type="FontFile" uid="uid://cc0nb2tt1qknw" path="res://assets/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="2_32x7p"]
+[ext_resource type="PackedScene" uid="uid://dn54eijpejvs0" path="res://scenes/interfaces/buttons/menu_button/menu_button.tscn" id="4_avk1d"]
+[ext_resource type="Theme" uid="uid://iqax3mw7anee" path="res://themes/menu_button.tres" id="5_y78xy"]
+
+[sub_resource type="FontVariation" id="FontVariation_avk1d"]
+base_font = ExtResource("2_32x7p")
+
+[sub_resource type="FontVariation" id="FontVariation_qadah"]
+base_font = ExtResource("2_32x7p")
+
+[node name="CreditsMenu" type="Control" unique_id=485969376 node_paths=PackedStringArray("transcitionScene")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qadah")
+transcitionScene = NodePath("TranscitionScene")
+
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=767844624]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 650.0
+color = Color(0.9779369, 0.97793704, 0.9779369, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1919567635]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 10.0
+offset_right = 760.0
+offset_bottom = 123.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_avk1d")
+theme_override_font_sizes/font_size = 65
+text = "Créditos"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1949881606]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 132.0
+offset_right = 732.0
+offset_bottom = 221.0
+
+[node name="Art&Code" type="Label" parent="VBoxContainer" unique_id=388218221]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_qadah")
+theme_override_font_sizes/font_size = 32
+text = "Arte y Código"
+horizontal_alignment = 1
+
+[node name="Author" type="Label" parent="VBoxContainer" unique_id=236511678]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_qadah")
+theme_override_font_sizes/font_size = 16
+text = "Axel Torreiro Lodeiro"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1139143151]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 237.0
+offset_right = 1088.0
+offset_bottom = 454.0
+
+[node name="Músic" type="Label" parent="VBoxContainer2" unique_id=1865399745]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_qadah")
+theme_override_font_sizes/font_size = 32
+text = "Música"
+horizontal_alignment = 1
+
+[node name="Author" type="Label" parent="VBoxContainer2" unique_id=447750140]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_qadah")
+theme_override_font_sizes/font_size = 16
+text = "main_menu, r_level_theme, victory_melody, results_theme (with FL Studio base) : Axel Torreiro Lodeiro
+register_theme: ft. darkxwolf17_birdup (anonymous friend)
+game_over_theme: ashutoshmusic (Externo)
+upgrade_theme: Pixabay (Externo)
+"
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="." unique_id=254559152]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 464.0
+offset_right = 741.0
+offset_bottom = 553.0
+
+[node name="Sound" type="Label" parent="VBoxContainer3" unique_id=1035204048]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_qadah")
+theme_override_font_sizes/font_size = 32
+text = "Sónidos"
+horizontal_alignment = 1
+
+[node name="Author" type="Label" parent="VBoxContainer3" unique_id=1658889029]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_qadah")
+theme_override_font_sizes/font_size = 16
+text = "Pixabay (Web de uso libre)"
+horizontal_alignment = 1
+
+[node name="MenuButton" parent="." unique_id=784250946 node_paths=PackedStringArray("transcitionScene") instance=ExtResource("4_avk1d")]
+layout_mode = 0
+offset_left = 925.0
+offset_top = 581.0
+offset_right = 1137.0
+offset_bottom = 629.0
+theme = ExtResource("5_y78xy")
+theme_override_font_sizes/font_size = 23
+transcitionScene = NodePath("../TranscitionScene")
+
+[node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("1_2smyf")]
+visible = false
+layout_mode = 1

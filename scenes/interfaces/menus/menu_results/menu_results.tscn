@@ -17,6 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://d313di8tkuj8e" path="res://assets/images/interface/celebrate_results/frame_8_delay-0.04s.png" id="10_dd5hj"]
 [ext_resource type="PackedScene" uid="uid://c2owqm8ke0db1" path="res://scenes/interfaces/transicitions/transition_scene/transcition_scene.tscn" id="15_222ou"]
 
+[sub_resource type="FontVariation" id="FontVariation_sxffe"]
+base_font = ExtResource("4_sxffe")
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_vy634"]
 animations = [{
 "frames": [{
@@ -58,9 +61,10 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Results" type="Node2D" unique_id=1736534899 node_paths=PackedStringArray("animation") groups=["results"]]
+[node name="Results" type="Node2D" unique_id=1736534899 node_paths=PackedStringArray("animation", "transcition") groups=["results"]]
 script = ExtResource("1_w5ssc")
 animation = NodePath("CelebrateSprite")
+transcition = NodePath("TranscitionScene")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=916238315]
 offset_left = -580.0
@@ -77,6 +81,7 @@ offset_left = -249.0
 offset_top = -345.0
 offset_right = 236.0
 offset_bottom = -276.0
+theme_override_fonts/font = SubResource("FontVariation_sxffe")
 theme_override_font_sizes/font_size = 50
 text = "Niveles Finalizados!!"
 
@@ -105,14 +110,13 @@ theme_override_font_sizes/font_size = 23
 transcitionScene = NodePath("../../../TranscitionScene")
 
 [node name="CelebrateSprite" type="AnimatedSprite2D" parent="." unique_id=1604032941]
-position = Vector2(-237, -35.999992)
+position = Vector2(-279, -34)
 scale = Vector2(0.82487464, 0.83182734)
 sprite_frames = SubResource("SpriteFrames_vy634")
 autoplay = "default"
 frame_progress = 0.07064526
 
 [node name="TranscitionScene" parent="." unique_id=1119988889 instance=ExtResource("15_222ou")]
-visible = false
 offset_left = -573.0
 offset_top = -386.0
 offset_right = -573.0
