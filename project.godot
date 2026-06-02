@@ -142,6 +142,8 @@ debug_next={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 viewport/hdr_2d=true
 anti_aliasing/quality/msaa_2d=2
 environment/defaults/default_clear_color=Color(0.66656864, 0.6665687, 0.6665685, 1)

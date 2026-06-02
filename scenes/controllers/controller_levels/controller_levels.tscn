@@ -19,12 +19,13 @@ glow_levels/4 = 0.6
 glow_levels/5 = 1.0
 glow_levels/6 = 1.0
 glow_normalized = true
-glow_intensity = 0.7
+glow_intensity = 0.6
 glow_strength = 0.8
-glow_bloom = 0.4
-glow_hdr_threshold = 1.4
+glow_bloom = 0.35
+glow_hdr_threshold = 1.5
+glow_hdr_luminance_cap = 2.0
 adjustment_enabled = true
-adjustment_contrast = 1.15
+adjustment_saturation = 1.2
 
 [node name="ControllerLevels" type="Node2D" unique_id=2080523597 node_paths=PackedStringArray("menu_modificators", "transiction_scene")]
 script = ExtResource("1_iyxch")
